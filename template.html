@@ -1,0 +1,1955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ITC GTEX — Sri Lanka Finance Guide for Textile &amp; Apparel SMEs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+/* ── TOKENS ──────────────────────────────────────────────── */
+:root {
+  --forest:   #0B2818;
+  --emerald:  #14542E;
+  --leaf:     #1D7A45;
+  --mint:     #2EAD65;
+  --parchment:#F8F3EB;
+  --cream:    #FDF9F4;
+  --sand:     #EDE5D5;
+  --gold:     #B8882A;
+  --gold-lt:  #D4A84B;
+  --gold-pale:#F5E9C8;
+  --ink:      #1A1A18;
+  --slate:    #4A5568;
+  --mist:     #8A9BA8;
+  --white:    #FFFFFF;
+  --shadow-sm: 0 1px 4px rgba(11,40,24,.08), 0 4px 16px rgba(11,40,24,.06);
+  --shadow-md: 0 4px 20px rgba(11,40,24,.12), 0 12px 40px rgba(11,40,24,.08);
+  --shadow-lg: 0 8px 40px rgba(11,40,24,.18), 0 24px 80px rgba(11,40,24,.12);
+  --r: 12px;
+  --r-sm: 8px;
+  --r-pill: 999px;
+}
+
+/* ── RESET ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--parchment);
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ── HEADER ──────────────────────────────────────────────── */
+.site-header {
+  position: relative;
+  background: var(--forest);
+  overflow: hidden;
+  padding: 36px 48px 32px;
+}
+.header-weave {
+  position: absolute; inset: 0;
+  opacity: .06;
+  background-image:
+    repeating-linear-gradient(45deg, var(--white) 0, var(--white) 1px, transparent 0, transparent 50%),
+    repeating-linear-gradient(-45deg, var(--white) 0, var(--white) 1px, transparent 0, transparent 50%);
+  background-size: 18px 18px;
+}
+.header-glow {
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(46,173,101,.18) 0%, transparent 70%);
+  top: -200px; right: -100px;
+  pointer-events: none;
+}
+.header-inner {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+.header-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.eyebrow-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold-lt);
+}
+.eyebrow-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold-lt);
+}
+.header-title {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.1;
+  letter-spacing: -.5px;
+}
+.header-title em {
+  font-style: italic;
+  color: var(--mint);
+}
+.header-subtitle {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255,255,255,.55);
+  letter-spacing: .2px;
+}
+.header-badges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+.hbadge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: var(--r-pill);
+  padding: 5px 14px 5px 10px;
+  color: rgba(255,255,255,.8);
+  font-size: 12px;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+}
+.hbadge-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--mint);
+  flex-shrink: 0;
+}
+.hbadge.gold-badge {
+  background: rgba(184,136,42,.2);
+  border-color: rgba(184,136,42,.35);
+  color: var(--gold-lt);
+}
+.hbadge.gold-badge .hbadge-dot {
+  background: var(--gold-lt);
+}
+
+/* ── NAV ─────────────────────────────────────────────────── */
+.nav-bar {
+  background: var(--white);
+  border-bottom: 1px solid var(--sand);
+  padding: 0 48px;
+  display: flex;
+  gap: 2px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(11,40,24,.06);
+}
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 16px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--mist);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color .2s, border-color .2s;
+  margin-bottom: -1px;
+  user-select: none;
+  white-space: nowrap;
+}
+.nav-item:hover { color: var(--emerald); }
+.nav-item.active {
+  color: var(--emerald);
+  border-bottom-color: var(--leaf);
+  font-weight: 600;
+}
+.nav-icon {
+  font-size: 14px;
+  opacity: .8;
+}
+
+/* ── PANELS ──────────────────────────────────────────────── */
+.panel { display: none; padding: 40px 48px; animation: fadeUp .35s ease; }
+.panel.active { display: block; }
+@keyframes fadeUp {
+  from { opacity:0; transform: translateY(10px); }
+  to   { opacity:1; transform: translateY(0); }
+}
+
+/* ── SECTION HEADING ─────────────────────────────────────── */
+.section-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--leaf);
+  margin-bottom: 6px;
+}
+.section-title {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--forest);
+  line-height: 1.15;
+  margin-bottom: 28px;
+}
+
+/* ── KPI STRIP ───────────────────────────────────────────── */
+.kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 36px;
+}
+.kpi-card {
+  background: var(--white);
+  border-radius: var(--r);
+  padding: 24px 24px 20px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(11,40,24,.05);
+  position: relative;
+  overflow: hidden;
+  transition: transform .2s, box-shadow .2s;
+}
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.kpi-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--leaf);
+  border-radius: var(--r) var(--r) 0 0;
+}
+.kpi-card.gold::before  { background: linear-gradient(90deg, var(--gold), var(--gold-lt)); }
+.kpi-card.teal::before  { background: #0A7A6B; }
+.kpi-card.slate::before { background: #3D5A80; }
+.kpi-num {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--forest);
+  letter-spacing: -1px;
+  margin-bottom: 6px;
+}
+.kpi-card.gold  .kpi-num { color: var(--gold); }
+.kpi-card.teal  .kpi-num { color: #0A7A6B; }
+.kpi-card.slate .kpi-num { color: #3D5A80; }
+.kpi-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--mist);
+}
+.kpi-sub {
+  font-size: 12px;
+  color: var(--mist);
+  margin-top: 3px;
+  font-weight: 300;
+}
+.kpi-icon {
+  position: absolute;
+  right: 20px; bottom: 16px;
+  font-size: 28px;
+  opacity: .07;
+}
+
+/* ── CHARTS ──────────────────────────────────────────────── */
+.charts-row {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+.charts-row.three { grid-template-columns: 1fr 1fr 1fr; }
+.charts-row.two   { grid-template-columns: 1.5fr 1fr; }
+.chart-card {
+  background: var(--white);
+  border-radius: var(--r);
+  padding: 22px 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(11,40,24,.05);
+}
+.chart-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.chart-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--mist);
+  margin-bottom: 2px;
+}
+.chart-title {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--forest);
+}
+.chart-wrap { position: relative; height: 210px; }
+.chart-wrap.tall { height: 240px; }
+
+/* ── FINDER ──────────────────────────────────────────────── */
+.finder-hero {
+  background: var(--forest);
+  border-radius: var(--r);
+  padding: 32px 36px;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.finder-hero-weave {
+  position: absolute; inset: 0;
+  opacity: .04;
+  background-image:
+    repeating-linear-gradient(45deg, var(--white) 0, var(--white) 1px, transparent 0, transparent 50%),
+    repeating-linear-gradient(-45deg, var(--white) 0, var(--white) 1px, transparent 0, transparent 50%);
+  background-size: 18px 18px;
+}
+.finder-hero-title {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--white);
+  position: relative;
+  margin-bottom: 4px;
+}
+.finder-hero-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,.45);
+  font-weight: 300;
+  position: relative;
+  margin-bottom: 24px;
+}
+.filters-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.filter-group { display: flex; flex-direction: column; gap: 5px; }
+.filter-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.4);
+}
+.filter-select {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: var(--r-sm);
+  padding: 10px 12px;
+  color: rgba(255,255,255,.85);
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  outline: none;
+  transition: border-color .2s, background .2s;
+  cursor: pointer;
+  width: 100%;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,.4)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+}
+.filter-select:focus {
+  border-color: var(--mint);
+  background-color: rgba(255,255,255,.1);
+}
+.filter-select option {
+  background: var(--forest);
+  color: var(--white);
+}
+.filter-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  align-items: center;
+  position: relative;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 22px;
+  border-radius: var(--r-pill);
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all .2s;
+  letter-spacing: .3px;
+}
+.btn-primary {
+  background: var(--mint);
+  color: var(--forest);
+  box-shadow: 0 4px 14px rgba(46,173,101,.35);
+}
+.btn-primary:hover {
+  background: #35C470;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(46,173,101,.45);
+}
+.btn-ghost {
+  background: rgba(255,255,255,.08);
+  color: rgba(255,255,255,.6);
+  border: 1px solid rgba(255,255,255,.15);
+}
+.btn-ghost:hover {
+  background: rgba(255,255,255,.14);
+  color: var(--white);
+}
+.result-pill {
+  background: rgba(46,173,101,.15);
+  border: 1px solid rgba(46,173,101,.3);
+  border-radius: var(--r-pill);
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--mint);
+}
+.result-pill span { font-family: 'Cormorant Garant', serif; font-size: 16px; }
+
+/* ── TABLE FRAME ─────────────────────────────────────────── */
+.table-frame {
+  background: var(--white);
+  border-radius: var(--r);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(11,40,24,.05);
+  overflow: hidden;
+}
+.table-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--sand);
+  background: var(--cream);
+}
+.table-top-title {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--forest);
+}
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--white);
+  border: 1.5px solid var(--sand);
+  border-radius: var(--r-pill);
+  padding: 7px 14px;
+  transition: border-color .2s;
+}
+.search-field:focus-within { border-color: var(--leaf); }
+.search-field svg { color: var(--mist); flex-shrink:0; }
+.search-input {
+  border: none;
+  outline: none;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  color: var(--ink);
+  width: 220px;
+  background: transparent;
+}
+.search-input::placeholder { color: var(--mist); }
+.tbl-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+/* Finder results: fit full width, no sideways scroll */
+.fit-table { table-layout: fixed; width: 100%; }
+.fit-table th, .fit-table td { white-space: normal; overflow-wrap: anywhere; word-break: break-word; padding: 10px 9px; }
+.fit-table .chip { white-space: normal; }
+.fit-table .prod-name { font-size: 12.5px; }
+.fit-table col.c-lender { width: 12%; }
+.fit-table col.c-prod   { width: 16%; }
+.fit-table col.c-desc   { width: 21%; }
+.fit-table col.c-need   { width: 11%; }
+.fit-table col.c-rep    { width: 9%; }
+.fit-table col.c-max    { width: 10%; }
+.fit-table col.c-fit    { width: 12%; }
+.fit-table col.c-view   { width: 9%; }
+.desc-clamp { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; font-size: 12px; color: var(--slate); line-height: 1.45; }
+.fit-table .btn { padding: 5px 8px !important; white-space: nowrap; }
+.row-link { display: block; font-size: 11.5px; color: var(--emerald); cursor: pointer; text-decoration: none; padding: 2px 0; line-height: 1.35; }
+.row-link:hover { text-decoration: underline; }
+.row-link.ext { color: var(--leaf); }
+.table-hint { padding: 10px 16px; font-size: 12px; color: var(--slate); background: var(--parchment); border-bottom: 1px solid var(--sand); }
+.table-hint strong { color: var(--leaf); }
+.col-filter-row th { padding: 5px 7px !important; background: var(--cream); border-bottom: 1px solid var(--sand); cursor: default; }
+.col-filter-row th:hover { color: var(--mist); }
+.col-filter-row select { width: 100%; font-family: 'Outfit', sans-serif; font-size: 10px; padding: 4px 5px; border: 1px solid var(--sand); border-radius: 6px; background: #fff; color: var(--slate); cursor: pointer; }
+.col-filter-clear { font-size: 10px; color: var(--gold); cursor: pointer; text-decoration: underline; white-space: nowrap; }
+.date-note { margin-top: 4px; background: rgba(192,57,43,.16); border: 1px solid #E06055; border-left: 4px solid #C0392B; color: #FBD9D4; font-size: 11px; font-weight: 600; letter-spacing: .2px; padding: 7px 12px; border-radius: 6px; text-align: right; max-width: 230px; line-height: 1.35; }
+/* All Products: fit full width, narrow Type/Size/Repayment */
+.db-fit col.d-lender{width:11%;} .db-fit col.d-prod{width:18%;} .db-fit col.d-need{width:11%;}
+.db-fit col.d-type{width:9%;} .db-fit col.d-size{width:9%;} .db-fit col.d-rep{width:8%;}
+.db-fit col.d-cost{width:11%;} .db-fit col.d-fit{width:11%;} .db-fit col.d-tc{width:7%;} .db-fit col.d-view{width:5%;}
+.db-fit th, .db-fit td { font-size: 11.5px; }
+thead th {
+  background: var(--cream);
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--mist);
+  border-bottom: 1px solid var(--sand);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: color .15s;
+}
+thead th:hover { color: var(--emerald); }
+thead th.sorted { color: var(--emerald); }
+thead th .si { opacity:.3; font-size:9px; margin-left:4px; }
+thead th.sorted .si { opacity:1; }
+tbody tr {
+  border-bottom: 1px solid rgba(11,40,24,.04);
+  transition: background .15s;
+  cursor: pointer;
+}
+tbody tr:last-child { border-bottom: none; }
+tbody tr:hover { background: #F0F7F3; }
+tbody td { padding: 11px 14px; vertical-align: top; }
+
+/* ── CHIPS / TAGS ────────────────────────────────────────── */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  border-radius: var(--r-pill);
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.chip-green  { background: #D1FAE5; color: #065F46; }
+.chip-grey   { background: #F1F5F9; color: #64748B; }
+.chip-blue   { background: #DBEAFE; color: #1E40AF; }
+.chip-amber  { background: #FEF3C7; color: #92400E; }
+.chip-teal   { background: #CCFBF1; color: #0F766E; }
+.chip-purple { background: #EDE9FE; color: #5B21B6; }
+.chip-red    { background: #FFE4E6; color: #9F1239; }
+.green-leaf  { color: var(--leaf); font-size:11px; }
+
+.inst-badge {
+  display: inline-block;
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+.prod-name { font-weight: 600; font-size: 13px; color: var(--forest); }
+.prod-code { font-size: 11px; color: var(--mist); font-weight: 400; margin-top: 2px; }
+
+/* ── PAGINATION ──────────────────────────────────────────── */
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-top: 1px solid var(--sand);
+  background: var(--cream);
+}
+.pager-info {
+  font-size: 12px;
+  color: var(--mist);
+  font-weight: 400;
+}
+.pager-info b { color: var(--emerald); }
+.pager-btns { display: flex; gap: 3px; }
+.pager-btn {
+  width: 30px; height: 30px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--sand);
+  background: var(--white);
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--slate);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all .15s;
+}
+.pager-btn:hover { background: #F0F7F3; border-color: var(--leaf); color: var(--emerald); }
+.pager-btn.active { background: var(--forest); color: var(--white); border-color: var(--forest); }
+.pager-btn:disabled { opacity: .35; cursor: not-allowed; }
+
+/* ── EMPTY STATE ─────────────────────────────────────────── */
+.empty-state {
+  text-align: center;
+  padding: 60px 24px;
+}
+.empty-icon { font-size: 40px; opacity: .25; margin-bottom: 12px; }
+.empty-msg {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--mist);
+  margin-bottom: 6px;
+}
+.empty-sub { font-size: 13px; color: var(--mist); font-weight: 300; }
+
+/* ── MODAL ───────────────────────────────────────────────── */
+.overlay {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(11,40,24,.55);
+  z-index: 900;
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn .2s ease;
+}
+.overlay.open { display: flex; }
+@keyframes fadeIn { from {opacity:0} to {opacity:1} }
+.modal {
+  background: var(--white);
+  border-radius: var(--r);
+  width: 680px;
+  max-width: 95vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  animation: slideUp .25s ease;
+}
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity:0 }
+  to   { transform: translateY(0); opacity:1 }
+}
+.modal-cap {
+  background: var(--forest);
+  padding: 28px 30px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.modal-cap-weave {
+  position: absolute; inset: 0;
+  opacity: .05;
+  background-image:
+    repeating-linear-gradient(45deg, var(--white) 0, var(--white) 1px, transparent 0, transparent 50%),
+    repeating-linear-gradient(-45deg, var(--white) 0, var(--white) 1px, transparent 0, transparent 50%);
+  background-size: 14px 14px;
+}
+.modal-inst-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  position: relative;
+}
+.modal-inst-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: var(--r-pill);
+  padding: 4px 12px 4px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,.8);
+}
+.modal-close-btn {
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: var(--r-sm);
+  color: rgba(255,255,255,.7);
+  font-size: 16px;
+  cursor: pointer;
+  width: 30px; height: 30px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all .2s;
+}
+.modal-close-btn:hover { background: rgba(255,255,255,.2); color: var(--white); }
+.modal-title {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+  position: relative;
+}
+.modal-code {
+  font-size: 11px;
+  color: rgba(255,255,255,.4);
+  font-weight: 400;
+  margin-top: 5px;
+  letter-spacing: 1px;
+  position: relative;
+}
+.modal-body { padding: 26px 30px; }
+.modal-sec { margin-bottom: 24px; }
+.modal-sec-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--leaf);
+  border-bottom: 1px solid var(--sand);
+  padding-bottom: 7px;
+  margin-bottom: 14px;
+}
+.modal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 16px; }
+.mf-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--mist);
+  margin-bottom: 3px;
+}
+.mf-val {
+  font-size: 13px;
+  color: var(--ink);
+  font-weight: 400;
+}
+.mf-val.big {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--emerald);
+}
+.modal-desc {
+  font-size: 13px;
+  color: var(--slate);
+  line-height: 1.7;
+  font-weight: 300;
+  background: var(--parchment);
+  border-left: 3px solid var(--leaf);
+  padding: 14px 16px;
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+}
+.modal-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--forest);
+  color: var(--white);
+  padding: 9px 18px;
+  border-radius: var(--r-pill);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: .3px;
+  transition: all .2s;
+}
+.modal-link:hover { background: var(--emerald); transform: translateY(-1px); }
+.modal-link.alt { background: var(--sand); color: var(--forest); }
+.modal-link.alt:hover { background: #D5C9B5; }
+.modal-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+
+/* ── ABOUT ───────────────────────────────────────────────── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.about-card {
+  background: var(--white);
+  border-radius: var(--r);
+  padding: 26px 28px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(11,40,24,.05);
+}
+.about-card-title {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--forest);
+  margin-bottom: 14px;
+  display: flex; align-items: center; gap: 9px;
+}
+.about-card p, .about-card li {
+  font-size: 13px;
+  color: var(--slate);
+  line-height: 1.75;
+  font-weight: 300;
+}
+.step-list { list-style: none; padding: 0; }
+.step-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  align-items: flex-start;
+}
+.step-n {
+  background: var(--forest);
+  color: var(--white);
+  border-radius: 50%;
+  width: 24px; height: 24px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.inst-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--sand);
+}
+.inst-row:last-child { border-bottom: none; }
+.inst-name-big {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--forest);
+}
+.inst-full { font-size: 12px; color: var(--mist); font-weight: 300; }
+.inst-count {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--leaf);
+}
+
+/* ── GREEN CALLOUT ───────────────────────────────────────── */
+.green-callout {
+  background: linear-gradient(135deg, var(--forest), #1A4A30);
+  border-radius: var(--r);
+  padding: 22px 26px;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.green-callout-icon {
+  font-size: 36px;
+  flex-shrink: 0;
+  opacity: .8;
+}
+.green-callout-num {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--mint);
+  line-height: 1;
+}
+.green-callout-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.5);
+  margin-top: 2px;
+}
+
+/* UX additions */
+.quick-start { margin: 0 0 30px; }
+.qs-title { font-size: 14px; font-weight: 600; color: var(--emerald); margin-bottom: 12px; }
+.qs-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.qs-chip { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: var(--r-pill);
+  background: var(--white); border: 1px solid var(--sand); font-size: 13px; font-weight: 500; color: var(--emerald);
+  cursor: pointer; transition: all .15s; box-shadow: var(--shadow-sm); }
+.qs-chip:hover { background: var(--emerald); color: var(--white); border-color: var(--emerald); transform: translateY(-1px); }
+.qs-chip .qs-ico { font-size: 15px; line-height: 1; }
+.finder-hint { font-size: 12.5px; color: rgba(255,255,255,.55); position: relative; margin: -14px 0 18px; line-height: 1.5; }
+.fit-cell { display: flex; flex-wrap: wrap; gap: 4px; }
+@media (max-width: 680px) {
+  .panel { padding: 22px 16px; }
+  .filters-grid { grid-template-columns: 1fr 1fr; }
+  .tbl-scroll table, .tbl-scroll thead, .tbl-scroll tbody, .tbl-scroll th, .tbl-scroll td, .tbl-scroll tr { display: block; }
+  .tbl-scroll thead { display: none; }
+  .tbl-scroll tr { border: 1px solid var(--sand); border-radius: var(--r-sm); margin-bottom: 12px; padding: 8px 12px; background: var(--white); }
+  .tbl-scroll td { border: none !important; padding: 6px 2px; display: flex; justify-content: space-between; gap: 14px; align-items: flex-start; text-align: right; }
+  .tbl-scroll td::before { content: attr(data-label); font-weight: 600; color: var(--mist); font-size: 10px; text-transform: uppercase; letter-spacing: .5px; flex-shrink: 0; text-align: left; padding-top: 2px; }
+  .tbl-scroll td:empty { display: none; }
+  .tbl-scroll td .prod-name { text-align: right; }
+}
+
+/* Glossary */
+.gloss-intro { font-size: 13.5px; color: var(--slate); max-width: 720px; margin-bottom: 26px; line-height: 1.6; }
+.cov-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(11,40,24,.06); font-size: 13px; color: var(--slate); }
+.cov-row:last-child { border-bottom: none; }
+.cov-row .cov-n { font-weight: 700; color: var(--emerald); }
+.tag-legend { display: flex; flex-direction: column; gap: 11px; }
+.tag-legend .tl-row { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--slate); line-height: 1.55; }
+.tag-legend .tl-row .chip { flex-shrink: 0; }
+.about-note { font-size: 12px; color: var(--mist); margin-top: 12px; }
+.gloss-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+.gloss-nav-link { display: inline-flex; align-items: center; padding: 8px 15px; border-radius: var(--r-pill); background: var(--white); border: 1px solid var(--sand); font-size: 12.5px; font-weight: 600; color: var(--emerald); cursor: pointer; text-decoration: none; box-shadow: var(--shadow-sm); transition: all .15s; }
+.gloss-nav-link:hover { background: var(--emerald); color: #fff; border-color: var(--emerald); transform: translateY(-1px); }
+.gloss-group { margin-bottom: 30px; scroll-margin-top: 20px; }
+.gloss-group h3 { font-family: 'Cormorant Garant', serif; font-size: 22px; color: var(--emerald); font-weight: 600; margin-bottom: 14px; }
+.gloss-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.gloss-item { background: var(--white); border: 1px solid var(--sand); border-radius: var(--r-sm);
+  padding: 15px 17px; box-shadow: var(--shadow-sm); }
+.gloss-term { font-weight: 600; color: var(--forest); font-size: 14px; margin-bottom: 5px; }
+.gloss-def { font-size: 13px; color: var(--slate); line-height: 1.6; }
+.gloss-ex { font-size: 12.5px; color: var(--leaf); margin-top: 7px; }
+.gloss-ex b { color: var(--emerald); }
+@media (max-width: 680px) { .gloss-grid { grid-template-columns: 1fr; } }
+.learn-link { display: inline-flex; align-items: center; gap: 9px; margin: 4px 0 28px; padding: 11px 18px;
+  background: var(--gold-pale); border: 1px solid var(--gold-lt); border-radius: var(--r-pill);
+  font-size: 13px; color: var(--emerald); cursor: pointer; transition: all .15s; box-shadow: var(--shadow-sm); }
+.learn-link:hover { background: var(--gold-lt); color: var(--forest); transform: translateY(-1px); }
+.learn-link .ll-ico { font-size: 15px; }
+
+@media (max-width: 1024px) {
+  .site-header { padding: 28px 24px; }
+  .nav-bar { padding: 0 24px; }
+  .panel { padding: 28px 24px; }
+  .kpi-strip { grid-template-columns: 1fr 1fr; }
+  .charts-row.three { grid-template-columns: 1fr; }
+  .charts-row.two { grid-template-columns: 1fr; }
+  .filters-grid { grid-template-columns: 1fr 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+}
+/* ── SHORTLIST & COMPARE ─────────────────────────────── */
+.star-btn { background:none; border:none; font-size:17px; line-height:1; cursor:pointer; color:var(--mist); padding:2px 5px; transition: transform .12s, color .12s; }
+.star-btn.on { color: var(--gold); }
+.star-btn:hover { transform: scale(1.2); color: var(--gold); }
+.star-th { width:36px; text-align:center; }
+.star-cell { text-align:center; }
+.shortlist-bar { position:fixed; right:20px; bottom:20px; z-index:800; display:none; align-items:center; gap:11px;
+  background:var(--forest); color:#fff; padding:10px 12px 10px 18px; border-radius:var(--r-pill); box-shadow:var(--shadow-lg); }
+.shortlist-bar.show { display:flex; animation: fadeUp .25s ease; }
+.sl-txt { font-size:13px; font-weight:500; }
+.sl-txt b { color: var(--gold-lt); }
+.sl-compare { background:var(--gold-lt); color:var(--forest); border:none; border-radius:var(--r-pill); padding:8px 15px; font-weight:600; font-size:12.5px; cursor:pointer; font-family:inherit; }
+.sl-compare:hover { background:var(--gold-pale); }
+.sl-clear { background:none; border:none; color:rgba(255,255,255,.65); cursor:pointer; font-size:14px; padding:4px 6px; }
+.sl-clear:hover { color:#fff; }
+.modal-sl-btn { margin-left:auto; font-size:12px; padding:6px 13px; border-radius:var(--r-pill); border:1px solid var(--gold-lt); background:var(--gold-pale); color:var(--forest); cursor:pointer; font-weight:600; font-family:inherit; }
+.modal-sl-btn:hover { background:var(--gold-lt); }
+.cmp-modal { background:var(--cream); width:min(1240px,95vw); max-height:92vh; border-radius:var(--r); display:flex; flex-direction:column; overflow:hidden; box-shadow:var(--shadow-lg); }
+.cmp-head { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; padding:20px 24px 16px; background:var(--forest); color:#fff; }
+.cmp-title { font-size:22px; font-weight:600; }
+.cmp-sub { font-size:12px; color:rgba(255,255,255,.65); margin-top:4px; }
+.cmp-head-btns { display:flex; gap:8px; align-items:center; flex-shrink:0; }
+.cmp-print { background:var(--gold-lt); color:var(--forest); border:none; padding:8px 15px; border-radius:var(--r-pill); cursor:pointer; font-weight:600; font-size:12.5px; font-family:inherit; }
+.cmp-print:hover { background:var(--gold-pale); }
+.cmp-clearall { background:rgba(255,255,255,.1); color:#fff; border:1px solid rgba(255,255,255,.3); padding:8px 14px; border-radius:var(--r-pill); cursor:pointer; font-size:12.5px; font-family:inherit; }
+.cmp-clearall:hover { background:rgba(255,255,255,.2); }
+.cmp-x { background:none; border:none; color:rgba(255,255,255,.7); font-size:17px; cursor:pointer; padding:4px 8px; }
+.cmp-x:hover { color:#fff; }
+.cmp-scroll { overflow:auto; padding:18px 24px; }
+.cmp-table { border-collapse:collapse; width:100%; font-size:12.5px; }
+.cmp-table th, .cmp-table td { border:1px solid var(--sand); padding:9px 12px; vertical-align:top; text-align:left; background:var(--white); min-width:160px; max-width:260px; }
+.cmp-table thead th { white-space:normal; text-transform:none; letter-spacing:0; cursor:default; overflow-wrap:anywhere; word-break:break-word; }
+.cmp-table th.cmp-corner { min-width:110px; background:var(--parchment); font-size:11px; text-transform:uppercase; letter-spacing:.5px; color:var(--mist); }
+.cmp-label { font-weight:600; color:var(--emerald); background:var(--parchment) !important; white-space:nowrap; font-size:12px; }
+.cmp-inst { font-weight:700; font-size:11px; }
+.cmp-prod { font-weight:600; font-size:13.5px; color:var(--forest); margin:4px 0 7px; line-height:1.35; }
+.cmp-actions { display:flex; gap:5px; margin-bottom:5px; }
+.cmp-mini { font-size:11px; padding:3px 10px; border-radius:var(--r-pill); border:1px solid var(--sand); background:var(--parchment); cursor:pointer; font-family:inherit; color:var(--emerald); }
+.cmp-mini:hover { background:var(--emerald); color:#fff; }
+.cmp-mini.danger { color:#a04030; }
+.cmp-mini.danger:hover { background:#a04030; color:#fff; }
+.cmp-link { display:inline-block; font-size:11px; color:var(--leaf); text-decoration:none; }
+.cmp-link:hover { text-decoration:underline; }
+.cmp-nd { color:var(--mist); font-size:11px; font-style:italic; }
+@media (max-width: 680px) {
+  .nav-bar { padding: 0 8px; overflow-x: auto; }
+  .nav-item { flex-direction: column; gap: 3px; padding: 9px 11px 11px; font-size: 10px; }
+  .nav-icon { font-size: 16px; }
+  .shortlist-bar { left: 12px; right: 12px; bottom: 12px; justify-content: space-between; padding-left: 14px; }
+}
+@media print {
+  body * { visibility: hidden !important; }
+  #compare-overlay, #compare-overlay * { visibility: visible !important; }
+  #compare-overlay { position: absolute !important; inset: 0 !important; display: block !important; background: #fff !important; backdrop-filter: none !important; padding: 0 !important; }
+  .cmp-modal { max-height: none !important; width: 100% !important; box-shadow: none !important; border-radius: 0 !important; overflow: visible !important; }
+  .cmp-scroll { overflow: visible !important; padding: 10px 0 !important; }
+  .cmp-head { background: #fff !important; color: #000 !important; padding: 0 0 8px !important; }
+  .cmp-title { color: #000 !important; }
+  .cmp-sub { color: #444 !important; }
+  .no-print, .cmp-head-btns, .cmp-actions { display: none !important; }
+  .cmp-table th, .cmp-table td { min-width: 0 !important; max-width: none !important; font-size: 10px !important; padding: 5px 7px !important; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-weave"></div>
+  <div class="header-glow"></div>
+  <div class="header-inner">
+    <div>
+      <div class="header-eyebrow">
+        <div class="eyebrow-dot"></div>
+        <span class="eyebrow-text">International Trade Centre · GTEX</span>
+      </div>
+      <h1 class="header-title">Sri Lanka <em>Finance Guide</em><br>for Textile &amp; Apparel SMEs</h1>
+      <p class="header-subtitle">Global Textiles and Apparel Programme (GTEX) &nbsp;·&nbsp; Financing &amp; funding options for Sri Lankan Textile &amp; Clothing SMEs</p>
+    </div>
+    <div class="header-badges">
+      <div class="hbadge"><div class="hbadge-dot"></div>1,060 Financing Products</div>
+      <div class="hbadge"><div class="hbadge-dot"></div>81 Institutions</div>
+      <div class="hbadge gold-badge"><div class="hbadge-dot"></div>🌱 128 Green Products</div>
+      <div class="date-note">Information current as of July 2026</div>
+    </div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="nav-bar">
+  <div class="nav-item active" id="tab-dashboard" onclick="showPanel('dashboard')">
+    <span class="nav-icon">◈</span> Overview
+  </div>
+  <div class="nav-item" id="tab-finder" onclick="showPanel('finder')">
+    <span class="nav-icon">⊕</span> Finance Finder
+  </div>
+  <div class="nav-item" id="tab-database" onclick="showPanel('database')">
+    <span class="nav-icon">≡</span> All Products
+  </div>
+  <div class="nav-item" id="tab-glossary" onclick="showPanel('glossary')">
+    <span class="nav-icon">◱</span> Finance Explained
+  </div>
+  <div class="nav-item" id="tab-about" onclick="showPanel('about')">
+    <span class="nav-icon">◉</span> How to Use
+  </div>
+</nav>
+
+<!-- DASHBOARD PANEL -->
+<div class="panel active" id="panel-dashboard">
+  <div class="quick-start">
+    <div class="qs-title">I need financing for…</div>
+    <div class="qs-chips">
+      <div class="qs-chip" onclick="quickStart('wc')"><span class="qs-ico">💵</span> Working capital</div>
+      <div class="qs-chip" onclick="quickStart('capex')"><span class="qs-ico">🏭</span> Machinery &amp; equipment</div>
+      <div class="qs-chip" onclick="quickStart('trade')"><span class="qs-ico">🚢</span> Export / trade order</div>
+      <div class="qs-chip" onclick="quickStart('startup')"><span class="qs-ico">🚀</span> Starting a business</div>
+      <div class="qs-chip" onclick="quickStart('green')"><span class="qs-ico">🌱</span> Going green / solar</div>
+      <div class="qs-chip" onclick="quickStart('women')"><span class="qs-ico">♀</span> Women-led business</div>
+      <div class="qs-chip" onclick="quickStart('collat')"><span class="qs-ico">🔓</span> No collateral</div>
+    </div>
+  </div>
+  <a class="learn-link" onclick="showPanel('glossary')"><span class="ll-ico">📘</span> New to finance? <strong>&nbsp;Start here →</strong></a>
+  <div class="section-label">At a Glance</div>
+  <div class="section-title" style="margin-bottom:24px">Financing Landscape Overview</div>
+
+  <div class="kpi-strip">
+    <div class="kpi-card">
+      <div class="kpi-num">1,060</div>
+      <div class="kpi-label">Total Products</div>
+      <div class="kpi-sub">Financing options mapped</div>
+      <div class="kpi-icon">⬡</div>
+    </div>
+    <div class="kpi-card teal">
+      <div class="kpi-num">81</div>
+      <div class="kpi-label">Institutions</div>
+      <div class="kpi-sub">Banks · NBFIs · Dev. banks · Govt · Microfinance · Investors</div>
+      <div class="kpi-icon">⬡</div>
+    </div>
+    <div class="kpi-card gold">
+      <div class="kpi-num">128</div>
+      <div class="kpi-label">Green Products</div>
+      <div class="kpi-sub">Sustainable / green tagged</div>
+      <div class="kpi-icon">🌿</div>
+    </div>
+    <div class="kpi-card slate">
+      <div class="kpi-num">823</div>
+      <div class="kpi-label">Open to T&amp;C SMEs</div>
+      <div class="kpi-sub">Funder criteria show T&amp;C SMEs are eligible</div>
+      <div class="kpi-icon">⬡</div>
+    </div>
+  </div>
+
+  <div class="charts-row three">
+    <div class="chart-card">
+      <div class="chart-head">
+        <div>
+          <div class="chart-label">Distribution</div>
+          <div class="chart-title">By Institution</div>
+        </div>
+      </div>
+      <div class="chart-wrap"><canvas id="cInst"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-head"><div>
+        <div class="chart-label">Breakdown</div>
+        <div class="chart-title">By Product Type</div>
+      </div></div>
+      <div class="chart-wrap tall"><canvas id="cType"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-head"><div>
+        <div class="chart-label">Breakdown</div>
+        <div class="chart-title">By Financing Need</div>
+      </div></div>
+      <div class="chart-wrap tall"><canvas id="cNeed"></canvas></div>
+    </div>
+  </div>
+
+  <div class="charts-row two">
+    <div class="chart-card">
+      <div class="chart-head"><div>
+        <div class="chart-label">Eligibility</div>
+        <div class="chart-title">By Business Size</div>
+      </div></div>
+      <div class="chart-wrap"><canvas id="cSize"></canvas></div>
+    </div>
+    <div class="chart-card" style="display:flex;flex-direction:column">
+      <div class="chart-head"><div>
+        <div class="chart-label">Sustainability</div>
+        <div class="chart-title">Green vs. Conventional</div>
+      </div></div>
+      <div style="flex:1;display:flex;align-items:center;justify-content:center;">
+        <canvas id="cGreen" style="max-height:190px;max-width:300px"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FINDER PANEL -->
+<div class="panel" id="panel-finder">
+  <div class="finder-hero">
+    <div class="finder-hero-weave"></div>
+    <div class="finder-hero-title">Find the Right Financing</div>
+    <div class="finder-hero-sub">Tell us about your business and what you need — we'll surface matching products.</div>
+    <div class="finder-hint"><a onclick="showPanel('glossary')" style="color:var(--gold-lt);cursor:pointer;text-decoration:underline;font-weight:600">Not sure what a term means? See Finance Explained →</a></div>
+    <div class="filters-grid">
+      <div class="filter-group">
+        <label class="filter-label">What's it for?</label>
+        <select class="filter-select" id="f-need"><option value="">Any purpose</option></select>
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">Business size</label>
+        <select class="filter-select" id="f-size"><option value="">All sizes</option></select>
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">Product type</label>
+        <select class="filter-select" id="f-type"><option value="">Any type</option></select>
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">Repayment period</label>
+        <select class="filter-select" id="f-tenor"><option value="">Any length</option></select>
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">Lender</label>
+        <select class="filter-select" id="f-inst"><option value="">All lenders</option></select>
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">Institution type</label>
+        <select class="filter-select" id="f-insttype"><option value="">All types</option></select>
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">T&amp;C access</label>
+        <select class="filter-select" id="f-tc">
+          <option value="" selected>Show all</option>
+          <option value="Open">Open to T&amp;C SMEs</option>
+          <option value="Restricted">Restricted</option>
+          <option value="Other">Other / unclear</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">Collateral</label>
+        <select class="filter-select" id="f-collat">
+          <option value="">Any</option>
+          <option value="yes">Collateral-free only 🔓</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">Women-led</label>
+        <select class="filter-select" id="f-women">
+          <option value="">Any</option>
+          <option value="yes">Women-led only ♀</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">Green finance</label>
+        <select class="filter-select" id="f-green">
+          <option value="">Show all</option>
+          <option value="Yes">Green only 🌱</option>
+          <option value="No">Conventional only</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">Green investment type</label>
+        <select class="filter-select" id="f-greentype">
+          <option value="">Any type</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">Cost</label>
+        <select class="filter-select" id="f-conc">
+          <option value="">Any cost</option>
+          <option value="yes">Concessionary / low-cost 💸</option>
+        </select>
+      </div>
+    </div>
+    <div class="filter-actions">
+      <button class="btn btn-primary" onclick="applyFilters()">⊕ Find Products</button>
+      <button class="btn btn-ghost" onclick="clearFilters()">Clear</button>
+      <div class="result-pill" id="finder-pill" style="display:none"><span id="finder-count-n">0</span> found</div>
+    </div>
+  </div>
+
+  <div class="table-frame">
+    <div class="table-top">
+      <div class="table-top-title" id="finder-table-title">All Products</div>
+      <div class="search-field">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input class="search-input" type="text" placeholder="Search results…" id="finder-search" oninput="renderFinder()">
+      </div>
+    </div>
+    <div class="table-hint">👆 Click any product row to open its full details. Use the <strong>Product page</strong> link to visit the funder&rsquo;s website. Tick <strong>☆</strong> to shortlist up to 5 products and compare them side by side.</div>
+    <div class="tbl-scroll">
+      <table class="fit-table">
+        <colgroup>
+          <col class="c-star"><col class="c-lender"><col class="c-prod"><col class="c-desc"><col class="c-need"><col class="c-rep">
+          <col class="c-max"><col class="c-fit"><col class="c-view">
+        </colgroup>
+        <thead><tr>
+          <th class="star-th">★</th>
+          <th>Lender</th>
+          <th>Product</th>
+          <th>Description</th>
+          <th>What it's for</th>
+          <th>Repayment</th>
+          <th>Max amount</th>
+          <th>Good to know</th>
+          <th>Product page</th>
+        </tr></thead>
+        <tbody id="finder-tbody"></tbody>
+      </table>
+    </div>
+    <div class="empty-state" id="finder-empty" style="display:none">
+      <div class="empty-icon">◎</div>
+      <div class="empty-msg">No matches found</div>
+      <div class="empty-sub">Try adjusting your search criteria.</div>
+    </div>
+    <div class="empty-state" id="finder-prompt">
+      <div class="empty-icon">⊕</div>
+      <div class="empty-msg">Find financing for your business</div>
+      <div class="empty-sub">Pick a filter above, use a quick-start on the Overview, or type in the search box to see matching products.</div>
+    </div>
+    <div class="pager" id="finder-pager"></div>
+  </div>
+</div>
+
+<!-- DATABASE PANEL -->
+<div class="panel" id="panel-database">
+  <div class="section-label">Complete Index</div>
+  <div class="section-title">All 1,060 Financing Products</div>
+
+  <div class="table-frame">
+    <div class="table-top">
+      <div class="table-top-title" id="db-count-label">1,060 products</div>
+      <div class="search-field">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input class="search-input" type="text" placeholder="Search all products…" id="db-search" oninput="renderDb(1)">
+      </div>
+    </div>
+    <div class="tbl-scroll">
+      <table class="fit-table db-fit">
+        <colgroup>
+          <col class="d-star"><col class="d-lender"><col class="d-prod"><col class="d-need"><col class="d-type"><col class="d-size">
+          <col class="d-rep"><col class="d-cost"><col class="d-fit"><col class="d-tc"><col class="d-view">
+        </colgroup>
+        <thead>
+        <tr>
+          <th class="star-th">★</th>
+          <th onclick="sortDb('Institution Name (Abbr.)')" id="th-inst">Lender <span class="si">⇅</span></th>
+          <th>Product</th>
+          <th onclick="sortDb('Std. Financing Need')" id="th-need">What it's for <span class="si">⇅</span></th>
+          <th onclick="sortDb('Std. Product Type')" id="th-type">Type <span class="si">⇅</span></th>
+          <th onclick="sortDb('Std. Business Size')" id="th-size">Size <span class="si">⇅</span></th>
+          <th onclick="sortDb('Std. Tenor')" id="th-tenor">Repayment <span class="si">⇅</span></th>
+          <th>Cost</th>
+          <th>Good to know</th>
+          <th onclick="sortDb('T&C Applicability')" id="th-tc">T&amp;C access <span class="si">⇅</span></th>
+          <th></th>
+        </tr>
+        <tr class="col-filter-row">
+          <th></th>
+          <th><select id="dbf-inst" onchange="renderDb(1)" onclick="event.stopPropagation()"><option value="">All lenders</option></select></th>
+          <th></th>
+          <th><select id="dbf-need" onchange="renderDb(1)" onclick="event.stopPropagation()"><option value="">All</option></select></th>
+          <th><select id="dbf-type" onchange="renderDb(1)" onclick="event.stopPropagation()"><option value="">All</option></select></th>
+          <th><select id="dbf-size" onchange="renderDb(1)" onclick="event.stopPropagation()"><option value="">All</option></select></th>
+          <th><select id="dbf-rep" onchange="renderDb(1)" onclick="event.stopPropagation()"><option value="">All</option></select></th>
+          <th></th>
+          <th></th>
+          <th><select id="dbf-tc" onchange="renderDb(1)" onclick="event.stopPropagation()"><option value="">All</option><option value="Open">Open</option><option value="Restricted">Restricted</option><option value="Other">Other</option></select></th>
+          <th><span class="col-filter-clear" onclick="clearDbFilters()">Clear</span></th>
+        </tr>
+        </thead>
+        <tbody id="db-tbody"></tbody>
+      </table>
+    </div>
+    <div class="empty-state" id="db-empty" style="display:none">
+      <div class="empty-icon">◎</div>
+      <div class="empty-msg">No products match</div>
+      <div class="empty-sub">Try a different search term.</div>
+    </div>
+    <div class="pager" id="db-pager"></div>
+  </div>
+</div>
+
+<!-- HOW TO USE PANEL -->
+<div class="panel" id="panel-about">
+  <div class="section-label">Guide Information</div>
+  <div class="section-title">How to Use This Guide</div>
+
+  <div class="about-grid">
+    <div class="about-card">
+      <div class="about-card-title">📖 What this guide is</div>
+      <p>This guide brings together financing and funding options relevant to Sri Lanka&rsquo;s Textile &amp; Clothing (T&amp;C) sector, with a focus on small and medium enterprises (SMEs). It is produced under the International Trade Centre&rsquo;s Global Textiles and Apparel Programme (GTEX). It maps <strong>1,060 products</strong> from <strong>81 institutions</strong> — banks, finance companies, development and government bodies, and investors — and tags each one so you can quickly see whether it fits your business, what it costs, and how to apply.</p>
+    </div>
+
+    <div class="about-card">
+      <div class="about-card-title">🚀 The four sections</div>
+      <ol class="step-list">
+        <li class="step-item"><span class="step-n">1</span><span><strong>Overview</strong> — a snapshot of the whole guide: totals and charts showing the mix of lenders, product types, purposes and business sizes. Use the &ldquo;I need financing for…&rdquo; shortcuts to jump straight into matching products.</span></li>
+        <li class="step-item"><span class="step-n">2</span><span><strong>Finance Finder</strong> — the main tool. Narrow products down by what you need the money for, business size, product type, repayment period, lender, institution type, and whether the product is collateral-free, women-led, concessionary or green. Click any row to open full details, or use the <em>Product page</em> link to visit the funder&rsquo;s website.</span></li>
+        <li class="step-item"><span class="step-n">3</span><span><strong>All Products</strong> — the complete list. Sort by any column, use the filter dropdown under each heading (like a spreadsheet), or search across everything.</span></li>
+        <li class="step-item"><span class="step-n">4</span><span><strong>Finance Explained</strong> — plain-language definitions of every product type, purpose, institution type and key term, each with a Textile &amp; Clothing example. New to finance? Start here.</span></li>
+      </ol>
+    </div>
+
+    <div class="about-card">
+      <div class="about-card-title">🏷️ Understanding the tags</div>
+      <div class="tag-legend">
+        <div class="tl-row"><span class="chip chip-green">Open</span><span>Under <strong>T&amp;C access</strong>: the funder&rsquo;s stated criteria suggest textile &amp; clothing SMEs are eligible. <span class="chip chip-amber">Restricted</span> means it is limited to certain sectors, corporates or retail customers, and <span class="chip chip-grey">Other</span> means eligibility is not clearly stated — open the product to check.</span></div>
+        <div class="tl-row"><span class="chip chip-teal">🔓 Collateral-free</span><span>No collateral or security is required.</span></div>
+        <div class="tl-row"><span class="chip chip-purple">♀ Women-led</span><span>The product targets or prioritises women-owned or women-led businesses.</span></div>
+        <div class="tl-row"><span class="chip chip-amber">💸 Low-cost</span><span>Concessionary terms — a lower rate, longer repayment or a grace period.</span></div>
+        <div class="tl-row"><span class="chip chip-green">🌱 Green</span><span>Financing intended for environmentally beneficial purposes, such as solar, efficiency or cleaner production.</span></div>
+      </div>
+      <p class="about-note">Not sure what a term means? Every product type and purpose is defined in <strong>Finance Explained</strong>.</p>
+    </div>
+
+    <div class="about-card">
+      <div class="about-card-title">🏦 What&rsquo;s covered — by institution type</div>
+      <div class="cov-row"><span>Commercial Bank</span><span class="cov-n">490</span></div>
+      <div class="cov-row"><span>Non-Banking Financial Institution (NBFI)</span><span class="cov-n">360</span></div>
+      <div class="cov-row"><span>Development Bank</span><span class="cov-n">71</span></div>
+      <div class="cov-row"><span>Government Agency</span><span class="cov-n">54</span></div>
+      <div class="cov-row"><span>Microfinance Institution</span><span class="cov-n">44</span></div>
+      <div class="cov-row"><span>Development Finance Institution / Multilateral</span><span class="cov-n">22</span></div>
+      <div class="cov-row"><span>Impact Investor / VC</span><span class="cov-n">19</span></div>
+    </div>
+
+    <div class="about-card">
+      <div class="about-card-title">💰 By type of finance</div>
+      <div class="cov-row"><span>Debt</span><span class="cov-n">967</span></div>
+      <div class="cov-row"><span>Guarantee</span><span class="cov-n">43</span></div>
+      <div class="cov-row"><span>Equity</span><span class="cov-n">19</span></div>
+      <div class="cov-row"><span>Grant</span><span class="cov-n">19</span></div>
+      <div class="cov-row"><span>Blended Finance</span><span class="cov-n">12</span></div>
+      <div style="height:14px"></div>
+      <div class="about-card-title" style="font-size:15px">T&amp;C access breakdown</div>
+      <div class="cov-row"><span>Open</span><span class="cov-n">823</span></div>
+      <div class="cov-row"><span>Restricted</span><span class="cov-n">199</span></div>
+      <div class="cov-row"><span>Other</span><span class="cov-n">38</span></div>
+    </div>
+
+        
+
+    <div class="about-card">
+      <div class="about-card-title">ℹ️ Data, currency &amp; a note of caution</div>
+      <p>Product information reflects funders&rsquo; publicly available details and is <strong>current as of July 2026</strong>; terms change often, so always confirm the latest details with the institution before applying. This guide is an information resource, not financial advice or a recommendation, and eligibility for any product is decided by the funder.</p>
+    </div>
+  </div>
+</div>
+
+<!-- GLOSSARY PANEL -->
+<div class="panel" id="panel-glossary">
+  <div class="section-label">Understanding Finance</div>
+  <div class="section-title">Finance Explained</div>
+  <p class="gloss-intro">Finance comes with a lot of jargon. This section explains the main instruments, purposes and terms used across the guide in plain language, each with a Textile &amp; Clothing example.</p>
+  <div id="glossary-body"></div>
+</div>
+
+<!-- MODAL -->
+<!-- SHORTLIST BAR -->
+<div class="shortlist-bar" id="shortlist-bar">
+  <span class="sl-txt">★ <b id="sl-count">0</b> shortlisted <span style="opacity:.6">(max 5)</span></span>
+  <button class="sl-compare" onclick="openCompare()">Compare side by side →</button>
+  <button class="sl-clear" onclick="clearShortlist()" title="Clear shortlist">✕</button>
+</div>
+
+<!-- COMPARE OVERLAY -->
+<div class="overlay" id="compare-overlay" onclick="if(event.target===this)closeCompare()">
+  <div class="cmp-modal">
+    <div class="cmp-head">
+      <div>
+        <div class="cmp-title">Shortlist: side-by-side comparison</div>
+        <div class="cmp-sub">Compared on <span id="cmp-date"></span> · Information current as of July 2026 · Always confirm the latest terms with the institution before applying</div>
+      </div>
+      <div class="cmp-head-btns">
+        <button class="cmp-print" onclick="printCompare()">🖨 Print / Save as PDF</button>
+        <button class="cmp-clearall" onclick="clearShortlist()">Clear all</button>
+        <button class="cmp-x" onclick="closeCompare()">✕</button>
+      </div>
+    </div>
+    <div class="cmp-scroll"><table class="cmp-table" id="cmp-table"></table></div>
+    
+  </div>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeOverlay(event)">
+  <div class="modal">
+    <div class="modal-cap">
+      <div class="modal-cap-weave"></div>
+      <div class="modal-inst-row">
+        <div class="modal-inst-pill" id="modal-inst-pill">—</div>
+        <button class="modal-close-btn" onclick="closeModal()">✕</button>
+      </div>
+      <div class="modal-title" id="modal-title">—</div>
+      <div class="modal-code" id="modal-code">—</div>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+const DATA = __GTEX_DATA__;
+
+/* ── NAV ── */
+function showPanel(p) {
+  document.querySelectorAll('.panel').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+  document.getElementById('panel-'+p).classList.add('active');
+  document.getElementById('tab-'+p).classList.add('active');
+  if (p==='database') { populateDbFilters(); renderDb(1); }
+  if (p==='finder')   { populateFilters(); renderFinder(); }
+  if (p==='glossary') renderGlossary();
+}
+
+/* ── INST COLORS ── */
+const IC = {
+  'BOC':'#0A5C36', 'ComBank':'#1565C0', 'HNB':'#BF360C',
+  'NTB':'#4527A0', 'PB':'#006064', 'Sampath Bank':'#827717'
+};
+function ic(n) { return IC[n] || '#3D5A80'; }
+
+/* ── CHIPS ── */
+function sizeChip(s) {
+  if(!s) return '';
+  const l = s.replace(/^[a-z]\.\s*/,'');
+  if(s.includes('Micro')) return `<span class="chip chip-teal">${l}</span>`;
+  if(s.includes('SMEs &')) return `<span class="chip chip-blue">${l}</span>`;
+  if(s.includes('SMEs'))  return `<span class="chip chip-blue">${l}</span>`;
+  if(s.includes('Large')) return `<span class="chip chip-amber">${l}</span>`;
+  return `<span class="chip chip-grey">${l}</span>`;
+}
+const GLOSSARY = {"What the financing is for": [{"t": "Working capital", "d": "Money for everyday operating needs rather than big one-off assets.", "ld": "Working capital is the money that keeps daily operations running, covering materials, wages, utilities and other short-term costs. Financing for working capital bridges the gap between spending on production and receiving payment from customers. It is about keeping the business moving, not about buying long-term assets.", "e": "Buying fabric and paying staff between orders."}, {"t": "Trade finance", "d": "Support for importing inputs or exporting products.", "ld": "This purpose covers financing that supports importing the inputs you need or exporting your products. It reduces the risk that a buyer does not pay or a supplier does not deliver, and it bridges the timing gap between production, shipment and payment.", "e": "Financing the import of accessories for an export order."}, {"t": "Cash flow management", "d": "Smoothing the timing gap between paying costs and receiving income.", "ld": "Cash flow management financing smooths the timing difference between when you pay costs and when income arrives. It helps you meet obligations during slow periods or while waiting for customer payments, so a temporary gap does not stop the business.", "e": "Covering a slow month while awaiting buyer payment."}, {"t": "Invoice/receivables financing", "d": "Turning unpaid customer invoices into immediate cash.", "ld": "This turns unpaid customer invoices into cash you can use now, instead of waiting for the payment terms to pass. It is useful when you sell on credit and need funds to keep producing while earlier invoices are still outstanding.", "e": "Advancing cash against a confirmed buyer invoice."}, {"t": "Fixed assets / CAPEX", "d": "Investment in longer-term assets like machinery, buildings or vehicles.", "ld": "Capital expenditure (CAPEX) is spending on longer-term assets such as machinery, buildings, vehicles or major equipment that you use over many years. Financing for fixed assets spreads the large upfront cost over time so it matches the period the asset is generating value.", "e": "Buying an automated cutting machine."}, {"t": "Start-up / creation", "d": "Funding to start a new business or launch a new operation.", "ld": "This purpose covers funding to start a new business or launch a new operation, when there is little or no track record yet. It may support first premises, initial equipment and early working capital, and often carries more conditions because the risk is higher.", "e": "Setting up a new stitching unit."}, {"t": "Technology & innovation", "d": "Investment in new technology, digitalisation, product development or R&D.", "ld": "Financing here supports investment in new technology, digital systems, automation, product development or research. It helps a business improve productivity, quality or its product range so it can compete and grow.", "e": "Adopting a digital production-tracking system."}, {"t": "Capacity building", "d": "Support for skills, systems, certification or training rather than physical assets.", "ld": "Capacity-building support funds skills, systems, certification, quality standards or training rather than physical assets. It strengthens how the business operates, which can be a condition for reaching new buyers or markets.", "e": "Funding staff training or a compliance certification."}, {"t": "Green / sustainable assets & RECP upgrades", "d": "Investment in cleaner, more efficient equipment and processes.", "ld": "This purpose covers investment in cleaner and more efficient equipment and processes. RECP stands for Resource Efficient and Cleaner Production, which means using energy, water and materials more efficiently while cutting waste and emissions.", "e": "Replacing an old boiler with an efficient one."}, {"t": "Sustainable upgrades (water, waste & circularity)", "d": "Improvements in water use, waste treatment and recycling.", "ld": "This covers improvements in how a business uses water, treats waste and effluent, and recycles or reuses materials as part of a more circular way of producing. Such upgrades reduce environmental impact and can also lower running costs.", "e": "Installing a water-recycling system in a dyeing plant."}, {"t": "Sustainable Agriculture", "d": "Financing for environmentally sound farming inputs and practices.", "ld": "This purpose covers financing for environmentally sound farming inputs and practices, relevant to natural-fibre value chains such as cotton. It supports production methods that protect soil, water and biodiversity.", "e": "Funding sustainable cotton sourcing."}], "Financing instruments": [{"t": "Short-term credit / working capital facility", "d": "Financing (usually under a year) to cover day-to-day running costs and bridge the gap until customers pay.", "ld": "Short-term credit covers the everyday cost of running your business, such as buying raw materials, paying wages and covering bills, until money from sales comes in. It is usually repaid within a year and often works as a revolving limit (like an overdraft or a working-capital loan) that you draw down and repay as cash moves in and out. It is best for recurring operating needs, not for buying long-term assets like machinery or buildings.", "e": "An overdraft to buy yarn and pay wages for a bulk order before the buyer settles the invoice."}, {"t": "Trade finance (LC/LG)", "d": "Tools that make buying and selling (especially across borders) safer, such as a Letter of Credit (LC) or a Letter/Bank Guarantee (LG).", "ld": "Trade finance is a set of banking tools that make it safer and easier to buy and sell goods, especially internationally. A Letter of Credit (LC) is a bank promise to pay a supplier once agreed shipping documents are presented, which reassures a supplier who does not yet know you. A Letter of Guarantee or Bank Guarantee (LG) is a bank promise to pay a third party if you fail to meet an obligation. Together these reduce the risk that a buyer does not pay or a supplier does not deliver.", "e": "Opening an LC to import zippers and trims, so the overseas supplier is assured of payment."}, {"t": "Factoring & forfaiting", "d": "Getting cash now by selling your unpaid invoices to a financier.", "ld": "Factoring and forfaiting let you get cash now against money your customers owe you later. In factoring, you sell your short-term invoices (receivables) to a financier who advances most of the value immediately and then collects from your customer when due. Forfaiting is similar but used for larger, longer-term export receivables and is usually without recourse, meaning the financier takes on the risk of non-payment. Both improve cash flow when buyers pay on credit terms.", "e": "A garment exporter sells its 60-day invoice to a financier to get paid immediately instead of waiting."}, {"t": "Grant / Subsidy", "d": "Money you do not have to repay, given to support a specific goal.", "ld": "A grant or subsidy is money you do not repay, provided by a government, donor or development programme to support a particular objective such as modernisation, training, certification or exports. Grants are usually tied to specific eligible activities and require you to report on how the funds were used. They are competitive and limited, so they suit clearly defined improvement projects rather than general running costs.", "e": "A grant that part-funds installing energy-efficient dyeing equipment."}, {"t": "Lease (operational / finance)", "d": "Using equipment or vehicles for regular payments instead of buying outright.", "ld": "Leasing lets you use equipment or vehicles by paying regular instalments instead of buying them outright, which protects your cash. A finance lease usually runs for most of the asset life and can end with you owning the asset; an operating lease is shorter and closer to renting, with the provider keeping the asset at the end. Leasing suits machinery and vehicles that you need now but cannot fund fully upfront.", "e": "Leasing new sewing or knitting machines rather than paying the full price upfront."}, {"t": "Long-term loan", "d": "A loan repaid over several years, typically for larger investments.", "ld": "A long-term loan is borrowed money repaid in instalments over several years, typically used for larger investments whose benefits are spread over time. Because the term is long, each instalment is lower than on a short loan of the same size, but you pay more total interest. It usually requires collateral and a clear repayment plan, and suits expansion, construction or major equipment.", "e": "A five-year loan to build or expand a factory."}, {"t": "Concessional / soft loan", "d": "A loan on easier-than-market terms, often government- or donor-backed.", "ld": "A concessional or soft loan is offered on terms easier than the normal market, such as a lower interest rate, a longer repayment period or a grace period before repayments start. These loans are usually funded or backed by governments, central banks or development agencies to encourage priority activities like modernisation, exports or green investment. Availability is limited and specific eligibility conditions apply.", "e": "A subsidised loan to modernise old machinery."}, {"t": "Mortgage / real estate", "d": "A loan secured against property or land, usually to buy or build premises.", "ld": "A mortgage is a loan secured against property or land, most often to buy, build or renovate business premises. The property acts as collateral, so if the loan is not repaid the lender can claim it. Because it is secured by real estate, a mortgage usually offers larger amounts and longer repayment periods than an unsecured loan.", "e": "A loan to purchase a factory building, using the building itself as security."}, {"t": "Insurance / guarantee", "d": "Protection against a risk (insurance) or a third party promising to pay if you cannot (guarantee).", "ld": "Insurance and guarantees are risk-protection tools that can also unlock financing. Insurance pays out if a defined risk occurs, for example export credit insurance covering the risk that a foreign buyer does not pay. A guarantee is a third party promising to pay if you cannot, which lowers the lender risk and can make approval easier or reduce the collateral you need.", "e": "Export credit insurance that covers the risk a foreign buyer fails to pay."}, {"t": "Equity investment", "d": "Raising money by selling a share of ownership in your business instead of borrowing.", "ld": "Equity investment means raising money by selling a share of ownership in your business rather than borrowing. Investors provide capital and in return share in future profits and in the increase in the company value, but there are no fixed repayments. It suits businesses that need growth capital and are willing to share ownership and decisions, and it can bring expertise and networks alongside the money.", "e": "An investor puts in capital for a stake to help scale up production."}, {"t": "Venture capital / PE", "d": "Equity from specialist investors: venture capital for young high-growth firms, private equity for more established ones.", "ld": "Venture capital (VC) and private equity (PE) are professional equity investors. VC funds typically back young, high-growth companies that are too risky for banks, taking a minority stake and expecting rapid growth. PE usually invests in more established businesses, often taking a larger stake and an active role in management. Both expect to exit their investment after some years, for example through a sale.", "e": "A VC fund backs a fast-growing sustainable apparel startup."}, {"t": "Bond / capital market", "d": "Raising money by issuing tradable debt (bonds) to investors.", "ld": "A bond is a way of borrowing directly from many investors by issuing tradable debt securities that promise to pay interest and repay the principal on a set date. It is generally used by larger, well-established companies that can meet disclosure and credit-rating requirements, and it can raise substantial amounts at once. For most SMEs this is not yet accessible, but it is useful to understand as a later growth option.", "e": "A large manufacturer issues a bond to fund a major expansion."}, {"t": "Microfinance", "d": "Small loans and financial services for micro and very small businesses.", "ld": "Microfinance provides small loans and basic financial services to micro and very small businesses and individuals who may not qualify for conventional bank credit. Loan sizes are small, terms are short, and requirements are lighter, sometimes using group lending or character-based assessment instead of heavy collateral. It suits micro-entrepreneurs, home-based producers and the smallest enterprises.", "e": "A home-based tailor takes a micro-loan to buy one new machine."}, {"t": "Green / sustainable finance", "d": "Financing earmarked for environmentally beneficial projects.", "ld": "Green or sustainable finance is money set aside specifically for projects that benefit the environment, such as renewable energy, energy and water efficiency, cleaner production or pollution control. It sometimes comes with better terms or dedicated funding lines because it is backed by climate or development funds. To qualify you usually need to show the environmental purpose of the investment, and sometimes a certification.", "e": "A loan to install rooftop solar panels at a garment factory."}, {"t": "Blended finance facility", "d": "Combines concessional or donor funds with commercial finance to make a project viable.", "ld": "Blended finance mixes concessional or donor money with normal commercial finance so that a project which would otherwise be too risky or costly becomes viable. The concessional part absorbs some risk or lowers the overall cost, which encourages private lenders or investors to take part. It is often used for first-of-a-kind or higher-impact projects such as new sustainable technologies.", "e": "A mix of grant and loan to fund a first-of-its-kind circular-textile plant."}, {"t": "Export credit / refinance", "d": "Finance that supports exporters, including low-rate central-bank refinance lines.", "ld": "Export credit and refinance schemes are designed to help exporters access finance on better terms. Under a refinance line, the central bank or a development institution provides funds to banks at a low rate so they can on-lend to exporters cheaply. This supports the working capital exporters need to buy inputs and produce goods before they are paid by overseas buyers.", "e": "A refinance-backed loan to fulfil a large export apparel order."}, {"t": "Pre-financing / FOB & supply chain finance", "d": "Cash provided before shipment or payment along the supply chain.", "ld": "These facilities provide cash at the right point in the trade cycle. Pre-shipment or pre-financing gives you funds to produce and prepare goods once you have a confirmed order, before you ship or get paid. Supply chain finance uses the strength of a large buyer or anchor firm to help its smaller suppliers get paid earlier. FOB (Free On Board) refers to the point where goods are loaded for shipment and responsibility passes to the buyer.", "e": "Pre-shipment finance to manufacture garments after receiving a confirmed export order."}, {"t": "Sustainability-linked loan / facility", "d": "A loan whose terms improve if you meet agreed environmental or social targets.", "ld": "A sustainability-linked loan ties the loan terms to your performance on agreed environmental or social targets. If you meet the targets, for example reducing water or energy use by a set amount, your interest rate or fees fall; if you miss them, they may rise. Unlike green finance, the money is not restricted to a specific project, but the incentives reward measurable improvement.", "e": "A loan on which your rate drops as you reduce water or energy use."}, {"t": "Treasury, FX & hedging", "d": "Tools to manage cash and protect against currency swings.", "ld": "These are tools for managing your cash and protecting against movements in exchange rates and interest rates. If you earn foreign currency from exports or pay for imports, currency swings can erode your margins. Instruments such as forward contracts let you fix a future exchange rate in advance, giving you certainty over what you will receive or pay.", "e": "Locking in an exchange rate so a future US-dollar export payment is not eroded by rupee movements."}], "Types of institution": [{"t": "Commercial Bank", "d": "A licensed bank offering a full range of services to businesses and individuals.", "ld": "A licensed commercial bank offers a full range of services (deposits, loans, overdrafts, trade finance, cards) to businesses and individuals. Commercial banks are the most common source of SME loans, working-capital lines and trade finance in Sri Lanka, and they typically require collateral and a track record.", "e": "A garment SME opens a working-capital overdraft at a commercial bank."}, {"t": "Development Bank", "d": "A bank mandated to support development priorities such as SMEs, industry and exports.", "ld": "A development bank has a mandate to support development priorities such as SMEs, agriculture, industry and exports. It often provides longer-term or lower-cost project finance than a typical commercial bank, and may channel donor or government funding lines to target sectors.", "e": "A term loan from a development bank to expand a factory."}, {"t": "Non-Banking Financial Institution (NBFI)", "d": "A licensed finance or leasing company that lends but cannot take demand deposits like a bank.", "ld": "A non-banking financial institution (NBFI) is a licensed finance or leasing company that provides loans, leasing, hire purchase and factoring, but cannot take demand deposits the way a bank can. NBFIs often serve smaller businesses and asset-finance needs, sometimes with faster approval but higher rates than banks.", "e": "Leasing a knitting machine through a registered finance company."}, {"t": "Microfinance Institution", "d": "Provides small loans and basic services to micro-enterprises and low-income entrepreneurs.", "ld": "A microfinance institution provides small loans and basic financial services to micro-enterprises and low-income entrepreneurs who may not qualify for bank credit. It often uses group lending or lighter requirements instead of heavy collateral, and suits the smallest and home-based producers.", "e": "A micro-loan for a home-based tailor to buy one machine."}, {"t": "Government Agency", "d": "A state body or programme providing finance, guarantees, grants or subsidised schemes.", "ld": "A government agency is a state body or programme that provides finance, guarantees, grants or subsidised schemes to support enterprises, exports or specific sectors. Support is usually tied to eligibility conditions and policy priorities.", "e": "An export-development grant or a state-backed credit-guarantee scheme."}, {"t": "Development Finance Institution / Multilateral", "d": "A national or international institution that funds development, often through local banks on concessional terms.", "ld": "A development finance institution or multilateral is a national or international body (such as a multilateral development bank or bilateral agency) that funds development by lending to or through local banks, or by co-financing larger projects. Its funds often carry concessional terms and reach SMEs indirectly via partner banks.", "e": "A credit line channelled through local banks to on-lend to SMEs."}, {"t": "Impact Investor / VC", "d": "An investor providing equity or risk capital seeking both financial return and positive impact.", "ld": "An impact investor or venture-capital fund provides equity or risk capital and seeks both a financial return and positive social or environmental impact. It takes an ownership stake rather than lending, and suits growth-stage or innovative businesses willing to share ownership.", "e": "An impact fund takes a stake in a sustainable apparel startup."}], "Key terms": [{"t": "Repayment period", "d": "How long you have to repay: short (under 1 year), medium (1 to 5 years) or long (over 5 years).", "ld": "The repayment period, sometimes called the tenor, is the length of time you have to repay a facility. It is commonly grouped as short-term (under one year), medium-term (one to five years) and long-term (over five years). A longer period lowers each instalment but usually increases the total interest you pay.", "e": ""}, {"t": "Grace period", "d": "An initial spell where you pay little or no principal, sometimes interest only.", "ld": "A grace period is an initial spell, usually at the start of a loan, when you make reduced or no principal repayments and sometimes pay only interest. It gives a new investment time to start generating income before full repayments begin. Interest usually still accrues during this time.", "e": "Six months of interest-only payments after buying new machines."}, {"t": "Concessionary / low-cost", "d": "Terms easier than the market: lower interest, longer repayment or a grace period.", "ld": "Concessionary terms are easier than the normal market, through a lower interest rate, a longer repayment period, a grace period or reduced fees. They are usually funded or backed by governments or development agencies to encourage priority activities, and they come with eligibility conditions.", "e": ""}, {"t": "Collateral / security", "d": "Assets pledged to a lender that they can claim if the loan is not repaid.", "ld": "Collateral is an asset you pledge to a lender, such as property, deposits, machinery or a personal guarantee, which the lender can claim if the loan is not repaid. It lowers the lender risk and can improve the amount, rate or chance of approval. Collateral-free products require no such security, which helps businesses that lack assets.", "e": "Pledging factory land against a loan."}, {"t": "Guarantee / risk-sharing", "d": "A third party agrees to cover part of the lender loss if you default.", "ld": "Under a guarantee or risk-sharing scheme, a third party such as a credit-guarantee institution agrees to cover part of the lender loss if you default. This makes lenders more willing to approve loans and can reduce the collateral they demand, which is especially helpful for SMEs with limited security.", "e": "A scheme covering 50% of the lender risk on an SME loan."}, {"t": "T&C access", "d": "Whether a product is Open to textile and clothing SMEs, Restricted, or Other (not clearly stated).", "ld": "This tag shows how open a product is to textile and clothing SMEs, based on the funder stated eligibility. Open means T&C SMEs are eligible. Restricted means the product is limited to particular sectors, to large corporates, or to retail customers, so many T&C SMEs may not qualify. Other means eligibility is not clearly stated, so you should open the product and check its criteria directly.", "e": ""}, {"t": "Women-led", "d": "The product targets or prioritises women-owned or women-led businesses.", "ld": "A product marked women-led targets or gives priority to businesses that are owned or led by women, sometimes with dedicated funding windows, lower rates or lighter collateral. If your business is women-owned or women-led, these products may offer better terms.", "e": ""}]};
+function stripNum(s){ return String(s||'').replace(/^\d+\.\s*/,''); }
+function typeChip(t) {
+  if(!t) return '—';
+  return `<span class="chip chip-purple" style="font-size:11px">${stripNum(t)}</span>`;
+}
+function glossSlug(g){ return 'gloss-'+g.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,''); }
+function gotoGloss(g){ const el=document.getElementById(glossSlug(g)); if(el) el.scrollIntoView({behavior:'smooth',block:'start'}); }
+function renderGlossary(){
+  const el = document.getElementById('glossary-body'); if(!el) return;
+  const keys = Object.keys(GLOSSARY);
+  let out = '<div class="gloss-nav">' + keys.map(g=>`<a class="gloss-nav-link" onclick="gotoGloss('${g.replace(/'/g,"\\'")}')">${g}</a>`).join('') + '</div>';
+  keys.forEach(g => {
+    out += `<div class="gloss-group" id="${glossSlug(g)}"><h3>${g}</h3><div class="gloss-grid">`;
+    GLOSSARY[g].forEach(it => {
+      out += `<div class="gloss-item"><div class="gloss-term">${it.t}</div><div class="gloss-def">${it.ld||it.d}</div>` + (it.e?`<div class="gloss-ex"><b>Example:</b> ${it.e}</div>`:'') + `</div>`;
+    });
+    out += `</div></div>`;
+  });
+  el.innerHTML = out;
+}
+function tenorChip(t) {
+  if(!t) return '—';
+  if(t.includes('Short')) return `<span class="chip chip-amber">${t}</span>`;
+  if(t.includes('Long'))  return `<span class="chip chip-blue">${t}</span>`;
+  return `<span class="chip chip-grey">${t}</span>`;
+}
+function greenChip(g) {
+  return g==='Yes'
+    ? '<span class="chip chip-green">🌱 Yes</span>'
+    : '<span class="chip chip-grey" style="font-size:11px">—</span>';
+}
+
+/* ── CHARTS ── */
+const GS = ['#0B2818','#14542E','#1D7A45','#2EAD65','#5DC98A','#A3E4BE'];
+const BS = ['#1565C0','#1976D2','#1E88E5','#2196F3','#42A5F5','#90CAF9','#BBDEFB'];
+
+function countBy(f) {
+  const m={};
+  DATA.forEach(r=>{ const v=r[f]; if(v) m[v]=(m[v]||0)+1; });
+  return Object.entries(m).sort((a,b)=>b[1]-a[1]);
+}
+function countBySplit(f) {
+  const m={};
+  DATA.forEach(r=>{ splitMulti(r[f]).forEach(v=>{ m[v]=(m[v]||0)+1; }); });
+  return Object.entries(m).sort((a,b)=>b[1]-a[1]);
+}
+function tcCat(s){ s=String(s||'').toUpperCase(); if(s.startsWith('OPEN')||s.startsWith('SECTOR-NEUTRAL')) return 'Open'; if(s.startsWith('RESTRICTED')) return 'Restricted'; return 'Other'; }
+function tcChip(s){ const c=tcCat(s); if(c==='Open') return '<span class="chip chip-green">Open</span>'; if(c==='Restricted') return '<span class="chip chip-amber">Restricted</span>'; return '<span class="chip chip-grey" style="font-size:11px">Other</span>'; }
+function makeBar(id, entries, pal, horiz=false) {
+  const labels = entries.map(e=>e[0].replace(/^\d+\.\s*/,'').replace(/^[a-z]\.\s*/,''));
+  const vals   = entries.map(e=>e[1]);
+  const colors = entries.map((_,i)=>pal[i%pal.length]);
+  new Chart(document.getElementById(id),{
+    type:'bar',
+    data:{labels, datasets:[{data:vals, backgroundColor:colors, borderRadius:5, borderSkipped:false}]},
+    options:{
+      indexAxis: horiz?'y':'x',
+      responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{display:false}},
+      scales:{
+        x:{grid:{display:!horiz,color:'rgba(0,0,0,.04'}, ticks:{font:{size:10,family:"Outfit"}, color:'#8A9BA8'}, border:{display:false}},
+        y:{grid:{display:horiz,color:'rgba(0,0,0,.04'}, ticks:{font:{size:10,family:"Outfit"}, color:'#8A9BA8', callback: v=>String(v).substring(0,22)}, border:{display:false}}
+      }
+    }
+  });
+}
+function makeDoughnut(id, labels, vals, colors) {
+  new Chart(document.getElementById(id),{
+    type:'doughnut',
+    data:{labels, datasets:[{data:vals, backgroundColor:colors, borderWidth:3, borderColor:'#fff'}]},
+    options:{
+      responsive:true, maintainAspectRatio:false, cutout:'65%',
+      plugins:{
+        legend:{position:'right', labels:{font:{size:11,family:"Outfit"}, color:'#4A5568', boxWidth:12, padding:12}}
+      }
+    }
+  });
+}
+
+function splitMulti(s){ return String(s||'').split(/,\s*(?![^(]*\))/).map(x=>x.trim()).filter(Boolean); }
+const SIZE_OPTS=['Micro (< LKR 15M turnover)','Small (LKR 15-250M)','Medium (LKR 250M-750M)','Large (> LKR 750M)'];
+function sizeSet(v){
+  const out=new Set();
+  splitMulti(v).forEach(p=>{const t=p.toLowerCase();
+    if(t.startsWith('all')){['Micro','Small','Medium','Large'].forEach(x=>out.add(x));}
+    else if(t.startsWith('smes & large')||t.startsWith('sme & large')){out.add('Small');out.add('Medium');out.add('Large');}
+    else if(t.startsWith('sme')){out.add('Micro');out.add('Small');out.add('Medium');}
+    else if(t.startsWith('micro')){out.add('Micro');}
+    else if(t.startsWith('small')){out.add('Small');}
+    else if(t.startsWith('medium')){out.add('Medium');}
+    else if(t.startsWith('large')){out.add('Large');}
+  });
+  return out;
+}
+function sizeMatch(row,sel){ if(!sel) return true; return sizeSet(row['Std. Business Size']).has(sel.split(' ')[0]); }
+
+function isCollatFree(r){ return r['Collateral Class']==='Collateral not required'; }
+function isWomen(r){ return String(r['Gender Lens']||'').trim().toLowerCase().startsWith('yes'); }
+function isConc(r){ return r['Concessional']==='Concessionary'; }
+
+/* ── SHORTLIST & COMPARE ─────────────────────────────── */
+const SHORTLIST_MAX = 5;
+let shortlist = [];
+try { const sv = JSON.parse(localStorage.getItem('gtexShortlist')||'[]'); shortlist = sv.filter(id=>DATA.some(r=>r.ID===id)); } catch(e) { shortlist = []; }
+function saveShortlist(){ try{ localStorage.setItem('gtexShortlist', JSON.stringify(shortlist)); }catch(e){} }
+function inShortlist(id){ return shortlist.includes(id); }
+function toggleShortlist(id, ev){
+  if(ev) ev.stopPropagation();
+  if(inShortlist(id)) shortlist = shortlist.filter(x=>x!==id);
+  else {
+    if(shortlist.length >= SHORTLIST_MAX){ alert('Your shortlist is full (maximum '+SHORTLIST_MAX+' products). Remove one before adding another.'); return; }
+    shortlist.push(id);
+  }
+  saveShortlist(); refreshStars(); renderShortlistBar();
+}
+function starBtn(id){ const on=inShortlist(id); return `<button class="star-btn ${on?'on':''}" data-star="${id}" title="${on?'Remove from shortlist':'Add to shortlist (compare up to 5)'}" onclick="toggleShortlist('${id}',event)">${on?'★':'☆'}</button>`; }
+function refreshStars(){ document.querySelectorAll('[data-star]').forEach(b=>{ const on=inShortlist(b.getAttribute('data-star')); b.classList.toggle('on',on); b.textContent=on?'★':'☆'; }); }
+function clearShortlist(){ shortlist=[]; saveShortlist(); refreshStars(); renderShortlistBar(); closeCompare(); }
+function renderShortlistBar(){
+  const bar=document.getElementById('shortlist-bar');
+  if(!bar) return;
+  if(!shortlist.length){ bar.classList.remove('show'); return; }
+  bar.classList.add('show');
+  const c=document.getElementById('sl-count'); if(c) c.textContent = shortlist.length;
+}
+function nd(v){ const s=String(v==null?'':v).trim(); return !s || /^not disclosed/i.test(s) || s==='—' || s==='-'; }
+function isUrl(v){ return /^https?:\/\//i.test(String(v||'').trim()); }
+const CMP_ROWS = [
+ ['Product type', r=>(r['Std. Product Type']||'').replace(/^\d+\.\s*/,'')],
+ ["What it's for", r=>r['Std. Financing Need']],
+ ['T&C access', r=>tcCat(r['T&C Applicability'])],
+ ['Repayment period', r=>r['Tenor']],
+ ['Interest / cost', r=>r['Interest Rate / Cost']],
+ ["Max. finance (LKR '000)", r=>r["Max. Finance (LKR '000)"]],
+ ["Min. finance (LKR '000)", r=>r["Min. Finance (LKR '000)"]],
+ ['Grace period', r=>r['Grace Period']],
+ ['Currency', r=>r['Currency']],
+ ['Collateral', r=>nd(r['Collateral Required'])?r['Collateral Class']:r['Collateral Required']],
+ ['Eligible business size', r=>r['Std. Business Size']],
+ ['Concessionary terms', r=>r['Concessional']],
+ ['Green finance', r=>r['Std. Green']==='Yes'?('Yes'+(r['Std. Green Investment Type']?' ('+r['Std. Green Investment Type']+')':'')):'No'],
+ ['Women-led focus', r=>isWomen(r)?'Yes':'No'],
+ ['Required documents', r=>r['Required Documents']],
+ ['Processing time', r=>r['Processing Time (months)']],
+ ['Contact', r=>[r['Contact Person'],r['Contact Phone'],r['Contact Email']].filter(x=>!nd(x)).join(' · ')],
+ ['Last verified', r=>r['Last Verified']||'June 2026'],
+];
+function openCompare(){
+  const items = shortlist.map(id=>DATA.find(r=>r.ID===id)).filter(Boolean);
+  if(!items.length){ closeCompare(); return; }
+  const head = `<tr><th class="cmp-corner">Compare</th>${items.map(r=>`<th><div class="cmp-inst" style="color:${ic(r['Institution Name (Abbr.)'])}">${r['Institution Name (Abbr.)']} · ${r['Institution Full Name']||''}</div><div class="cmp-prod">${r['Financing Product']}</div><div class="cmp-actions no-print"><button class="cmp-mini" onclick="openModal('${r.ID}')">Details</button><button class="cmp-mini danger" onclick="toggleShortlist('${r.ID}');openCompare()">Remove</button></div>${(r['Product Page']||r['Website'])?`<a class="cmp-link" href="${(r['Product Page']||r['Website']).trim()}" target="_blank" rel="noopener">Product page ↗</a>`:''}</th>`).join('')}</tr>`;
+  const body = CMP_ROWS.map(([label,fn])=>{
+    const vals = items.map(fn);
+    if(vals.every(nd)) return '';
+    return `<tr><td class="cmp-label">${label}</td>${vals.map(v=>`<td>${nd(v)?'<span class="cmp-nd">Not disclosed</span>':v}</td>`).join('')}</tr>`;
+  }).join('');
+  document.getElementById('cmp-table').innerHTML = `<thead>${head}</thead><tbody>${body}</tbody>`;
+  const d=document.getElementById('cmp-date'); if(d) d.textContent=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+  document.getElementById('compare-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeCompare(){ const o=document.getElementById('compare-overlay'); if(o && o.classList.contains('open')){ o.classList.remove('open'); document.body.style.overflow=''; } }
+function printCompare(){ window.print(); }
+
+function tcRank(r){ const c=tcCat(r['T&C Applicability']); return c==='Open'?0:(c==='Restricted'?1:2); }
+function fitBadges(r){
+  let h='';
+  if(r['Std. Green']==='Yes') h+='<span class="chip chip-green" title="Green / sustainable finance">🌱 Green</span> ';
+  if(isCollatFree(r)) h+='<span class="chip chip-teal" title="No collateral required">🔓 Collateral-free</span> ';
+  if(isWomen(r)) h+='<span class="chip chip-purple" title="Targets women-led businesses">♀ Women-led</span> ';
+  if(isConc(r)) h+='<span class="chip chip-amber" title="Concessionary / low-cost terms">💸 Low-cost</span> ';
+  return h || '<span style="color:var(--mist);font-size:11px">—</span>';
+}
+function quickStart(kind){
+  populateFilters();
+  clearFilters();
+  const set=(id,v)=>{ const el=document.getElementById(id); if(el) el.value=v; };
+  if(kind==='wc')      set('f-need','Working capital');
+  else if(kind==='capex')  set('f-need','Fixed assets / CAPEX');
+  else if(kind==='trade')  set('f-need','Trade finance');
+  else if(kind==='startup') set('f-need','Start-up / creation');
+  else if(kind==='green')  set('f-green','Yes');
+  else if(kind==='women')  set('f-women','yes');
+  else if(kind==='collat') set('f-collat','yes');
+  showPanel('finder');
+  applyFilters();
+}
+window.addEventListener('DOMContentLoaded', () => {
+  makeBar('cInst', countBy('Institution Name (Abbr.)').slice(0,12), GS);
+  makeBar('cType', countBy('Std. Product Type').slice(0,9), BS, true);
+  makeBar('cNeed', countBySplit('Std. Financing Need').slice(0,10), GS, true);
+  makeBar('cSize', countBy('Std. Business Size'), GS);
+  const gY = DATA.filter(r=>r['Std. Green']==='Yes').length;
+  makeDoughnut('cGreen',
+    [`Conventional (${DATA.length-gY})`, `Green (${gY})`],
+    [DATA.length-gY, gY],
+    ['#E2E8F0','#1D7A45']);
+  populateFilters();
+});
+
+/* ── FILTER DROPDOWNS ── */
+let filtersPopulated = false;
+function rankFor(id,v){
+  if(id==='f-tenor'){ const o=['Short-term','Medium-term','Long-term','None','Not disclosed']; const i=o.findIndex(p=>v.startsWith(p)); return i<0?o.length:i; }
+  if(id==='f-need'){ const o=['Working capital','Trade finance','Cash flow management','Invoice/receivables financing','Fixed assets / CAPEX','Start-up / creation','Technology & innovation','Capacity building','Green / sustainable assets & RECP upgrades','Sustainable upgrades','Sustainable Agriculture']; const i=o.findIndex(p=>v.startsWith(p)); return i<0?o.length:i; }
+  if(id==='f-size'){ const s=v.toLowerCase(); if(s.startsWith('micro'))return 1; if(s.startsWith('small'))return 2; if(s.startsWith('medium'))return 3; if(s.startsWith('sme'))return 4; if(s.startsWith('large'))return 6; if(s.startsWith('other'))return 8; if(s.startsWith('not disclosed'))return 9; return 7; }
+  return 0;
+}
+function populateFilters() {
+  if (filtersPopulated) return;
+  filtersPopulated = true;
+  const INST_FULL = {};
+  DATA.forEach(r=>{ const a=r['Institution Name (Abbr.)']; if(a && !INST_FULL[a]) INST_FULL[a]=r['Institution Full Name']||a; });
+  const cfg = [
+    ['f-size','Std. Business Size'],['f-need','Std. Financing Need'],['f-greentype','Std. Green Investment Type'],
+    ['f-type','Std. Product Type'],['f-tenor','Std. Tenor'],
+    ['f-inst','Institution Name (Abbr.)'],['f-insttype','Institution Type']
+  ];
+  const splitFields = new Set(['Std. Financing Need','Std. Tenor','Std. Green Investment Type']);
+  cfg.forEach(([id,field]) => {
+    let vals;
+    if (id==='f-size') { vals=[...SIZE_OPTS]; }
+    else if (splitFields.has(field)) {
+      const s=new Set();
+      DATA.forEach(r=>splitMulti(r[field]).forEach(x=>s.add(x)));
+      vals=[...s];
+    } else {
+      vals=[...new Set(DATA.map(r=>r[field]).filter(Boolean))];
+    }
+    if (id==='f-greentype') vals = vals.filter(v=>!/^not disclosed/i.test(v));
+    vals.sort((a,b)=>(rankFor(id,a)-rankFor(id,b)) || a.localeCompare(b));
+    const sel = document.getElementById(id);
+    vals.forEach(v => {
+      const o = document.createElement('option');
+      o.value = v;
+      o.textContent = (id==='f-inst') ? (INST_FULL[v] || v) : (id==='f-insttype') ? v.replace(/\s*-\s*\(.*/,'').trim() : v.replace(/^\d+\.\s*/,'').replace(/^[a-z]\.\s*/,'');
+      sel.appendChild(o);
+    });
+  });
+}
+
+/* ── FINDER ── */
+let finderRows = [...DATA];
+let finderActive = false, finderPage = 1; const PER_F = 25;
+function applyFilters() {
+  const get = id => document.getElementById(id).value;
+  finderRows = DATA.filter(r =>
+    sizeMatch(r, get('f-size')) &&
+    (!get('f-need')  || splitMulti(r['Std. Financing Need']).includes(get('f-need'))) &&
+    (!get('f-type')  || r['Std. Product Type']===get('f-type'))   &&
+    (!get('f-tenor') || splitMulti(r['Std. Tenor']).includes(get('f-tenor'))) &&
+    (!get('f-inst')  || r['Institution Name (Abbr.)']===get('f-inst')) &&
+    (!get('f-insttype') || r['Institution Type']===get('f-insttype')) &&
+    (!get('f-green') || r['Std. Green']===get('f-green')) &&
+    (!get('f-greentype') || splitMulti(r['Std. Green Investment Type']).includes(get('f-greentype'))) &&
+    (!get('f-tc')    || tcCat(r['T&C Applicability'])===get('f-tc')) &&
+    (get('f-collat')!=='yes' || isCollatFree(r)) &&
+    (get('f-women')!=='yes'  || isWomen(r)) &&
+    (get('f-conc')!=='yes'   || isConc(r))
+  );
+  const pill = document.getElementById('finder-pill');
+  pill.style.display = 'flex';
+  document.getElementById('finder-count-n').textContent = finderRows.length;
+  finderActive = true;
+  renderFinder(1);
+}
+function clearFilters() {
+  ['f-size','f-need','f-type','f-tenor','f-inst','f-insttype','f-green','f-greentype','f-tc','f-collat','f-women','f-conc'].forEach(id=>{const el=document.getElementById(id); if(el) el.value='';});
+  document.getElementById('finder-search').value='';
+  document.getElementById('finder-pill').style.display='none';
+  finderRows=[...DATA];
+  finderActive=false;
+  renderFinder();
+}
+function renderFinder(pg) {
+  finderPage = pg || 1;
+  const q=(document.getElementById('finder-search')?.value||'').toLowerCase();
+  const tbody=document.getElementById('finder-tbody');
+  const empty=document.getElementById('finder-empty');
+  const prompt=document.getElementById('finder-prompt');
+  const pager=document.getElementById('finder-pager');
+  const title=document.getElementById('finder-table-title');
+  prompt.style.display='none';
+  let rows = finderRows;
+  if(q) rows=rows.filter(r=>Object.values(r).some(v=>String(v).toLowerCase().includes(q)));
+  rows = rows.slice().sort((a,b)=>(tcRank(a)-tcRank(b)) || ((isConc(b)?1:0)-(isConc(a)?1:0)));
+  title.textContent = `${rows.length} product${rows.length!==1?'s':''}`;
+  if(!rows.length){ tbody.innerHTML=''; pager.innerHTML=''; empty.style.display='block'; return; }
+  empty.style.display='none';
+  const pages=Math.ceil(rows.length/PER_F);
+  if(finderPage>pages) finderPage=1;
+  const slice=rows.slice((finderPage-1)*PER_F, finderPage*PER_F);
+  tbody.innerHTML=slice.map((r,i)=>`
+    <tr onclick="openModal('${r.ID}')">
+      <td class="star-cell" data-label="Shortlist">${starBtn(r.ID)}</td>
+      <td data-label="Lender">
+        <span class="inst-badge" style="color:${ic(r['Institution Name (Abbr.)'])}">${r['Institution Name (Abbr.)']}</span>
+        <div style="font-size:11px;color:var(--mist);margin-top:1px">${r['Institution Full Name']}</div>
+      </td>
+      <td data-label="Product">
+        <div class="prod-name">${r['Financing Product']}</div>
+        <div class="prod-code">${r['Product Code']}</div>
+      </td>
+      <td data-label="Description"><div class="desc-clamp">${r['Product Description']||'—'}</div></td>
+      <td data-label="What it's for" style="font-size:12px">${r['Std. Financing Need']?.replace(/^\d+\.\s*/,'')||'—'}</td>
+      <td data-label="Repayment">${tenorChip(r['Std. Tenor'])}</td>
+      <td data-label="Max amount" style="font-size:12px;color:var(--slate)">${r["Max. Finance (LKR '000)"]||'—'}</td>
+      <td data-label="Good to know"><div class="fit-cell">${tcCat(r['T&C Applicability'])!=='Open'?tcChip(r['T&C Applicability'])+' ':''}${fitBadges(r)}</div></td>
+      <td data-label="Product page">
+        ${(r['Product Page']||r['Website'])?`<a class="row-link ext" href="${r['Product Page']||r['Website']}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Product page ↗</a>`:'<span style="color:var(--mist);font-size:11px">—</span>'}
+      </td>
+    </tr>`).join('');
+  if(pages>1){
+    let ph=`<div class="pager-info">Showing <b>${(finderPage-1)*PER_F+1}–${Math.min(finderPage*PER_F,rows.length)}</b> of <b>${rows.length}</b></div><div class="pager-btns">`;
+    ph+=`<button class="pager-btn" ${finderPage===1?'disabled':''} onclick="renderFinder(${finderPage-1})">‹</button>`;
+    const st=Math.max(1,finderPage-2), en=Math.min(pages,st+4);
+    for(let p=st;p<=en;p++) ph+=`<button class="pager-btn ${p===finderPage?'active':''}" onclick="renderFinder(${p})">${p}</button>`;
+    ph+=`<button class="pager-btn" ${finderPage===pages?'disabled':''} onclick="renderFinder(${finderPage+1})">›</button></div>`;
+    pager.innerHTML=ph;
+  } else pager.innerHTML='';
+}
+
+/* ── DB TABLE ── */
+let dbSort={col:'ID',asc:true}, dbPage=1;
+const PER=20;
+function sortDb(c) {
+  dbSort={col:c, asc: dbSort.col===c?!dbSort.asc:true};
+  renderDb(1);
+}
+let dbFiltersPopulated=false;
+function populateDbFilters(){
+  if(dbFiltersPopulated) return; dbFiltersPopulated=true;
+  const IF={}; DATA.forEach(r=>{const a=r['Institution Name (Abbr.)']; if(a&&!IF[a])IF[a]=r['Institution Full Name']||a;});
+  const cfg=[['dbf-inst','Institution Name (Abbr.)',false,'f-inst'],['dbf-need','Std. Financing Need',true,'f-need'],['dbf-type','Std. Product Type',false,'f-type'],['dbf-size','Std. Business Size',false,'f-size'],['dbf-rep','Std. Tenor',true,'f-tenor']];
+  cfg.forEach(([id,field,split,rk])=>{
+    const sel=document.getElementById(id); if(!sel) return;
+    let vals; if(id==='dbf-size'){vals=[...SIZE_OPTS];} else if(split){const s=new Set();DATA.forEach(r=>splitMulti(r[field]).forEach(x=>s.add(x)));vals=[...s];} else vals=[...new Set(DATA.map(r=>r[field]).filter(Boolean))];
+    vals.sort((a,b)=>(rankFor(rk,a)-rankFor(rk,b))||a.localeCompare(b));
+    vals.forEach(v=>{const o=document.createElement('option');o.value=v;o.textContent=(id==='dbf-inst'?(IF[v]||v):v.replace(/^\d+\.\s*/,'').replace(/^[a-z]\.\s*/,''));sel.appendChild(o);});
+  });
+}
+function clearDbFilters(){
+  ['dbf-inst','dbf-need','dbf-type','dbf-size','dbf-rep','dbf-tc'].forEach(id=>{const e=document.getElementById(id); if(e) e.value='';});
+  const s=document.getElementById('db-search'); if(s) s.value='';
+  renderDb(1);
+}
+function getDbRows() {
+  const q=(document.getElementById('db-search')?.value||'').toLowerCase();
+  const gv=id=>{const e=document.getElementById(id);return e?e.value:'';};
+  let rows=DATA.filter(r =>
+    (!gv('dbf-inst') || r['Institution Name (Abbr.)']===gv('dbf-inst')) &&
+    (!gv('dbf-need') || splitMulti(r['Std. Financing Need']).includes(gv('dbf-need'))) &&
+    (!gv('dbf-type') || r['Std. Product Type']===gv('dbf-type')) &&
+    sizeMatch(r, gv('dbf-size')) &&
+    (!gv('dbf-rep')  || splitMulti(r['Std. Tenor']).includes(gv('dbf-rep'))) &&
+    (!gv('dbf-tc')   || tcCat(r['T&C Applicability'])===gv('dbf-tc'))
+  );
+  if(q) rows=rows.filter(r=>Object.values(r).some(v=>String(v).toLowerCase().includes(q)));
+  rows.sort((a,b)=>dbSort.asc?(a[dbSort.col]||'').localeCompare(b[dbSort.col]||''):(b[dbSort.col]||'').localeCompare(a[dbSort.col]||''));
+  return rows;
+}
+function renderDb(pg) {
+  dbPage=pg||1;
+  const rows=getDbRows();
+  const pages=Math.ceil(rows.length/PER);
+  const slice=rows.slice((dbPage-1)*PER, dbPage*PER);
+  const tbody=document.getElementById('db-tbody');
+  const empty=document.getElementById('db-empty');
+  const pager=document.getElementById('db-pager');
+  document.getElementById('db-count-label').textContent=`${rows.length} product${rows.length!==1?'s':''}`;
+  if(!slice.length){tbody.innerHTML='';empty.style.display='block';pager.innerHTML='';return;}
+  empty.style.display='none';
+  tbody.innerHTML=slice.map(r=>`
+    <tr onclick="openModal('${r.ID}')">
+      <td class="star-cell" data-label="Shortlist">${starBtn(r.ID)}</td>
+      <td data-label="Lender">
+        <span class="inst-badge" style="color:${ic(r['Institution Name (Abbr.)'])}">${r['Institution Name (Abbr.)']}</span>
+        <div style="font-size:11px;color:var(--mist);margin-top:1px">${r['Institution Full Name']||''}</div>
+      </td>
+      <td data-label="Product">
+        <div class="prod-name">${r['Financing Product']}</div>
+        <div class="prod-code">${r['Product Code']}</div>
+      </td>
+      <td data-label="What it's for" style="font-size:12px">${r['Std. Financing Need']?.replace(/^\d+\.\s*/,'')||'—'}</td>
+      <td data-label="Type">${typeChip(r['Std. Product Type'])}</td>
+      <td data-label="Size">${sizeChip(r['Std. Business Size'])}</td>
+      <td data-label="Repayment">${tenorChip(r['Std. Tenor'])}</td>
+      <td data-label="Cost" style="font-size:12px;color:var(--slate);max-width:130px">${r['Interest Rate / Cost']||'—'}</td>
+      <td data-label="Good to know"><div class="fit-cell">${fitBadges(r)}</div></td>
+      <td data-label="T&C access">${tcChip(r['T&C Applicability'])}</td>
+      <td><button class="btn" style="padding:5px 12px;font-size:11px;background:var(--parchment);color:var(--emerald);border:1px solid var(--sand)" onclick="event.stopPropagation();openModal('${r.ID}')">View →</button></td>
+    </tr>`).join('');
+
+  let ph=`<div class="pager-info">Showing <b>${(dbPage-1)*PER+1}–${Math.min(dbPage*PER,rows.length)}</b> of <b>${rows.length}</b></div><div class="pager-btns">`;
+  ph+=`<button class="pager-btn" ${dbPage===1?'disabled':''} onclick="renderDb(${dbPage-1})">‹</button>`;
+  const s=Math.max(1,dbPage-2),e=Math.min(pages,s+4);
+  for(let p=s;p<=e;p++) ph+=`<button class="pager-btn ${p===dbPage?'active':''}" onclick="renderDb(${p})">${p}</button>`;
+  ph+=`<button class="pager-btn" ${dbPage===pages?'disabled':''} onclick="renderDb(${dbPage+1})">›</button></div>`;
+  pager.innerHTML=ph;
+}
+
+/* ── MODAL ── */
+function openModal(id) {
+  const r=DATA.find(d=>d.ID===id); if(!r) return;
+  document.getElementById('modal-inst-pill').innerHTML=`<span style="width:8px;height:8px;border-radius:50%;background:${ic(r['Institution Name (Abbr.)'])};display:inline-block;margin-right:2px"></span> ${r['Institution Name (Abbr.)']} &nbsp;·&nbsp; ${r['Institution Full Name']}`;
+  document.getElementById('modal-title').textContent=r['Financing Product'];
+  document.getElementById('modal-code').textContent=r['Product Code']+' · '+r['Source of Finance']+(r['Institution Type']?' · '+r['Institution Type']:'');
+  const b=document.getElementById('modal-body');
+  const tcc=tcCat(r['T&C Applicability']);
+  const tcColor = tcc==='Open'?'var(--leaf)':(tcc==='Restricted'?'var(--gold)':'var(--slate)');
+  const cell=(label,val,big)=> nd(val)?'':`<div><div class="mf-label">${label}</div><div class="mf-val${big?' big':''}">${val}</div></div>`;
+  const grid=cells=>{ const c=cells.join(''); return c?`<div class="modal-grid">${c}</div>`:''; };
+  const kt = grid([
+    cell('Repayment period', r['Tenor']),
+    cell('Interest Rate / Cost', r['Interest Rate / Cost'], true),
+    cell("Min. Finance (LKR '000)", r["Min. Finance (LKR '000)"]),
+    cell("Max. Finance (LKR '000)", r["Max. Finance (LKR '000)"], true),
+    cell('Currency', r['Currency']),
+    cell('Grace Period', r['Grace Period']),
+    cell('Concessionary Terms', r['Concessional']),
+    cell('Guarantee / Risk-sharing', r['Guarantee'])
+  ]);
+  const el = grid([
+    cell('Business Size', r['Eligible Business Size']),
+    cell('T&C Value Chain Stage', r['T&C Value Chain Stage']),
+    cell('Turnover Requirement', r['Turnover Requirement']),
+    cell('Capital Requirement', r['Capital Requirement']),
+    cell('Collateral Required', r['Collateral Required']),
+    cell('Gender Lens (women-led)', r['Gender Lens'])
+  ]);
+  const ac = grid([
+    cell('Processing Time', r['Processing Time (months)']),
+    cell('Contact Person', r['Contact Person']),
+    cell('Email', r['Contact Email']),
+    cell('Phone', r['Contact Phone'])
+  ]);
+  const ec = nd(r['Eligibility Criteria'])?'':`<div style="margin-top:12px"><div class="mf-label" style="margin-bottom:5px">Eligibility Criteria</div><div class="modal-desc">${r['Eligibility Criteria']}</div></div>`;
+  const ea = nd(r['Eligible Projects / Applicants'])?'':`<div style="margin-top:12px"><div class="mf-label" style="margin-bottom:5px">Eligible Applicants</div><div class="modal-desc">${r['Eligible Projects / Applicants']}</div></div>`;
+  const rd = nd(r['Required Documents'])?'':`<div style="margin-top:12px"><div class="mf-label" style="margin-bottom:5px">Required Documents</div><div class="modal-desc">${r['Required Documents']}</div></div>`;
+  const applyTxt = (!isUrl(r['Application Form / Link']) && !nd(r['Application Form / Link']))?`<div style="margin-top:12px"><div class="mf-label" style="margin-bottom:5px">How to Apply</div><div class="modal-desc">${r['Application Form / Link']}</div></div>`:'';
+  const links = [
+    isUrl(r['Application Form / Link'])?`<a href="${String(r['Application Form / Link']).trim()}" target="_blank" class="modal-link">📝 Apply / Form ↗</a>`:'',
+    isUrl(r['Product Page'])?`<a href="${String(r['Product Page']).trim()}" target="_blank" class="modal-link alt">📄 Product Page ↗</a>`:'',
+    isUrl(r['Website'])?`<a href="${String(r['Website']).trim()}" target="_blank" class="modal-link alt">🌐 Institution Website ↗</a>`:''
+  ].join('');
+  b.innerHTML=`
+    <div class="modal-sec" style="padding-bottom:6px">
+      <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center">${tcChip(r['T&C Applicability'])} ${fitBadges(r)}<button class="modal-sl-btn" onclick="toggleShortlist('${r.ID}',event);this.innerHTML=inShortlist('${r.ID}')?'★ Shortlisted':'☆ Add to shortlist'">${inShortlist(r.ID)?'★ Shortlisted':'☆ Add to shortlist'}</button></div>
+    </div>
+    ${nd(r['Product Description'])?'':`<div class="modal-sec">
+      <div class="modal-sec-title">Product Description</div>
+      <div class="modal-desc">${r['Product Description']}</div>
+    </div>`}
+    ${r['T&C Applicability']?`<div class="modal-sec">
+      <div class="modal-sec-title">🧵 Access for Textile &amp; Clothing SMEs</div>
+      <div style="margin-bottom:8px">${tcChip(r['T&C Applicability'])}</div>
+      <div class="modal-desc" style="color:${tcColor}">${r['T&C Applicability']}</div>
+    </div>`:''}
+    ${kt?`<div class="modal-sec">
+      <div class="modal-sec-title">Key Terms</div>
+      ${kt}
+    </div>`:`<div class="modal-sec">
+      <div class="modal-sec-title">Key Terms</div>
+      <div class="modal-desc" style="color:var(--mist)">The funder has not published detailed terms for this product. Contact the institution or check the product page for current rates and amounts.</div>
+    </div>`}
+    ${(el||ec||ea)?`<div class="modal-sec">
+      <div class="modal-sec-title">Eligibility</div>
+      ${el}${ec}${ea}
+    </div>`:''}
+    ${(ac||rd||applyTxt||links)?`<div class="modal-sec">
+      <div class="modal-sec-title">Application &amp; Contact</div>
+      ${ac}${rd}${applyTxt}
+      ${links?`<div class="modal-links">${links}</div>`:''}
+    </div>`:''}
+    ${r['Std. Green']==='Yes'?`<div class="modal-sec"><div class="modal-sec-title">🌱 Green Finance</div><div class="modal-grid">${cell('Investment Type', r['Std. Green Investment Type'])||''}${cell('Green Certification Req.', r['Green Certification Req.'])||''}</div></div>`:''}
+    ${nd(r['Comments'])?'':`<div class="modal-sec"><div class="modal-sec-title">Notes</div><div class="modal-desc" style="font-size:12px;color:var(--mist)">${r['Comments']}</div></div>`}
+    <div class="modal-sec"><div class="modal-desc" style="font-size:11.5px;color:var(--mist)">Last verified: ${r['Last Verified']||'June 2026'} · Fields the funder has not published are hidden. Terms change often; always confirm with the institution before applying.</div></div>
+  `;
+  document.getElementById('overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeOverlay(e) { if(e.target===document.getElementById('overlay')) closeModal(); }
+function closeModal() {
+  document.getElementById('overlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown', e=>{ if(e.key==='Escape'){ closeModal(); closeCompare(); } });
+renderShortlistBar();
+</script>
+</body>
+</html>
