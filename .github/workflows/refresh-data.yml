@@ -33,17 +33,17 @@ jobs:
           SHAREPOINT_SHARE_URL: ${{ secrets.SHAREPOINT_SHARE_URL }}
         run: node fetch-sharepoint.mjs
 
-      - name: Regenerate finance.json
+      - name: Regenerate dashboard (index.html + finance.json)
         run: node generate-finance-json.mjs source.xlsx
 
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain public/finance.json)" ]; then
-            git add public/finance.json
-            git commit -m "chore: refresh finance.json from SharePoint"
+          if [ -n "$(git status --porcelain index.html public/finance.json)" ]; then
+            git add index.html public/finance.json
+            git commit -m "chore: refresh dashboard from SharePoint"
             git push
           else
-            echo "No changes to finance.json"
+            echo "No changes to dashboard"
           fi
