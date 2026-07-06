@@ -1,0 +1,8 @@
+node_modules/
+dist/
+source.xlsx
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
