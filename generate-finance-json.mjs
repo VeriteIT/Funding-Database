@@ -2,8 +2,13 @@
  * generate-finance-json.mjs
  *
  * Reads the GTEX Sri Lanka T&C SME Finance Guide workbook (the same file that
- * lives in SharePoint) and emits `public/finance.json`, the single data source
- * consumed by the dashboard.
+ * lives in SharePoint) and produces the deployable dashboard by injecting the
+ * live product data into `template.html`.
+ *
+ * Outputs:
+ *   - public/finance.json   (the raw data, handy for debugging / reuse)
+ *   - index.html            (template.html with `const DATA = ...` filled in
+ *                            and the header/KPI counts refreshed)
  *
  * Usage:
  *   node generate-finance-json.mjs [path-to-xlsx]
@@ -13,86 +18,70 @@
  * file to `source.xlsx` and passes it in.
  */
 import ExcelJS from "exceljs";
-import { readdirSync, writeFileSync, mkdirSync } from "node:fs";
+import { readdirSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = __dirname;
-const OUT_DIR = join(ROOT, "public");
-const OUT_FILE = join(OUT_DIR, "finance.json");
+const TEMPLATE = join(ROOT, "template.html");
+const OUT_HTML = join(ROOT, "index.html");
+const OUT_JSON = join(ROOT, "public", "finance.json");
 
-// Header row lives on row 3 of the Database sheet; data starts on row 4.
 const SHEET = "Database";
 const HEADER_ROW = 3;
 const DATA_START_ROW = 4;
 
-// Column index (1-based) -> field name in the emitted record.
+// Column index (1-based) in the Database sheet -> reference DATA field name.
+// These field names must match exactly what template.html's JS reads.
 const COLUMNS = {
-  1: "institutionAbbr",
-  2: "institution",
-  3: "sourceOfFinance", // FILTER
-  4: "institutionType", // FILTER
-  5: "productId",
-  6: "productName",
-  7: "instrument", // FILTER
-  8: "useCaseText",
-  9: "useCases", // FILTER (multi-value, comma separated)
-  10: "description",
-  11: "productUrl",
-  12: "currency",
-  13: "tenorText",
-  14: "tenor", // FILTER
-  15: "costText",
-  16: "gracePeriod",
-  17: "minFunding",
-  18: "maxFunding",
-  19: "concessionary", // FILTER
-  20: "guarantee",
-  21: "greenFocus", // FILTER (Yes/No)
-  22: "greenType", // FILTER (multi-value)
-  23: "eligibilityText",
-  24: "eligibleApplicants",
-  25: "businessSizeText",
-  26: "businessSize", // FILTER
-  27: "valueChainText",
-  28: "valueChain", // FILTER (multi-value)
-  29: "collateralText",
-  30: "collateral", // FILTER
-  31: "turnoverRequirement",
-  32: "capitalRequirement",
-  33: "greenCertRequirement",
-  34: "genderLens",
-  35: "requiredDocs",
-  36: "applicationForm",
-  37: "processingTime",
-  38: "institutionUrl",
-  39: "contactPerson",
-  40: "contactEmail",
-  41: "contactNumber",
-  42: "dateAdded",
-  43: "dateModified",
-  44: "smeApplicabilityText",
-  45: "smeApplicability", // FILTER
-  46: "comments",
+  1: "Institution Name (Abbr.)",
+  2: "Institution Full Name",
+  3: "Source of Finance",
+  4: "Institution Type",
+  // 5 = Product ID -> used to build Product Code
+  6: "Financing Product",
+  7: "Std. Product Type",
+  8: "Financing Need",
+  9: "Std. Financing Need",
+  10: "Product Description",
+  11: "Product Page",
+  12: "Currency",
+  13: "Tenor",
+  14: "Std. Tenor",
+  15: "Interest Rate / Cost",
+  16: "Grace Period",
+  17: "Min. Finance (LKR '000)",
+  18: "Max. Finance (LKR '000)",
+  19: "Concessional",
+  20: "Guarantee",
+  21: "Std. Green",
+  22: "Std. Green Investment Type",
+  23: "Eligibility Criteria",
+  24: "Eligible Projects / Applicants",
+  25: "Eligible Business Size",
+  26: "Std. Business Size",
+  27: "T&C Value Chain Stage",
+  29: "Collateral Required",
+  30: "Collateral Class",
+  31: "Turnover Requirement",
+  32: "Capital Requirement",
+  33: "Green Certification Req.",
+  34: "Gender Lens",
+  35: "Required Documents",
+  36: "Application Form / Link",
+  37: "Processing Time (months)",
+  38: "Website",
+  39: "Contact Person",
+  40: "Contact Email",
+  41: "Contact Phone",
+  44: "T&C Applicability",
+  46: "Comments",
+  43: "Last Verified", // Date Modified
 };
-
-// Fields that hold comma-separated multi-values -> arrays.
-const MULTI_FIELDS = new Set(["useCases", "greenType", "valueChain"]);
-
-const NULLISH = new Set([
-  "",
-  "n/a",
-  "na",
-  "not applicable",
-  "not disclosed",
-  "none",
-  "-",
-]);
 
 function cellToString(value) {
   if (value == null) return "";
-  // ExcelJS may return rich text / hyperlink objects.
   if (typeof value === "object") {
     if (value.text) return String(value.text).trim();
     if (value.result != null) return String(value.result).trim();
@@ -100,21 +89,10 @@ function cellToString(value) {
     if (Array.isArray(value.richText)) {
       return value.richText.map((r) => r.text).join("").trim();
     }
+    if (value instanceof Date) return value.toISOString().slice(0, 10);
     return "";
   }
   return String(value).trim();
-}
-
-function clean(value) {
-  const s = cellToString(value);
-  if (NULLISH.has(s.toLowerCase())) return "";
-  return s;
-}
-
-function splitMulti(value) {
-  const s = cellToString(value);
-  if (!s || NULLISH.has(s.toLowerCase())) return [];
-  return [...new Set(s.split(",").map((p) => p.trim()).filter(Boolean))];
 }
 
 function resolveSourcePath() {
@@ -126,8 +104,16 @@ function resolveSourcePath() {
   if (!xlsx.length) {
     throw new Error("No .xlsx source found. Pass a path or set SOURCE_XLSX.");
   }
-  // newest by name (files are date-prefixed) as a reasonable default
   return xlsx.sort().at(-1);
+}
+
+// Classify the free-text T&C applicability into Open / Restricted / Other
+// (mirrors template.html's tcCat()).
+function tcCat(s) {
+  const t = String(s || "").toUpperCase();
+  if (t.startsWith("OPEN") || t.startsWith("SECTOR-NEUTRAL")) return "Open";
+  if (t.startsWith("RESTRICTED")) return "Restricted";
+  return "Other";
 }
 
 async function main() {
@@ -140,35 +126,63 @@ async function main() {
   if (!ws) throw new Error(`Sheet "${SHEET}" not found.`);
 
   const records = [];
+  let seq = 0;
   for (let r = DATA_START_ROW; r <= ws.rowCount; r += 1) {
     const row = ws.getRow(r);
-    const abbr = clean(row.getCell(1).value);
-    if (!abbr) continue; // skip blank / spacer rows
+    const abbr = cellToString(row.getCell(1).value);
+    if (!abbr) continue;
 
+    seq += 1;
     const rec = {};
-    for (const [colStr, field] of Object.entries(COLUMNS)) {
-      const col = Number(colStr);
-      const raw = row.getCell(col).value;
-      if (MULTI_FIELDS.has(field)) {
-        rec[field] = splitMulti(raw);
-      } else {
-        rec[field] = clean(raw);
-      }
-    }
+    rec.ID = `G${String(seq).padStart(4, "0")}`;
+    const productId = cellToString(row.getCell(5).value);
+    rec["Product Code"] = `${abbr} · #${productId || seq}`;
 
-    rec.id = `${rec.institutionAbbr}-${rec.productId || r}`;
-    rec.greenFocus = /^yes/i.test(cellToString(row.getCell(21).value));
-    rec.concessionaryFlag = /^concession/i.test(
-      cellToString(row.getCell(19).value),
-    );
-    rec.womenFocus = /^yes/i.test(cellToString(row.getCell(34).value));
+    for (const [colStr, field] of Object.entries(COLUMNS)) {
+      rec[field] = cellToString(row.getCell(Number(colStr)).value);
+    }
 
     records.push(rec);
   }
 
-  mkdirSync(OUT_DIR, { recursive: true });
-  writeFileSync(OUT_FILE, JSON.stringify(records, null, 2));
-  console.log(`Wrote ${records.length} products -> ${OUT_FILE}`);
+  // ── stats for the header / KPI / About counts ──
+  const total = records.length;
+  const institutions = new Set(records.map((r) => r["Institution Full Name"] || r["Institution Name (Abbr.)"])).size;
+  const green = records.filter((r) => /^yes/i.test(r["Std. Green"])).length;
+  const openTC = records.filter((r) => tcCat(r["T&C Applicability"]) === "Open").length;
+
+  const fmt = (n) => n.toLocaleString("en-US");
+  console.log(`Products: ${total} · Institutions: ${institutions} · Green: ${green} · Open T&C: ${openTC}`);
+
+  // ── write JSON (debug / reuse) ──
+  mkdirSync(dirname(OUT_JSON), { recursive: true });
+  writeFileSync(OUT_JSON, JSON.stringify(records, null, 2));
+
+  // ── inject into template.html ──
+  let html = readFileSync(TEMPLATE, "utf8");
+  if (!html.includes("__GTEX_DATA__")) {
+    throw new Error("template.html is missing the __GTEX_DATA__ placeholder.");
+  }
+  html = html.replace("__GTEX_DATA__", JSON.stringify(records));
+
+  // Refresh the hard-coded counts in the header/KPIs/About so they track data.
+  html = html
+    .replace(/1,060 Financing Products/g, `${fmt(total)} Financing Products`)
+    .replace(/81 Institutions/g, `${fmt(institutions)} Institutions`)
+    .replace(/🌱 128 Green Products/g, `🌱 ${fmt(green)} Green Products`)
+    // KPI strip
+    .replace(/<div class="kpi-num">1,060<\/div>/, `<div class="kpi-num">${fmt(total)}</div>`)
+    .replace(/<div class="kpi-num">81<\/div>/, `<div class="kpi-num">${fmt(institutions)}</div>`)
+    .replace(/<div class="kpi-num">128<\/div>/, `<div class="kpi-num">${fmt(green)}</div>`)
+    .replace(/<div class="kpi-num">823<\/div>/, `<div class="kpi-num">${fmt(openTC)}</div>`)
+    // section titles / about references
+    .replace(/All 1,060 Financing Products/g, `All ${fmt(total)} Financing Products`)
+    .replace(/>1,060 products</g, `>${fmt(total)} products<`)
+    .replace(/maps <strong>1,060 products<\/strong> from <strong>81 institutions<\/strong>/,
+      `maps <strong>${fmt(total)} products</strong> from <strong>${fmt(institutions)} institutions</strong>`);
+
+  writeFileSync(OUT_HTML, html);
+  console.log(`Wrote ${OUT_HTML} (${html.length} bytes) and ${OUT_JSON}`);
 }
 
 main().catch((err) => {
