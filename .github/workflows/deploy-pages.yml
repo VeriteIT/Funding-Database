@@ -1,0 +1,51 @@
+name: Deploy to GitHub Pages
+
+on:
+  # Runs whenever the site changes (including the refresh-data commit)
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "public/**"
+      - ".github/workflows/deploy-pages.yml"
+  # Allow manual runs
+  workflow_dispatch:
+
+# Permissions the Pages deployment needs
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one concurrent deployment; let the newest win
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Stage site files
+        # Publish only what the browser needs: index.html + public/.
+        run: |
+          mkdir -p _site
+          cp index.html _site/index.html
+          if [ -d public ]; then cp -r public _site/public; fi
+          # Prevent Jekyll from mangling the static files
+          touch _site/.nojekyll
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
