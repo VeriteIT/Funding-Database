@@ -1,0 +1,49 @@
+name: Refresh finance data from SharePoint
+
+on:
+  # Manual trigger
+  workflow_dispatch:
+  # Scheduled: every day at 02:00 UTC
+  schedule:
+    - cron: "0 2 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm ci || npm install
+
+      - name: Download workbook from SharePoint
+        env:
+          GRAPH_TENANT_ID: ${{ secrets.GRAPH_TENANT_ID }}
+          GRAPH_CLIENT_ID: ${{ secrets.GRAPH_CLIENT_ID }}
+          GRAPH_CLIENT_SECRET: ${{ secrets.GRAPH_CLIENT_SECRET }}
+          SHAREPOINT_SHARE_URL: ${{ secrets.SHAREPOINT_SHARE_URL }}
+        run: node fetch-sharepoint.mjs
+
+      - name: Regenerate finance.json
+        run: node generate-finance-json.mjs source.xlsx
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain public/finance.json)" ]; then
+            git add public/finance.json
+            git commit -m "chore: refresh finance.json from SharePoint"
+            git push
+          else
+            echo "No changes to finance.json"
+          fi
