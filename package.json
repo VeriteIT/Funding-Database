@@ -5,17 +5,10 @@
   "type": "module",
   "scripts": {
     "generate": "node generate-finance-json.mjs",
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "build": "node generate-finance-json.mjs source.xlsx || node generate-finance-json.mjs",
+    "preview": "node -e \"require('http').createServer((q,s)=>require('fs').createReadStream('index.html').pipe(s)).listen(4199,()=>console.log('http://localhost:4199'))\""
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.3.4",
-    "exceljs": "^4.4.0",
-    "vite": "^6.0.7"
+    "exceljs": "^4.4.0"
   }
 }
