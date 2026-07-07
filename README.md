@@ -39,16 +39,7 @@ To change the **look**, edit `template.html` (never edit `index.html` directly â
 it is overwritten on every regenerate). To change the **data mapping**, edit the
 `COLUMNS` map in `generate-finance-json.mjs`.
 
-## Hosting (Vercel)
 
-The repo is served as static files â€” **no build command needed**. `vercel.json`
-sets `buildCommand: null` and serves `index.html` from the root. Vercel redeploys
-automatically whenever the GitHub Action commits a refreshed `index.html`.
-
-> Note: the page loads Chart.js from a CDN (`cdnjs.cloudflare.com`) at runtime,
-> so the charts on the Overview tab need internet access in the browser.
-
-## SharePoint linkage
 
 The `refresh-data` action pulls the latest workbook daily (02:00 UTC) and on
 manual dispatch, regenerates `index.html`, and commits it. Configure these
