@@ -154,6 +154,26 @@ async function main() {
   const fmt = (n) => n.toLocaleString("en-US");
   console.log(`Products: ${total} · Institutions: ${institutions} · Green: ${green} · Open T&C: ${openTC}`);
 
+  // ── breakdown tables for the About panel (built from data) ──
+  const countBy = (field) => {
+    const m = new Map();
+    records.forEach((r) => {
+      const v = (r[field] || "").trim();
+      if (v) m.set(v, (m.get(v) || 0) + 1);
+    });
+    return [...m.entries()].sort((a, b) => b[1] - a[1]);
+  };
+  const covRows = (entries) =>
+    entries
+      .map(([label, n]) => `<div class="cov-row"><span>${escapeHtml(label)}</span><span class="cov-n">${fmt(n)}</span></div>`)
+      .join("\n      ");
+
+  const byInstType = covRows(countBy("Institution Type"));
+  const bySource = covRows(countBy("Source of Finance"));
+  const tcCounts = { Open: 0, Restricted: 0, Other: 0 };
+  records.forEach((r) => { tcCounts[tcCat(r["T&C Applicability"])] += 1; });
+  const byTC = covRows(Object.entries(tcCounts).filter(([, n]) => n > 0));
+
   // ── write JSON (debug / reuse) ──
   mkdirSync(dirname(OUT_JSON), { recursive: true });
   writeFileSync(OUT_JSON, JSON.stringify(records, null, 2));
@@ -163,26 +183,33 @@ async function main() {
   if (!html.includes("__GTEX_DATA__")) {
     throw new Error("template.html is missing the __GTEX_DATA__ placeholder.");
   }
-  html = html.replace("__GTEX_DATA__", JSON.stringify(records));
 
-  // Refresh the hard-coded counts in the header/KPIs/About so they track data.
-  html = html
-    .replace(/1,060 Financing Products/g, `${fmt(total)} Financing Products`)
-    .replace(/81 Institutions/g, `${fmt(institutions)} Institutions`)
-    .replace(/🌱 128 Green Products/g, `🌱 ${fmt(green)} Green Products`)
-    // KPI strip
-    .replace(/<div class="kpi-num">1,060<\/div>/, `<div class="kpi-num">${fmt(total)}</div>`)
-    .replace(/<div class="kpi-num">81<\/div>/, `<div class="kpi-num">${fmt(institutions)}</div>`)
-    .replace(/<div class="kpi-num">128<\/div>/, `<div class="kpi-num">${fmt(green)}</div>`)
-    .replace(/<div class="kpi-num">823<\/div>/, `<div class="kpi-num">${fmt(openTC)}</div>`)
-    // section titles / about references
-    .replace(/All 1,060 Financing Products/g, `All ${fmt(total)} Financing Products`)
-    .replace(/>1,060 products</g, `>${fmt(total)} products<`)
-    .replace(/maps <strong>1,060 products<\/strong> from <strong>81 institutions<\/strong>/,
-      `maps <strong>${fmt(total)} products</strong> from <strong>${fmt(institutions)} institutions</strong>`);
+  const tokens = {
+    __GTEX_DATA__: JSON.stringify(records),
+    __COUNT_TOTAL__: fmt(total),
+    __COUNT_INSTITUTIONS__: fmt(institutions),
+    __COUNT_GREEN__: fmt(green),
+    __COUNT_OPEN__: fmt(openTC),
+    __ABOUT_BY_INSTTYPE__: byInstType,
+    __ABOUT_BY_SOURCE__: bySource,
+    __ABOUT_BY_TC__: byTC,
+  };
+  for (const [token, value] of Object.entries(tokens)) {
+    if (!html.includes(token)) {
+      throw new Error(`template.html is missing the ${token} placeholder.`);
+    }
+    html = html.split(token).join(value);
+  }
 
   writeFileSync(OUT_HTML, html);
   console.log(`Wrote ${OUT_HTML} (${html.length} bytes) and ${OUT_JSON}`);
+}
+
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
 }
 
 main().catch((err) => {
