@@ -317,6 +317,43 @@ body {
 .chart-wrap { position: relative; height: 210px; }
 .chart-wrap.tall { height: 240px; }
 
+/* Ranked name + count list (replaces bar charts on the Overview) */
+.rank-list { display: flex; flex-direction: column; gap: 8px; }
+.rank-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 7px 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(11,40,24,.035);
+}
+.rank-fill {
+  position: absolute;
+  top: 0; bottom: 0; left: 0;
+  border-radius: 8px;
+  opacity: .18;
+}
+.rank-name {
+  position: relative;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--forest);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.rank-val {
+  position: relative;
+  flex: none;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--forest);
+  font-variant-numeric: tabular-nums;
+}
+
 /* ── FINDER ──────────────────────────────────────────────── */
 .finder-hero {
   background: var(--forest);
@@ -513,9 +550,9 @@ table { width: 100%; border-collapse: collapse; }
 .col-filter-clear { font-size: 10px; color: var(--gold); cursor: pointer; text-decoration: underline; white-space: nowrap; }
 .date-note { margin-top: 4px; background: rgba(192,57,43,.16); border: 1px solid #E06055; border-left: 4px solid #C0392B; color: #FBD9D4; font-size: 11px; font-weight: 600; letter-spacing: .2px; padding: 7px 12px; border-radius: 6px; text-align: right; max-width: 230px; line-height: 1.35; }
 /* All Products: fit full width, narrow Type/Size/Repayment */
-.db-fit col.d-lender{width:11%;} .db-fit col.d-prod{width:18%;} .db-fit col.d-need{width:11%;}
+.db-fit col.d-lender{width:11%;} .db-fit col.d-prod{width:14%;} .db-fit col.d-need{width:11%;}
 .db-fit col.d-type{width:9%;} .db-fit col.d-size{width:9%;} .db-fit col.d-rep{width:8%;}
-.db-fit col.d-cost{width:11%;} .db-fit col.d-fit{width:11%;} .db-fit col.d-tc{width:7%;} .db-fit col.d-view{width:5%;}
+.db-fit col.d-cost{width:11%;} .db-fit col.d-fit{width:11%;} .db-fit col.d-tc{width:7%;} .db-fit col.d-view{width:9%;}
 .db-fit th, .db-fit td { font-size: 11.5px; }
 thead th {
   background: var(--cream);
@@ -1089,21 +1126,21 @@ tbody td { padding: 11px 14px; vertical-align: top; }
           <div class="chart-title">By Institution</div>
         </div>
       </div>
-      <div class="chart-wrap"><canvas id="cInst"></canvas></div>
+      <div id="cInst" class="rank-list"></div>
     </div>
     <div class="chart-card">
       <div class="chart-head"><div>
         <div class="chart-label">Breakdown</div>
         <div class="chart-title">By Product Type</div>
       </div></div>
-      <div class="chart-wrap tall"><canvas id="cType"></canvas></div>
+      <div id="cType" class="rank-list"></div>
     </div>
     <div class="chart-card">
       <div class="chart-head"><div>
         <div class="chart-label">Breakdown</div>
         <div class="chart-title">By Financing Need</div>
       </div></div>
-      <div class="chart-wrap tall"><canvas id="cNeed"></canvas></div>
+      <div id="cNeed" class="rank-list"></div>
     </div>
   </div>
 
@@ -1267,6 +1304,7 @@ tbody td { padding: 11px 14px; vertical-align: top; }
         <input class="search-input" type="text" placeholder="Search all products…" id="db-search" oninput="renderDb(1)">
       </div>
     </div>
+    <div class="table-hint">👆 Click any product row to open its full details. Use the <strong>Product page</strong> link to visit the funder&rsquo;s website. Tick <strong>☆</strong> to shortlist up to 5 products and compare them side by side.</div>
     <div class="tbl-scroll">
       <table class="fit-table db-fit">
         <colgroup>
@@ -1285,7 +1323,7 @@ tbody td { padding: 11px 14px; vertical-align: top; }
           <th>Cost</th>
           <th>Good to know</th>
           <th onclick="sortDb('T&C Applicability')" id="th-tc">T&amp;C access <span class="si">⇅</span></th>
-          <th></th>
+          <th>Product page</th>
         </tr>
         <tr class="col-filter-row">
           <th></th>
@@ -1362,8 +1400,24 @@ tbody td { padding: 11px 14px; vertical-align: top; }
         
 
     <div class="about-card">
+      <div class="about-card-title">🔍 How institutions were selected</div>
+      <p>The database was built through a structured mapping of Sri Lanka&rsquo;s supply-side financing landscape, covering seven categories of financial and funding entities:</p>
+      <ul style="margin:8px 0 10px;padding-left:20px">
+        <li>Licensed commercial banks</li>
+        <li>Non-bank financial institutions registered with the Central Bank of Sri Lanka (CBSL)</li>
+        <li>Microfinance institutions registered with the CBSL</li>
+        <li>Development banks</li>
+        <li>Government funding bodies</li>
+        <li>Impact investors and venture capital providers</li>
+        <li>Multilateral institutions and development finance institutions (DFIs)</li>
+      </ul>
+      <p>The defining inclusion criterion was an <strong>active online presence</strong>. Product information was drawn directly from each institution&rsquo;s own official website (extracted on <strong>9 July 2026</strong>), so every detail &mdash; product names, eligibility conditions, financing terms and applicability to Textile &amp; Clothing (T&amp;C) SMEs &mdash; comes from authoritative, first-party disclosures rather than secondary or intermediary references, preserving accuracy and verifiability.</p>
+      <p>Institutions without a discernible online presence, or whose websites did not publish sufficient product-level information, were omitted, because their offerings could not be reliably verified through this website-based extraction. Restricting the scope to funders with a web presence is a deliberate trade-off in favour of data reliability and consistency &mdash; while acknowledging that a small number of entities operating solely through offline or relationship-based channels fall outside this exercise.</p>
+    </div>
+
+    <div class="about-card">
       <div class="about-card-title">ℹ️ Data, currency &amp; a note of caution</div>
-      <p>Product information reflects funders&rsquo; publicly available details and is <strong>current as of July 2026</strong>; terms change often, so always confirm the latest details with the institution before applying. This guide is an information resource, not financial advice or a recommendation, and eligibility for any product is decided by the funder.</p>
+      <p>Product information is drawn from each funder&rsquo;s own official website and is <strong>current as of 9 July 2026</strong>; terms change often, so always confirm the latest details with the institution before applying. This guide is an information resource, not financial advice or a recommendation, and eligibility for any product is decided by the funder.</p>
     </div>
   </div>
 </div>
@@ -1516,6 +1570,22 @@ function makeBar(id, entries, pal, horiz=false) {
     }
   });
 }
+function makeRankList(id, entries, pal) {
+  const el = document.getElementById(id);
+  if(!el) return;
+  const max = Math.max(1, ...entries.map(e=>e[1]));
+  el.innerHTML = entries.map((e,i)=>{
+    const name = String(e[0]).replace(/^\d+\.\s*/,'').replace(/^[a-z]\.\s*/,'');
+    const val  = e[1];
+    const pct  = Math.max(4, Math.round(val/max*100));
+    const color= pal[i%pal.length];
+    return `<div class="rank-row" title="${name}: ${val}">`
+      + `<div class="rank-fill" style="width:${pct}%;background:${color}"></div>`
+      + `<span class="rank-name">${name}</span>`
+      + `<span class="rank-val">${val}</span>`
+      + `</div>`;
+  }).join('');
+}
 function makeDoughnut(id, labels, vals, colors) {
   new Chart(document.getElementById(id),{
     type:'doughnut',
@@ -1638,9 +1708,9 @@ function quickStart(kind){
   applyFilters();
 }
 window.addEventListener('DOMContentLoaded', () => {
-  makeBar('cInst', countBy('Institution Name (Abbr.)').slice(0,12), GS);
-  makeBar('cType', countBy('Std. Product Type').slice(0,9), BS, true);
-  makeBar('cNeed', countBySplit('Std. Financing Need').slice(0,10), GS, true);
+  makeRankList('cInst', countBy('Institution Name (Abbr.)').slice(0,12), GS);
+  makeRankList('cType', countBy('Std. Product Type').slice(0,9), BS);
+  makeRankList('cNeed', countBySplit('Std. Financing Need').slice(0,10), GS);
   makeBar('cSize', countBy('Std. Business Size'), GS);
   const gY = DATA.filter(r=>r['Std. Green']==='Yes').length;
   makeDoughnut('cGreen',
@@ -1840,7 +1910,9 @@ function renderDb(pg) {
       <td data-label="Cost" style="font-size:12px;color:var(--slate);max-width:130px">${r['Interest Rate / Cost']||'—'}</td>
       <td data-label="Good to know"><div class="fit-cell">${fitBadges(r)}</div></td>
       <td data-label="T&C access">${tcChip(r['T&C Applicability'])}</td>
-      <td><button class="btn" style="padding:5px 12px;font-size:11px;background:var(--parchment);color:var(--emerald);border:1px solid var(--sand)" onclick="event.stopPropagation();openModal('${r.ID}')">View →</button></td>
+      <td data-label="Product page">
+        ${(r['Product Page']||r['Website'])?`<a class="row-link ext" href="${r['Product Page']||r['Website']}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Product page ↗</a>`:'<span style="color:var(--mist);font-size:11px">—</span>'}
+      </td>
     </tr>`).join('');
 
   let ph=`<div class="pager-info">Showing <b>${(dbPage-1)*PER+1}–${Math.min(dbPage*PER,rows.length)}</b> of <b>${rows.length}</b></div><div class="pager-btns">`;
