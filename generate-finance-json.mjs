@@ -195,9 +195,9 @@ async function main() {
     __ABOUT_BY_TC__: byTC,
   };
   for (const [token, value] of Object.entries(tokens)) {
-    if (!html.includes(token)) {
-      throw new Error(`template.html is missing the ${token} placeholder.`);
-    }
+    // __GTEX_DATA__ is required (checked above); other tokens are optional —
+    // skip any the template no longer uses instead of failing the build.
+    if (!html.includes(token)) continue;
     html = html.split(token).join(value);
   }
 

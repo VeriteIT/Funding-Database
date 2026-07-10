@@ -1356,13 +1356,22 @@ tbody td { padding: 11px 14px; vertical-align: top; }
   <div class="section-label">Guide Information</div>
   <div class="section-title">How to Use This Guide</div>
 
+  <nav class="gloss-nav" aria-label="Jump to section">
+    <a class="gloss-nav-link" onclick="document.getElementById('about-what').scrollIntoView({behavior:'smooth',block:'start'})">📖 What this guide is</a>
+    <a class="gloss-nav-link" onclick="document.getElementById('about-sections').scrollIntoView({behavior:'smooth',block:'start'})">🚀 The four sections</a>
+    <a class="gloss-nav-link" onclick="document.getElementById('about-tags').scrollIntoView({behavior:'smooth',block:'start'})">🏷️ Understanding the tags</a>
+    <a class="gloss-nav-link" onclick="document.getElementById('about-insttype').scrollIntoView({behavior:'smooth',block:'start'})">🏦 By institution type</a>
+    <a class="gloss-nav-link" onclick="document.getElementById('about-methodology').scrollIntoView({behavior:'smooth',block:'start'})">🔍 How institutions were selected</a>
+    <a class="gloss-nav-link" onclick="document.getElementById('about-data').scrollIntoView({behavior:'smooth',block:'start'})">ℹ️ Data &amp; caution</a>
+  </nav>
+
   <div class="about-grid">
-    <div class="about-card">
+    <div class="about-card" id="about-what">
       <div class="about-card-title">📖 What this guide is</div>
       <p>This guide brings together financing and funding options relevant to Sri Lanka&rsquo;s Textile &amp; Clothing (T&amp;C) sector, with a focus on small and medium enterprises (SMEs). It is produced under the International Trade Centre&rsquo;s Global Textiles and Apparel Programme (GTEX). It maps <strong>1,220 products</strong> from <strong>98 institutions</strong> — banks, finance companies, development and government bodies, and investors — and tags each one so you can quickly see whether it fits your business, what it costs, and how to apply.</p>
     </div>
 
-    <div class="about-card">
+    <div class="about-card" id="about-sections">
       <div class="about-card-title">🚀 The four sections</div>
       <ol class="step-list">
         <li class="step-item"><span class="step-n">1</span><span><strong>Overview</strong> — a snapshot of the whole guide: totals and charts showing the mix of lenders, product types, purposes and business sizes. Use the &ldquo;I need financing for…&rdquo; shortcuts to jump straight into matching products.</span></li>
@@ -1372,7 +1381,7 @@ tbody td { padding: 11px 14px; vertical-align: top; }
       </ol>
     </div>
 
-    <div class="about-card">
+    <div class="about-card" id="about-tags">
       <div class="about-card-title">🏷️ Understanding the tags</div>
       <div class="tag-legend">
         <div class="tl-row"><span class="chip chip-green">Open</span><span>Under <strong>T&amp;C access</strong>: the funder&rsquo;s stated criteria suggest textile &amp; clothing SMEs are eligible. <span class="chip chip-amber">Restricted</span> means it is limited to certain sectors, corporates or retail customers, and <span class="chip chip-grey">Other</span> means eligibility is not clearly stated — open the product to check.</span></div>
@@ -1384,7 +1393,7 @@ tbody td { padding: 11px 14px; vertical-align: top; }
       <p class="about-note">Not sure what a term means? Every product type and purpose is defined in <strong>Finance Explained</strong>.</p>
     </div>
 
-    <div class="about-card">
+    <div class="about-card" id="about-insttype">
       <div class="about-card-title">🏦 What&rsquo;s covered — by institution type</div>
       <div class="cov-row"><span>Commercial Bank</span><span class="cov-n">651</span></div>
       <div class="cov-row"><span>Non-Banking Financial Institution (NBFI)  - (Inlcuding leasing companies and factoring companies)</span><span class="cov-n">356</span></div>
@@ -1396,23 +1405,8 @@ tbody td { padding: 11px 14px; vertical-align: top; }
       <div class="cov-row"><span>Non-Banking Financial Institution (NBFI)  - (Inlcuding leasing companies and factoring companies)</span><span class="cov-n">12</span></div>
     </div>
 
-    <div class="about-card">
-      <div class="about-card-title">💰 By type of finance</div>
-      <div class="cov-row"><span>Debt</span><span class="cov-n">1,090</span></div>
-      <div class="cov-row"><span>Guarantee</span><span class="cov-n">79</span></div>
-      <div class="cov-row"><span>Equity</span><span class="cov-n">23</span></div>
-      <div class="cov-row"><span>Grant</span><span class="cov-n">19</span></div>
-      <div class="cov-row"><span>Blended Finance</span><span class="cov-n">9</span></div>
-      <div style="height:14px"></div>
-      <div class="about-card-title" style="font-size:15px">T&amp;C access breakdown</div>
-      <div class="cov-row"><span>Open</span><span class="cov-n">1,003</span></div>
-      <div class="cov-row"><span>Restricted</span><span class="cov-n">174</span></div>
-      <div class="cov-row"><span>Other</span><span class="cov-n">43</span></div>
-    </div>
 
-        
-
-    <div class="about-card">
+    <div class="about-card" id="about-methodology">
       <div class="about-card-title">🔍 How institutions were selected</div>
       <p>The database was built through a structured mapping of Sri Lanka&rsquo;s supply-side financing landscape, covering seven categories of financial and funding entities:</p>
       <ul style="margin:8px 0 10px;padding-left:20px">
@@ -1428,7 +1422,7 @@ tbody td { padding: 11px 14px; vertical-align: top; }
       <p>Institutions without a discernible online presence, or whose websites did not publish sufficient product-level information, were omitted, because their offerings could not be reliably verified through this website-based extraction. Restricting the scope to funders with a web presence is a deliberate trade-off in favour of data reliability and consistency &mdash; while acknowledging that a small number of entities operating solely through offline or relationship-based channels fall outside this exercise.</p>
     </div>
 
-    <div class="about-card">
+    <div class="about-card" id="about-data">
       <div class="about-card-title">ℹ️ Data, currency &amp; a note of caution</div>
       <p>Product information is drawn from each funder&rsquo;s own official website and is <strong>current as of 9 July 2026</strong>; terms change often, so always confirm the latest details with the institution before applying. This guide is an information resource, not financial advice or a recommendation, and eligibility for any product is decided by the funder.</p>
     </div>
