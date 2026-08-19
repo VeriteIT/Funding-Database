@@ -907,6 +907,7 @@ tbody td { padding: 11px 14px; vertical-align: top; }
 /* UX additions */
 .quick-start { margin: 0 0 30px; }
 .qs-title { font-size: 14px; font-weight: 600; color: var(--emerald); margin-bottom: 12px; }
+.qs-title-2 { margin-top: 18px; }
 .qs-chips { display: flex; flex-wrap: wrap; gap: 10px; }
 .qs-chip { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: var(--r-pill);
   background: var(--white); border: 1px solid var(--sand); font-size: 13px; font-weight: 500; color: var(--emerald);
@@ -1082,9 +1083,17 @@ tbody td { padding: 11px 14px; vertical-align: top; }
       <div class="qs-chip" onclick="quickStart('capex')"><span class="qs-ico">🏭</span> Machinery &amp; equipment</div>
       <div class="qs-chip" onclick="quickStart('trade')"><span class="qs-ico">🚢</span> Export / trade order</div>
       <div class="qs-chip" onclick="quickStart('startup')"><span class="qs-ico">🚀</span> Starting a business</div>
+      <div class="qs-chip" onclick="quickStart('tech')"><span class="qs-ico">💡</span> Technology &amp; innovation</div>
       <div class="qs-chip" onclick="quickStart('green')"><span class="qs-ico">🌱</span> Going green / solar</div>
       <div class="qs-chip" onclick="quickStart('women')"><span class="qs-ico">♀</span> Women-led business</div>
-      <div class="qs-chip" onclick="quickStart('collat')"><span class="qs-ico">🔓</span> No collateral</div>
+    </div>
+    <div class="qs-title qs-title-2">I need a…</div>
+    <div class="qs-chips">
+      <div class="qs-chip" onclick="quickStart('loan')"><span class="qs-ico">🏦</span> Loan</div>
+      <div class="qs-chip" onclick="quickStart('grant')"><span class="qs-ico">🎁</span> Grant</div>
+      <div class="qs-chip" onclick="quickStart('equity')"><span class="qs-ico">📈</span> Equity investment</div>
+      <div class="qs-chip" onclick="quickStart('conc')"><span class="qs-ico">💸</span> Concessional loan</div>
+      <div class="qs-chip" onclick="quickStart('collat')"><span class="qs-ico">🔓</span> No collateral loan</div>
     </div>
   </div>
   <a class="learn-link" onclick="showPanel('glossary')"><span class="ll-ico">📘</span> New to finance? <strong>&nbsp;Start here →</strong></a>
@@ -1179,6 +1188,16 @@ tbody td { padding: 11px 14px; vertical-align: top; }
       <div class="filter-group">
         <label class="filter-label">Business size</label>
         <select class="filter-select" id="f-size"><option value="">All sizes</option></select>
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">What kind of finance?</label>
+        <select class="filter-select" id="f-family">
+          <option value="">Any kind</option>
+          <option value="Loan">Loan 🏦</option>
+          <option value="Grant">Grant / subsidy 🎁</option>
+          <option value="Equity">Equity investment 📈</option>
+          <option value="Concessional">Concessional / soft loan 💸</option>
+        </select>
       </div>
       <div class="filter-group">
         <label class="filter-label">Product type</label>
@@ -1375,7 +1394,7 @@ tbody td { padding: 11px 14px; vertical-align: top; }
       <div class="about-card-title">🚀 The four sections</div>
       <ol class="step-list">
         <li class="step-item"><span class="step-n">1</span><span><strong>Overview</strong> — a snapshot of the whole guide: totals and charts showing the mix of lenders, product types, purposes and business sizes. Use the &ldquo;I need financing for…&rdquo; shortcuts to jump straight into matching products.</span></li>
-        <li class="step-item"><span class="step-n">2</span><span><strong>Finance Finder</strong> — the main tool. Narrow products down by what you need the money for, business size, product type, repayment period, lender, institution type, and whether the product is collateral-free, women-led, concessionary or green. Click any row to open full details, or use the <em>Product page</em> link to visit the funder&rsquo;s website.</span></li>
+        <li class="step-item"><span class="step-n">2</span><span><strong>Finance Finder</strong> — the main tool. Narrow products down by what you need the money for, what kind of finance you want (loan, grant, equity or concessional), business size, product type, repayment period, lender, institution type, and whether the product is collateral-free, women-led, concessionary or green. Click any row to open full details, or use the <em>Product page</em> link to visit the funder&rsquo;s website.</span></li>
         <li class="step-item"><span class="step-n">3</span><span><strong>All Products</strong> — the complete list. Sort by any column, use the filter dropdown under each heading (like a spreadsheet), or search across everything.</span></li>
         <li class="step-item"><span class="step-n">4</span><span><strong>Finance Explained</strong> — plain-language definitions of every product type, purpose, institution type and key term, each with a Textile &amp; Clothing example. New to finance? Start here.</span></li>
       </ol>
@@ -1620,6 +1639,35 @@ function isCollatFree(r){ return r['Collateral Class']==='Collateral not require
 function isWomen(r){ return String(r['Gender Lens']||'').trim().toLowerCase().startsWith('yes'); }
 function isConc(r){ return r['Concessional']==='Concessionary'; }
 
+/* ── PRODUCT FAMILIES ──────────────────────────────────
+   Groups the numbered 'Std. Product Type' values into the plain-language
+   instrument families the "I need a…" shortcuts and the "What kind of
+   finance?" filter use. Types are listed explicitly rather than pattern-
+   matched, so renaming one in the workbook drops it from its family
+   visibly (an empty result) instead of silently mis-grouping it. */
+const CONC_LOAN_TYPE = '07. Concessional / soft loan';
+const FAMILY_TYPES = {
+  Loan: new Set([
+    '01. Short-term credit / working capital facility',
+    '06. Long-term loan',
+    CONC_LOAN_TYPE,
+    '08. Mortgage / real estate',
+    '13. Microfinance',
+    '17. Export credit / refinance',
+    '19. Sustainability-linked loan / facility'
+  ]),
+  Grant: new Set(['04. Grant / Subsidy']),
+  Equity: new Set(['10. Equity investment','11. Venture capital / PE'])
+};
+function familyMatch(r, sel){
+  if(!sel) return true;
+  // 'Concessionary' flag and the concessional product type do not overlap in
+  // the workbook, so match either — otherwise this returns almost nothing.
+  if(sel==='Concessional') return isConc(r) || r['Std. Product Type']===CONC_LOAN_TYPE;
+  const types = FAMILY_TYPES[sel];
+  return types ? types.has(r['Std. Product Type']) : true;
+}
+
 /* ── SHORTLIST & COMPARE ─────────────────────────────── */
 const SHORTLIST_MAX = 5;
 let shortlist = [];
@@ -1697,12 +1745,19 @@ function quickStart(kind){
   populateFilters();
   clearFilters();
   const set=(id,v)=>{ const el=document.getElementById(id); if(el) el.value=v; };
+  // "I need financing for…" — purpose
   if(kind==='wc')      set('f-need','Working capital');
   else if(kind==='capex')  set('f-need','Fixed assets / CAPEX');
   else if(kind==='trade')  set('f-need','Trade finance');
   else if(kind==='startup') set('f-need','Start-up / creation');
+  else if(kind==='tech')   set('f-need','Technology & innovation');
   else if(kind==='green')  set('f-green','Yes');
   else if(kind==='women')  set('f-women','yes');
+  // "I need a…" — instrument
+  else if(kind==='loan')   set('f-family','Loan');
+  else if(kind==='grant')  set('f-family','Grant');
+  else if(kind==='equity') set('f-family','Equity');
+  else if(kind==='conc')   set('f-family','Concessional');
   else if(kind==='collat') set('f-collat','yes');
   showPanel('finder');
   applyFilters();
@@ -1769,6 +1824,7 @@ function applyFilters() {
   finderRows = DATA.filter(r =>
     sizeMatch(r, get('f-size')) &&
     (!get('f-need')  || splitMulti(r['Std. Financing Need']).includes(get('f-need'))) &&
+    familyMatch(r, get('f-family')) &&
     (!get('f-type')  || r['Std. Product Type']===get('f-type'))   &&
     (!get('f-tenor') || splitMulti(r['Std. Tenor']).includes(get('f-tenor'))) &&
     (!get('f-inst')  || r['Institution Name (Abbr.)']===get('f-inst')) &&
@@ -1787,7 +1843,7 @@ function applyFilters() {
   renderFinder(1);
 }
 function clearFilters() {
-  ['f-size','f-need','f-type','f-tenor','f-inst','f-insttype','f-green','f-greentype','f-tc','f-collat','f-women','f-conc'].forEach(id=>{const el=document.getElementById(id); if(el) el.value='';});
+  ['f-size','f-need','f-family','f-type','f-tenor','f-inst','f-insttype','f-green','f-greentype','f-tc','f-collat','f-women','f-conc'].forEach(id=>{const el=document.getElementById(id); if(el) el.value='';});
   document.getElementById('finder-search').value='';
   document.getElementById('finder-pill').style.display='none';
   finderRows=[...DATA];
