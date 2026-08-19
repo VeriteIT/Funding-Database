@@ -44253,98 +44253,6 @@
   },
   {
     "ID": "G0963",
-    "Product Code": "Swedfund · #1039",
-    "Institution Name (Abbr.)": "Swedfund",
-    "Institution Full Name": "Swedfund International AB",
-    "Source of Finance": "Debt",
-    "Institution Type": "Development Finance Institution / Multilateral",
-    "Financing Product": "Loan financing (medium & long-term)",
-    "Std. Product Type": "06. Long-term loan",
-    "Financing Need": "Debt capital for financial institutions, corporates and project-finance sponsors",
-    "Std. Financing Need": "Fixed assets / CAPEX, Working capital",
-    "Product Description": "Sweden's DFI; instruments = equity, loans, guarantees. SL exposure: USD 10m loan to LOLC Finance PLC (2019), which on-lends to SMEs. Sector-neutral.",
-    "Product Page": "https://www.swedfund.se/en/investments",
-    "Currency": "Multi-currency",
-    "Tenor": "Medium & long-term",
-    "Std. Tenor": "Long-term (> 5 years)",
-    "Interest Rate / Cost": "Quasi-commercial; not publicly disclosed",
-    "Grace Period": "",
-    "Min. Finance (LKR '000)": "3000000",
-    "Max. Finance (LKR '000)": "",
-    "Concessional": "Concessionary",
-    "Guarantee": "Yes — also offers loan guarantees",
-    "Std. Green": "No",
-    "Std. Green Investment Type": "",
-    "Eligibility Criteria": "FIs, corporates and project sponsors seeking debt capital in low/middle-income countries",
-    "Eligible Projects / Applicants": "Financial institutions / corporates / project sponsors",
-    "Eligible Business Size": "FIs & corporates (often via partner)",
-    "Std. Business Size": "Large (> LKR 750M)",
-    "T&C Value Chain Stage": "Not specified (sector-neutral)",
-    "Collateral Required": "Outcome-focused; DFI does not require usual collateral",
-    "Collateral Class": "Collateral not required",
-    "Turnover Requirement": "",
-    "Capital Requirement": "",
-    "Green Certification Req.": "",
-    "Gender Lens": "No",
-    "Required Documents": "DFI due diligence; ESG requirements per agreement",
-    "Application Form / Link": "",
-    "Processing Time (months)": "",
-    "Website": "https://www.swedfund.se/en",
-    "Contact Person": "",
-    "Contact Email": "",
-    "Contact Phone": "",
-    "Last Verified": "2026-06-15",
-    "T&C Applicability": "Low–Indirect — real SL exposure via LOLC (SME on-lending) but sector-neutral; not T&C-specific. (Min cell = USD 10m LOLC loan, indicative.)",
-    "Comments": ""
-  },
-  {
-    "ID": "G0964",
-    "Product Code": "Swedfund · #1040",
-    "Institution Name (Abbr.)": "Swedfund",
-    "Institution Full Name": "Swedfund International AB",
-    "Source of Finance": "Equity",
-    "Institution Type": "Development Finance Institution / Multilateral",
-    "Financing Product": "Equity investment (minority) & fund investments",
-    "Std. Product Type": "10. Equity investment",
-    "Financing Need": "Long-term minority equity in companies and funds to develop sustainable business",
-    "Std. Financing Need": "Fixed assets / CAPEX, Technology & innovation",
-    "Product Description": "Direct & indirect (fund) minority equity in companies in low/middle-income countries; long-term but time-limited; board involvement.",
-    "Product Page": "https://www.swedfund.se/en/the-model/our-offer/equity-loans-and-funds/",
-    "Currency": "Multi-currency",
-    "Tenor": "Long-term but time-limited; until exit",
-    "Std. Tenor": "Long-term (> 5 years)",
-    "Interest Rate / Cost": "Equity stake",
-    "Grace Period": "",
-    "Min. Finance (LKR '000)": "",
-    "Max. Finance (LKR '000)": "",
-    "Concessional": "Concessionary",
-    "Guarantee": "No",
-    "Std. Green": "No",
-    "Std. Green Investment Type": "",
-    "Eligibility Criteria": "Companies & funds in OECD-DAC-eligible developing countries; main partner invests at least as much",
-    "Eligible Projects / Applicants": "Companies / investment funds",
-    "Eligible Business Size": "SMEs to mid-market via partner/fund",
-    "Std. Business Size": "SMEs & Large (Excluding Micro)",
-    "T&C Value Chain Stage": "Not specified",
-    "Collateral Required": "None – equity",
-    "Collateral Class": "Collateral not required",
-    "Turnover Requirement": "",
-    "Capital Requirement": "",
-    "Green Certification Req.": "",
-    "Gender Lens": "No",
-    "Required Documents": "",
-    "Application Form / Link": "",
-    "Processing Time (months)": "",
-    "Website": "https://www.swedfund.se/en",
-    "Contact Person": "",
-    "Contact Email": "",
-    "Contact Phone": "",
-    "Last Verified": "2026-06-15",
-    "T&C Applicability": "Low–Indirect — sector-neutral DFI equity; no T&C-specific SL product",
-    "Comments": ""
-  },
-  {
-    "ID": "G0965",
     "Product Code": "nV · #1041",
     "Institution Name (Abbr.)": "nV",
     "Institution Full Name": "nVentures (Pte Ltd)",
@@ -44390,7 +44298,7 @@
     "Comments": ""
   },
   {
-    "ID": "G0966",
+    "ID": "G0964",
     "Product Code": "SIV · #1042",
     "Institution Name (Abbr.)": "SIV",
     "Institution Full Name": "Seedstars International Ventures (Seedstars)",
@@ -44436,7 +44344,7 @@
     "Comments": ""
   },
   {
-    "ID": "G0967",
+    "ID": "G0965",
     "Product Code": "CI · #1043",
     "Institution Name (Abbr.)": "CI",
     "Institution Full Name": "Creation Investments Capital Management, LLC",
@@ -44482,7 +44390,7 @@
     "Comments": ""
   },
   {
-    "ID": "G0968",
+    "ID": "G0966",
     "Product Code": "AVK · #1044",
     "Institution Name (Abbr.)": "AVK",
     "Institution Full Name": "Aavishkaar Capital (Aavishkaar Group)",
@@ -44528,7 +44436,7 @@
     "Comments": ""
   },
   {
-    "ID": "G0969",
+    "ID": "G0967",
     "Product Code": "AVK · #1045",
     "Institution Name (Abbr.)": "AVK",
     "Institution Full Name": "Aavishkaar Capital (Aavishkaar Group)",
@@ -44574,7 +44482,7 @@
     "Comments": ""
   },
   {
-    "ID": "G0970",
+    "ID": "G0968",
     "Product Code": "Antler · #1046",
     "Institution Name (Abbr.)": "Antler",
     "Institution Full Name": "Antler",
@@ -44620,881 +44528,7 @@
     "Comments": ""
   },
   {
-    "ID": "G0971",
-    "Product Code": "ADB · #1047",
-    "Institution Name (Abbr.)": "ADB",
-    "Institution Full Name": "Asian Development Bank",
-    "Source of Finance": "Debt",
-    "Institution Type": "Development Finance Institution / Multilateral",
-    "Financing Product": "Small and Medium-Sized Enterprises Line of Credit (SMELoC) Project",
-    "Std. Product Type": "07. Concessional / soft loan",
-    "Financing Need": "On-lending to SMEs via PFIs, prioritising women-led, first-time-borrower and outside-Colombo SMEs",
-    "Std. Financing Need": "Fixed assets / CAPEX, Working capital",
-    "Product Description": "USD 100m line of credit on-lent through PFIs to SMEs, prioritising women-led, first-time-borrower and outside-Colombo SMEs; We-Fi grant window for women entrepreneurs.",
-    "Product Page": "https://www.adb.org/projects/49273-001/main",
-    "Currency": "USD (facility); LKR (sub-loans)",
-    "Tenor": "N/A",
-    "Std. Tenor": "Not disclosed",
-    "Interest Rate / Cost": "PFI-determined on-lending rate",
-    "Grace Period": "N/A",
-    "Min. Finance (LKR '000)": "N/A",
-    "Max. Finance (LKR '000)": "Sub-loans up to LKR 30m (with We-Fi grant) / LKR 50m (without) per DFCC operating page",
-    "Concessional": "Concessionary",
-    "Guarantee": "No",
-    "Std. Green": "No",
-    "Std. Green Investment Type": "",
-    "Eligibility Criteria": "DFCC operating page: \"SMEs with annual turnover below LKR 1000 million having less than 200 employees if in manufacturing sector\" — manufacturing named; T&C SMEs qualify. SME definition: turnover < LKR 1bn, <200 employees (domestic operating instructions).",
-    "Eligible Projects / Applicants": "SMEs borrowing via participating financial institutions (PFIs)",
-    "Eligible Business Size": "SMEs with annual turnover < LKR 1,000m and < 200 employees (manufacturing) per DFCC operating instructions",
-    "Std. Business Size": "SMEs (Micro + Small + Medium)",
-    "T&C Value Chain Stage": "Manufacturing named (T&C SMEs qualify)",
-    "Collateral Required": "Per PFI credit policy",
-    "Collateral Class": "Other",
-    "Turnover Requirement": "Annual turnover < LKR 1,000 million",
-    "Capital Requirement": "N/A",
-    "Green Certification Req.": "N/A",
-    "Gender Lens": "Yes — women-led SMEs prioritised; We-Fi grant window",
-    "Required Documents": "N/A",
-    "Application Form / Link": "https://www.dfcc.lk/sme/smeloc-sme-adb",
-    "Processing Time (months)": "N/A",
-    "Website": "https://www.adb.org",
-    "Contact Person": "N/A",
-    "Contact Email": "N/A",
-    "Contact Phone": "N/A",
-    "Last Verified": "",
-    "T&C Applicability": "Sector-neutral — eligible",
-    "Comments": ""
-  },
-  {
-    "ID": "G0972",
-    "Product Code": "ADB · #1048",
-    "Institution Name (Abbr.)": "ADB",
-    "Institution Full Name": "Asian Development Bank",
-    "Source of Finance": "Debt",
-    "Institution Type": "Development Finance Institution / Multilateral",
-    "Financing Product": "SMELoC Project — Additional Financing",
-    "Std. Product Type": "07. Concessional / soft loan",
-    "Financing Need": "Scale-up of SME credit line; innovative SME financing, SME-cluster capacity, ICT/BPO competitiveness",
-    "Std. Financing Need": "Fixed assets / CAPEX, Working capital",
-    "Product Description": "USD 75m scale-up of the SME credit line; added innovative SME financing scheme, SME cluster capacity and ICT/BPO competitiveness outputs.",
-    "Product Page": "https://www.adb.org/projects/documents/sri-49273-002-rrp",
-    "Currency": "USD (facility); LKR (sub-loans)",
-    "Tenor": "N/A",
-    "Std. Tenor": "Not disclosed",
-    "Interest Rate / Cost": "Relent by MoF to PFIs in LKR at CBSL AWDR-linked rate (PAM)",
-    "Grace Period": "N/A",
-    "Min. Finance (LKR '000)": "N/A",
-    "Max. Finance (LKR '000)": "N/A",
-    "Concessional": "Concessionary",
-    "Guarantee": "No",
-    "Std. Green": "No",
-    "Std. Green Investment Type": "",
-    "Eligibility Criteria": "Same PFI on-lending and SME eligibility framework as parent project (RRP/PAM); no sector exclusion catching T&C.",
-    "Eligible Projects / Applicants": "SMEs borrowing via PFIs",
-    "Eligible Business Size": "Same SME eligibility framework as parent project",
-    "Std. Business Size": "SMEs (Micro + Small + Medium)",
-    "T&C Value Chain Stage": "No sector exclusion catching T&C",
-    "Collateral Required": "Per PFI credit policy",
-    "Collateral Class": "Other",
-    "Turnover Requirement": "N/A",
-    "Capital Requirement": "N/A",
-    "Green Certification Req.": "N/A",
-    "Gender Lens": "No specific window noted in this financing",
-    "Required Documents": "N/A",
-    "Application Form / Link": "N/A",
-    "Processing Time (months)": "N/A",
-    "Website": "https://www.adb.org",
-    "Contact Person": "N/A",
-    "Contact Email": "N/A",
-    "Contact Phone": "N/A",
-    "Last Verified": "",
-    "T&C Applicability": "Sector-neutral — eligible",
-    "Comments": ""
-  },
-  {
-    "ID": "G0973",
-    "Product Code": "ADB · #1050",
-    "Institution Name (Abbr.)": "ADB",
-    "Institution Full Name": "Asian Development Bank",
-    "Source of Finance": "Blended Finance",
-    "Institution Type": "Development Finance Institution / Multilateral",
-    "Financing Product": "Enhancing Small and Medium-sized Enterprises Finance Project (incl. 'SMELOC2' component and NCGI equity)",
-    "Std. Product Type": "15. Blended finance facility",
-    "Financing Need": "Working-capital credit line for MSMEs in agriculture, tourism, manufacturing, technology, export sectors & women-led firms; plus NCGI partial credit guarantees",
-    "Std. Financing Need": "Fixed assets / CAPEX, Working capital",
-    "Product Description": "USD 100m (March 2024): USD 50m SMELOC2 working-capital credit line for MSMEs in agriculture, tourism, manufacturing, technology, export sectors and women-led firms; USD 50m as government equity in NCGI for partial credit guarantees.",
-    "Product Page": "https://www.parliament.lk/uploads/documents/paperspresented/1758085392003802.pdf",
-    "Currency": "USD (facility); LKR (sub-loans)",
-    "Tenor": "Up to 10 years (Sampath investment/joint variant)",
-    "Std. Tenor": "Long-term (> 5 years), Medium-term (1-5 years)",
-    "Interest Rate / Cost": "8.0% p.a. (Sampath refinance page)",
-    "Grace Period": "N/A",
-    "Min. Finance (LKR '000)": "N/A",
-    "Max. Finance (LKR '000)": "Sub-loans up to LKR 20m per MSME (Sampath page)",
-    "Concessional": "Concessionary",
-    "Guarantee": "Yes — USD 50m GoSL equity in NCGI funds partial credit guarantees",
-    "Std. Green": "No",
-    "Std. Green Investment Type": "",
-    "Eligibility Criteria": "\"to address urgent working capital financing needs of MSMEs in the agriculture, tourism, manufacturing, technology, export-oriented sectors and women-led enterprises\" (DDF Performance Report). T&C SMEs fall under manufacturing/export-oriented.",
-    "Eligible Projects / Applicants": "MSMEs (manufacturing & export-oriented explicitly named); women-led enterprises",
-    "Eligible Business Size": "MSMEs in named priority sectors",
-    "Std. Business Size": "SMEs (Micro + Small + Medium)",
-    "T&C Value Chain Stage": "Manufacturing & export-oriented named — T&C SMEs included",
-    "Collateral Required": "Guarantee window for collateral-short SMEs",
-    "Collateral Class": "Other",
-    "Turnover Requirement": "N/A",
-    "Capital Requirement": "N/A",
-    "Green Certification Req.": "N/A",
-    "Gender Lens": "Yes — women-led enterprises named",
-    "Required Documents": "N/A",
-    "Application Form / Link": "https://www.sampath.lk/personal-banking/loan/refinance/Refinance-Credit-Lines?category=personal_banking",
-    "Processing Time (months)": "N/A",
-    "Website": "https://www.adb.org",
-    "Contact Person": "N/A",
-    "Contact Email": "N/A",
-    "Contact Phone": "N/A",
-    "Last Verified": "",
-    "T&C Applicability": "Explicit (manufacturing & export-oriented named)",
-    "Comments": ""
-  },
-  {
-    "ID": "G0974",
-    "Product Code": "ADB · #1051",
-    "Institution Name (Abbr.)": "ADB",
-    "Institution Full Name": "Asian Development Bank",
-    "Source of Finance": "Guarantee",
-    "Institution Type": "Development Finance Institution / Multilateral",
-    "Financing Product": "Trade and Supply Chain Finance Program (TSCFP) — Sri Lanka operations",
-    "Std. Product Type": "02. Trade finance (LC/LG)",
-    "Financing Need": "Guarantees and loans covering LCs and trade instruments of partner banks (e.g. garment pre-export finance)",
-    "Std. Financing Need": "Trade finance",
-    "Product Description": "Guarantees and loans covering LCs and trade instruments of Sri Lankan partner banks; USD 200m existing Sri Lanka capacity; ADB cites a garment pre-export finance trade loan as a Sri Lanka example.",
-    "Product Page": "https://www.adb.org/what-we-do/trade-supply-chain-finance-program/participating-banks",
-    "Currency": "USD",
-    "Tenor": "N/A",
-    "Std. Tenor": "Short-term (< 1 year)",
-    "Interest Rate / Cost": "N/A",
-    "Grace Period": "N/A",
-    "Min. Finance (LKR '000)": "N/A",
-    "Max. Finance (LKR '000)": "USD 200m existing Sri Lanka programme capacity (pre-Dec 2025)",
-    "Concessional": "Non Concessionary",
-    "Guarantee": "Yes — trade-finance guarantees / risk participation",
-    "Std. Green": "No",
-    "Std. Green Investment Type": "",
-    "Eligibility Criteria": "\"$250,000 trade loan to a Sri Lanka bank to on-lend pre-export finance for the manufacture of garments for export to Europe and India\" (ADB TSCFP trade finance page).",
-    "Eligible Projects / Applicants": "Sri Lankan partner (issuing) banks; benefits exporters incl. garment manufacturers",
-    "Eligible Business Size": "N/A",
-    "Std. Business Size": "Not disclosed",
-    "T&C Value Chain Stage": "Garment pre-export finance cited as Sri Lanka example",
-    "Collateral Required": "N/A",
-    "Collateral Class": "Other",
-    "Turnover Requirement": "N/A",
-    "Capital Requirement": "N/A",
-    "Green Certification Req.": "N/A",
-    "Gender Lens": "No",
-    "Required Documents": "N/A",
-    "Application Form / Link": "N/A",
-    "Processing Time (months)": "N/A",
-    "Website": "https://www.adb.org",
-    "Contact Person": "N/A",
-    "Contact Email": "N/A",
-    "Contact Phone": "N/A",
-    "Last Verified": "",
-    "T&C Applicability": "Sector-neutral — eligible (garment example explicit)",
-    "Comments": ""
-  },
-  {
-    "ID": "G0975",
-    "Product Code": "ADB · #1052",
-    "Institution Name (Abbr.)": "ADB",
-    "Institution Full Name": "Asian Development Bank",
-    "Source of Finance": "Guarantee",
-    "Institution Type": "Development Finance Institution / Multilateral",
-    "Financing Product": "TSCFP Emergency Assistance Facility — Cyclone Ditwah response",
-    "Std. Product Type": "02. Trade finance (LC/LG)",
-    "Financing Need": "Emergency trade finance for essential imports (food, medicines, relief supplies)",
-    "Std. Financing Need": "Trade finance",
-    "Product Description": "USD 40m emergency trade-finance facility (Dec 2025) to finance essential imports — food, medicines, relief supplies — through TSCFP's six Sri Lankan partner banks.",
-    "Product Page": "https://www.adb.org/news/adb-mobilizes-40-million-emergency-trade-finance-support-sri-lanka-following-cyclone-ditwah",
-    "Currency": "USD",
-    "Tenor": "N/A",
-    "Std. Tenor": "Short-term (< 1 year)",
-    "Interest Rate / Cost": "N/A",
-    "Grace Period": "N/A",
-    "Min. Finance (LKR '000)": "N/A",
-    "Max. Finance (LKR '000)": "USD 40m (additional to USD 200m capacity)",
-    "Concessional": "Non Concessionary",
-    "Guarantee": "Yes — trade-finance facility via TSCFP",
-    "Std. Green": "No",
-    "Std. Green Investment Type": "",
-    "Eligibility Criteria": "Facility targets essential imports (food, medicine, relief); T&C raw-material imports not named — whether garment-sector trade qualifies is unstated.",
-    "Eligible Projects / Applicants": "Six TSCFP partner banks in Sri Lanka",
-    "Eligible Business Size": "N/A",
-    "Std. Business Size": "Not disclosed",
-    "T&C Value Chain Stage": "Essential imports targeted; T&C raw-material imports not named",
-    "Collateral Required": "N/A",
-    "Collateral Class": "Other",
-    "Turnover Requirement": "N/A",
-    "Capital Requirement": "N/A",
-    "Green Certification Req.": "N/A",
-    "Gender Lens": "No",
-    "Required Documents": "N/A",
-    "Application Form / Link": "N/A",
-    "Processing Time (months)": "N/A",
-    "Website": "https://www.adb.org",
-    "Contact Person": "N/A",
-    "Contact Email": "N/A",
-    "Contact Phone": "N/A",
-    "Last Verified": "",
-    "T&C Applicability": "Conditional/Unclear",
-    "Comments": ""
-  },
-  {
-    "ID": "G0976",
-    "Product Code": "ADB · #1053",
-    "Institution Name (Abbr.)": "ADB",
-    "Institution Full Name": "Asian Development Bank",
-    "Source of Finance": "Debt",
-    "Institution Type": "Development Finance Institution / Multilateral",
-    "Financing Product": "Rooftop Solar Power Generation Project",
-    "Std. Product Type": "14. Green / sustainable finance",
-    "Financing Need": "Long-term debt financing for installation of rooftop solar PV systems (incl. business/factory rooftops)",
-    "Std. Financing Need": "Fixed assets / CAPEX, Green / sustainable assets & RECP upgrades",
-    "Product Description": "Credit line enabling institutional and domestic customers (incl. businesses) to finance rooftop solar PV — classic energy-capex route for manufacturing/T&C facilities.",
-    "Product Page": "https://www.adb.org/projects/50373-002/main",
-    "Currency": "USD (facility); LKR (sub-loans)",
-    "Tenor": "Long-term debt financing",
-    "Std. Tenor": "Long-term (> 5 years)",
-    "Interest Rate / Cost": "N/A",
-    "Grace Period": "N/A",
-    "Min. Finance (LKR '000)": "N/A",
-    "Max. Finance (LKR '000)": "N/A",
-    "Concessional": "Concessionary",
-    "Guarantee": "No",
-    "Std. Green": "Yes",
-    "Std. Green Investment Type": "Solar",
-    "Eligibility Criteria": "Eligibility is by installation/customer type, not industry; factory rooftop systems qualify in principle — sub-loan criteria in operating instructions (not retrieved).",
-    "Eligible Projects / Applicants": "Institutional & domestic customers incl. businesses (factory rooftop systems qualify in principle)",
-    "Eligible Business Size": "N/A",
-    "Std. Business Size": "All sizes",
-    "T&C Value Chain Stage": "Eligibility by installation/customer type, not industry",
-    "Collateral Required": "N/A",
-    "Collateral Class": "Other",
-    "Turnover Requirement": "N/A",
-    "Capital Requirement": "N/A",
-    "Green Certification Req.": "N/A",
-    "Gender Lens": "No",
-    "Required Documents": "N/A",
-    "Application Form / Link": "N/A",
-    "Processing Time (months)": "N/A",
-    "Website": "https://www.adb.org",
-    "Contact Person": "N/A",
-    "Contact Email": "N/A",
-    "Contact Phone": "N/A",
-    "Last Verified": "",
-    "T&C Applicability": "Sector-neutral — eligible (asset-based, not sector-based)",
-    "Comments": ""
-  },
-  {
-    "ID": "G0977",
-    "Product Code": "IFC · #1054",
-    "Institution Name (Abbr.)": "IFC",
-    "Institution Full Name": "International Finance Corporation (World Bank Group)",
-    "Source of Finance": "Debt",
-    "Institution Type": "Development Finance Institution / Multilateral",
-    "Financing Product": "IFC senior loan to Nations Trust Bank (SME/WSME on-lending)",
-    "Std. Product Type": "06. Long-term loan",
-    "Financing Need": "Expand the bank's SME lending; 15% earmarked for women-owned SMEs",
-    "Std. Financing Need": "Fixed assets / CAPEX, Working capital",
-    "Product Description": "USD 50m loan to NTB to expand SME lending — first IFC debt investment in Sri Lanka's financial sector since the 2022 crisis; 15% earmarked for women-owned SMEs.",
-    "Product Page": "https://www.ifc.org/en/pressroom/2025/ifc-invests-166-million-to-support-sri-lankan-businesses-and-drive-economic-growth",
-    "Currency": "USD",
-    "Tenor": "N/A",
-    "Std. Tenor": "Not disclosed",
-    "Interest Rate / Cost": "N/A",
-    "Grace Period": "N/A",
-    "Min. Finance (LKR '000)": "N/A",
-    "Max. Finance (LKR '000)": "USD 50m loan to NTB (USD 7.5m WSME earmark)",
-    "Concessional": "Non Concessionary",
-    "Guarantee": "No (senior loan; de-risked by IDA PSW)",
-    "Std. Green": "No",
-    "Std. Green Investment Type": "",
-    "Eligibility Criteria": "Use of proceeds is SME lending with WSME earmark: \"$7.5 million or 15 percent is earmarked for on-lending to women-owned SMEs\"; no sector exclusion catching T&C published.",
-    "Eligible Projects / Applicants": "SMEs borrowing from Nations Trust Bank; women-owned SMEs (earmark)",
-    "Eligible Business Size": "N/A",
-    "Std. Business Size": "SMEs (Micro + Small + Medium)",
-    "T&C Value Chain Stage": "No published sector exclusion catching T&C",
-    "Collateral Required": "N/A",
-    "Collateral Class": "Other",
-    "Turnover Requirement": "N/A",
-    "Capital Requirement": "N/A",
-    "Green Certification Req.": "N/A",
-    "Gender Lens": "Yes — 15% / USD 7.5m earmarked for women-owned SMEs",
-    "Required Documents": "N/A",
-    "Application Form / Link": "N/A",
-    "Processing Time (months)": "N/A",
-    "Website": "https://www.ifc.org",
-    "Contact Person": "N/A",
-    "Contact Email": "N/A",
-    "Contact Phone": "N/A",
-    "Last Verified": "",
-    "T&C Applicability": "Sector-neutral — eligible",
-    "Comments": ""
-  },
-  {
-    "ID": "G0978",
-    "Product Code": "IFC · #1055",
-    "Institution Name (Abbr.)": "IFC",
-    "Institution Full Name": "International Finance Corporation (World Bank Group)",
-    "Source of Finance": "Guarantee",
-    "Institution Type": "Development Finance Institution / Multilateral",
-    "Financing Product": "IFC Risk-Sharing Facilities with Commercial Bank of Ceylon and NDB (SME portfolios)",
-    "Std. Product Type": "09. Insurance / guarantee",
-    "Financing Need": "IFC shares 50% of principal losses on portfolios of eligible SME loans (de-risking bank SME lending)",
-    "Std. Financing Need": "Fixed assets / CAPEX, Working capital",
-    "Product Description": "Up to USD 80m in RSFs — USD 60m CBC, USD 20m NDB — under which IFC shares 50% of principal losses on portfolios of eligible SME loans, de-risking bank lending to smaller firms.",
-    "Product Page": "https://www.ifc.org/en/pressroom/2025/ifc-invests-166-million-to-support-sri-lankan-businesses-and-drive-economic-growth",
-    "Currency": "USD",
-    "Tenor": "N/A",
-    "Std. Tenor": "Not disclosed",
-    "Interest Rate / Cost": "N/A",
-    "Grace Period": "N/A",
-    "Min. Finance (LKR '000)": "N/A",
-    "Max. Finance (LKR '000)": "Up to USD 80m (USD 60m CBC + USD 20m NDB)",
-    "Concessional": "Concessionary",
-    "Guarantee": "Yes — 50% principal-loss risk-sharing facility",
-    "Std. Green": "No",
-    "Std. Green Investment Type": "",
-    "Eligibility Criteria": "Eligible-SME-loan portfolio criteria not published; SME definition per IFC/bank agreement (Conditional element: published sub-loan criteria not located — treat as sector-neutral with verification flag).",
-    "Eligible Projects / Applicants": "Eligible SME loan portfolios of CBC and NDB",
-    "Eligible Business Size": "Eligible-SME criteria per IFC/bank agreement (not published)",
-    "Std. Business Size": "SMEs (Micro + Small + Medium)",
-    "T&C Value Chain Stage": "Sector-neutral (criteria not published)",
-    "Collateral Required": "De-risks collateral-short SME lending",
-    "Collateral Class": "Other",
-    "Turnover Requirement": "N/A",
-    "Capital Requirement": "N/A",
-    "Green Certification Req.": "N/A",
-    "Gender Lens": "No",
-    "Required Documents": "N/A",
-    "Application Form / Link": "N/A",
-    "Processing Time (months)": "N/A",
-    "Website": "https://www.ifc.org",
-    "Contact Person": "N/A",
-    "Contact Email": "N/A",
-    "Contact Phone": "N/A",
-    "Last Verified": "",
-    "T&C Applicability": "Sector-neutral — eligible",
-    "Comments": ""
-  },
-  {
-    "ID": "G0979",
-    "Product Code": "IFC · #1056",
-    "Institution Name (Abbr.)": "IFC",
-    "Institution Full Name": "International Finance Corporation (World Bank Group)",
-    "Source of Finance": "Guarantee",
-    "Institution Type": "Development Finance Institution / Multilateral",
-    "Financing Product": "IFC Global Trade Finance Program (GTFP) — Sri Lanka lines (NTB, NDB) and partner-bank network",
-    "Std. Product Type": "02. Trade finance (LC/LG)",
-    "Financing Need": "Trade-finance guarantee lines strengthening trade finance for underserved sectors incl. SMEs / exporters",
-    "Std. Financing Need": "Trade finance",
-    "Product Description": "USD 36m GTFP trade-finance guarantee lines — up to USD 20m NTB and USD 16m NDB (Jan 2026) — strengthening trade finance for underserved sectors incl. SMEs; GTFP lines with Sri Lankan partner banks reactivated Jan 2023.",
-    "Product Page": "https://www.ifc.org/en/pressroom/2025/ifc-invests-166-million-to-support-sri-lankan-businesses-and-drive-economic-growth",
-    "Currency": "USD",
-    "Tenor": "N/A",
-    "Std. Tenor": "Short-term (< 1 year)",
-    "Interest Rate / Cost": "N/A",
-    "Grace Period": "N/A",
-    "Min. Finance (LKR '000)": "N/A",
-    "Max. Finance (LKR '000)": "USD 36m (USD 20m NTB + USD 16m NDB)",
-    "Concessional": "Non Concessionary",
-    "Guarantee": "Yes — GTFP trade-finance guarantees",
-    "Std. Green": "No",
-    "Std. Green Investment Type": "",
-    "Eligibility Criteria": "\"enhance the banks' ability to provide underserved sectors with access to global markets and supply chains\" — exporters incl. T&C reached through LC confirmation/supply-chain finance.",
-    "Eligible Projects / Applicants": "Partner banks (NTB, NDB); exporters incl. T&C reached via LC confirmation",
-    "Eligible Business Size": "N/A",
-    "Std. Business Size": "Not disclosed",
-    "T&C Value Chain Stage": "Exporters incl. T&C reached through supply-chain finance",
-    "Collateral Required": "N/A",
-    "Collateral Class": "Other",
-    "Turnover Requirement": "N/A",
-    "Capital Requirement": "N/A",
-    "Green Certification Req.": "N/A",
-    "Gender Lens": "No",
-    "Required Documents": "N/A",
-    "Application Form / Link": "N/A",
-    "Processing Time (months)": "N/A",
-    "Website": "https://www.ifc.org",
-    "Contact Person": "N/A",
-    "Contact Email": "N/A",
-    "Contact Phone": "N/A",
-    "Last Verified": "",
-    "T&C Applicability": "Sector-neutral — eligible",
-    "Comments": ""
-  },
-  {
-    "ID": "G0980",
-    "Product Code": "IFC · #1057",
-    "Institution Name (Abbr.)": "IFC",
-    "Institution Full Name": "International Finance Corporation (World Bank Group)",
-    "Source of Finance": "Debt",
-    "Institution Type": "Development Finance Institution / Multilateral",
-    "Financing Product": "IFC COVID-19 Fast-Track Facility loan to Commercial Bank of Ceylon",
-    "Std. Product Type": "06. Long-term loan",
-    "Financing Need": "Expand SME lending amid COVID-19; over one-third dedicated to women-owned businesses; incl. SME exporters",
-    "Std. Financing Need": "Working capital",
-    "Product Description": "USD 50m loan to ComBank (June 2020) to expand SME lending amid COVID-19, with over a third dedicated to women-owned businesses and a focus incl. SME exporters.",
-    "Product Page": "https://www.ifc.org/en/pressroom/2020/ifc-s-50-million-in-support-to-commercial-bank-of-ceylon-to-boos",
-    "Currency": "USD",
-    "Tenor": "N/A",
-    "Std. Tenor": "Not disclosed",
-    "Interest Rate / Cost": "N/A",
-    "Grace Period": "N/A",
-    "Min. Finance (LKR '000)": "N/A",
-    "Max. Finance (LKR '000)": "USD 50m loan to ComBank",
-    "Concessional": "Non Concessionary",
-    "Guarantee": "No",
-    "Std. Green": "No",
-    "Std. Green Investment Type": "",
-    "Eligibility Criteria": "SME and SME-exporter focus stated; no sector exclusion catching T&C published.",
-    "Eligible Projects / Applicants": "SMEs and SME exporters borrowing from Commercial Bank of Ceylon; women-owned businesses",
-    "Eligible Business Size": "N/A",
-    "Std. Business Size": "SMEs (Micro + Small + Medium)",
-    "T&C Value Chain Stage": "SME-exporter focus; no T&C exclusion",
-    "Collateral Required": "N/A",
-    "Collateral Class": "Other",
-    "Turnover Requirement": "N/A",
-    "Capital Requirement": "N/A",
-    "Green Certification Req.": "N/A",
-    "Gender Lens": "Yes — >1/3 for women-owned businesses",
-    "Required Documents": "N/A",
-    "Application Form / Link": "N/A",
-    "Processing Time (months)": "N/A",
-    "Website": "https://www.ifc.org",
-    "Contact Person": "N/A",
-    "Contact Email": "N/A",
-    "Contact Phone": "N/A",
-    "Last Verified": "",
-    "T&C Applicability": "Sector-neutral — eligible",
-    "Comments": ""
-  },
-  {
-    "ID": "G0981",
-    "Product Code": "IFC · #1058",
-    "Institution Name (Abbr.)": "IFC",
-    "Institution Full Name": "International Finance Corporation (World Bank Group)",
-    "Source of Finance": "Debt",
-    "Institution Type": "Development Finance Institution / Multilateral",
-    "Financing Product": "IFC cross-currency swap facility (CBC, NTB, Sampath) — essential imports",
-    "Std. Product Type": "20. Treasury, FX & hedging",
-    "Financing Need": "FX liquidity to banks to sustain imports of essential goods during the crisis",
-    "Std. Financing Need": "Trade finance",
-    "Product Description": "Up to USD 400m over one year (from Feb 2023) to three banks handling >30% of remittances/exports, providing forex liquidity to sustain imports of essential goods during the crisis.",
-    "Product Page": "https://www.ifc.org/en/pressroom/2023/boost-to-sri-lankan-economy-with-ifc-providing-financing-of-up-to-400-million-to-banks-to-ensure-essential-imports",
-    "Currency": "USD",
-    "Tenor": "One year (from Feb 2023)",
-    "Std. Tenor": "Short-term (< 1 year)",
-    "Interest Rate / Cost": "N/A",
-    "Grace Period": "N/A",
-    "Min. Finance (LKR '000)": "N/A",
-    "Max. Finance (LKR '000)": "Up to USD 400m (across 3 banks)",
-    "Concessional": "Non Concessionary",
-    "Guarantee": "No",
-    "Std. Green": "No",
-    "Std. Green Investment Type": "",
-    "Eligibility Criteria": "Targeted essential imports (food, medicine, fertiliser); T&C input imports not named. Included for completeness as crisis-era bank-channel liquidity.",
-    "Eligible Projects / Applicants": "CBC, NTB and Sampath Bank (FX liquidity)",
-    "Eligible Business Size": "N/A",
-    "Std. Business Size": "Not disclosed",
-    "T&C Value Chain Stage": "Essential imports targeted; T&C inputs not named",
-    "Collateral Required": "N/A",
-    "Collateral Class": "Not disclosed",
-    "Turnover Requirement": "N/A",
-    "Capital Requirement": "N/A",
-    "Green Certification Req.": "N/A",
-    "Gender Lens": "No",
-    "Required Documents": "N/A",
-    "Application Form / Link": "N/A",
-    "Processing Time (months)": "N/A",
-    "Website": "https://www.ifc.org",
-    "Contact Person": "N/A",
-    "Contact Email": "N/A",
-    "Contact Phone": "N/A",
-    "Last Verified": "",
-    "T&C Applicability": "Conditional/Unclear",
-    "Comments": ""
-  },
-  {
-    "ID": "G0982",
-    "Product Code": "FMO · #1059",
-    "Institution Name (Abbr.)": "FMO",
-    "Institution Full Name": "Nederlandse Financierings-Maatschappij voor Ontwikkelingslanden N.V. (Dutch Entrepreneurial Development Bank)",
-    "Source of Finance": "Equity",
-    "Institution Type": "Development Finance Institution / Multilateral",
-    "Financing Product": "Emerald Sri Lanka Fund I (NDB Zephyr Partners) — FMO participation",
-    "Std. Product Type": "11. Venture capital / PE",
-    "Financing Need": "Risk capital (equity) to SMEs in high-growth sectors via private equity fund",
-    "Std. Financing Need": "Fixed assets / CAPEX",
-    "Product Description": "FMO anchor participation in the largest Sri Lanka-dedicated private equity fund, providing risk capital to SMEs in high-growth sectors.",
-    "Product Page": "https://www.fmo.nl/project-detail/41785",
-    "Currency": "USD",
-    "Tenor": "N/A",
-    "Std. Tenor": "None",
-    "Interest Rate / Cost": "N/A",
-    "Grace Period": "N/A",
-    "Min. Finance (LKR '000)": "N/A",
-    "Max. Finance (LKR '000)": "FMO commitment amount not disclosed on project page",
-    "Concessional": "Non Concessionary",
-    "Guarantee": "No",
-    "Std. Green": "No",
-    "Std. Green Investment Type": "",
-    "Eligibility Criteria": "SME risk capital across high-growth sectors; no T&C exclusion stated.",
-    "Eligible Projects / Applicants": "SMEs in high-growth sectors (via Emerald Sri Lanka Fund I)",
-    "Eligible Business Size": "N/A",
-    "Std. Business Size": "SMEs (Micro + Small + Medium)",
-    "T&C Value Chain Stage": "No T&C exclusion stated",
-    "Collateral Required": "N/A",
-    "Collateral Class": "Collateral not required",
-    "Turnover Requirement": "N/A",
-    "Capital Requirement": "N/A",
-    "Green Certification Req.": "N/A",
-    "Gender Lens": "No",
-    "Required Documents": "N/A",
-    "Application Form / Link": "N/A",
-    "Processing Time (months)": "N/A",
-    "Website": "https://www.fmo.nl",
-    "Contact Person": "N/A",
-    "Contact Email": "N/A",
-    "Contact Phone": "N/A",
-    "Last Verified": "",
-    "T&C Applicability": "Sector-neutral — eligible",
-    "Comments": ""
-  },
-  {
-    "ID": "G0983",
-    "Product Code": "FMO · #1060",
-    "Institution Name (Abbr.)": "FMO",
-    "Institution Full Name": "Nederlandse Financierings-Maatschappij voor Ontwikkelingslanden N.V. (Dutch Entrepreneurial Development Bank)",
-    "Source of Finance": "Debt",
-    "Institution Type": "Development Finance Institution / Multilateral",
-    "Financing Product": "FMO loan to National Development Bank PLC (green/agri on-lending)",
-    "Std. Product Type": "06. Long-term loan",
-    "Financing Need": "Grow NDB's renewable-energy portfolio (≥40% of funds) and agri portfolio (≥10% of funds)",
-    "Std. Financing Need": "Fixed assets / CAPEX, Green / sustainable assets & RECP upgrades",
-    "Product Description": "FMO funding to NDB with use of proceeds: at least 40% renewable-energy portfolio and at least 10% agri portfolio growth.",
-    "Product Page": "https://www.fmo.nl/project-detail/32374",
-    "Currency": "USD (amount not disclosed)",
-    "Tenor": "N/A",
-    "Std. Tenor": "Not disclosed",
-    "Interest Rate / Cost": "N/A",
-    "Grace Period": "N/A",
-    "Min. Finance (LKR '000)": "N/A",
-    "Max. Finance (LKR '000)": "Amount not stated on project page",
-    "Concessional": "Non Concessionary",
-    "Guarantee": "No",
-    "Std. Green": "Yes",
-    "Std. Green Investment Type": "Multiple / Other",
-    "Eligibility Criteria": "Remaining ~50% use of proceeds unstated; RE window relevant to T&C factory solar/EE investments via NDB.",
-    "Eligible Projects / Applicants": "NDB on-lending (RE / agri portfolios)",
-    "Eligible Business Size": "N/A",
-    "Std. Business Size": "SMEs (Micro + Small + Medium)",
-    "T&C Value Chain Stage": "RE window relevant to T&C factory solar/EE",
-    "Collateral Required": "N/A",
-    "Collateral Class": "Other",
-    "Turnover Requirement": "N/A",
-    "Capital Requirement": "N/A",
-    "Green Certification Req.": "N/A",
-    "Gender Lens": "No",
-    "Required Documents": "N/A",
-    "Application Form / Link": "N/A",
-    "Processing Time (months)": "N/A",
-    "Website": "https://www.fmo.nl",
-    "Contact Person": "N/A",
-    "Contact Email": "N/A",
-    "Contact Phone": "N/A",
-    "Last Verified": "",
-    "T&C Applicability": "Conditional/Unclear",
-    "Comments": ""
-  },
-  {
-    "ID": "G0984",
-    "Product Code": "FMO · #1061",
-    "Institution Name (Abbr.)": "FMO",
-    "Institution Full Name": "Nederlandse Financierings-Maatschappij voor Ontwikkelingslanden N.V. (Dutch Entrepreneurial Development Bank)",
-    "Source of Finance": "Debt",
-    "Institution Type": "Development Finance Institution / Multilateral",
-    "Financing Product": "FMO loan to Sanasa Development Bank (SME portfolio growth)",
-    "Std. Product Type": "06. Long-term loan",
-    "Financing Need": "Grow SDB's SME portfolio with rural / inclusive-finance focus",
-    "Std. Financing Need": "Fixed assets / CAPEX, Working capital",
-    "Product Description": "Secured local-currency loan of USD 6m equivalent, 5 years with 2 years' grace, to grow SDB's SME portfolio with rural/inclusive-finance focus.",
-    "Product Page": "https://www.fmo.nl/project-detail/50195",
-    "Currency": "USD (local-currency equivalent)",
-    "Tenor": "5 years",
-    "Std. Tenor": "Medium-term (1-5 years)",
-    "Interest Rate / Cost": "N/A",
-    "Grace Period": "2 years' grace",
-    "Min. Finance (LKR '000)": "N/A",
-    "Max. Finance (LKR '000)": "USD 6m (local-currency equivalent)",
-    "Concessional": "Non Concessionary",
-    "Guarantee": "No",
-    "Std. Green": "No",
-    "Std. Green Investment Type": "",
-    "Eligibility Criteria": "SME-portfolio use of proceeds; SDB's client base is rural MSME — micro/small T&C producers in scope.",
-    "Eligible Projects / Applicants": "SDB SME clients (rural MSME base; micro/small T&C producers in scope)",
-    "Eligible Business Size": "N/A",
-    "Std. Business Size": "SMEs (Micro + Small + Medium)",
-    "T&C Value Chain Stage": "SME-portfolio use; micro/small T&C producers in scope",
-    "Collateral Required": "Secured loan (FMO–SDB)",
-    "Collateral Class": "Other",
-    "Turnover Requirement": "N/A",
-    "Capital Requirement": "N/A",
-    "Green Certification Req.": "N/A",
-    "Gender Lens": "No",
-    "Required Documents": "N/A",
-    "Application Form / Link": "N/A",
-    "Processing Time (months)": "N/A",
-    "Website": "https://www.fmo.nl",
-    "Contact Person": "N/A",
-    "Contact Email": "N/A",
-    "Contact Phone": "N/A",
-    "Last Verified": "",
-    "T&C Applicability": "Sector-neutral — eligible",
-    "Comments": ""
-  },
-  {
-    "ID": "G0985",
-    "Product Code": "Proparco · #1062",
-    "Institution Name (Abbr.)": "Proparco",
-    "Institution Full Name": "Société de Promotion et de Participation pour la Coopération Économique (AFD Group)",
-    "Source of Finance": "Debt",
-    "Institution Type": "Development Finance Institution / Multilateral",
-    "Financing Product": "Proparco SME credit line to Hatton National Bank",
-    "Std. Product Type": "06. Long-term loan",
-    "Financing Need": "Finance SME loans, with at least half earmarked for SMEs in rural provinces",
-    "Std. Financing Need": "Fixed assets / CAPEX, Working capital",
-    "Product Description": "USD 60m credit line to HNB to finance SME loans, with at least half earmarked for SMEs in rural provinces; builds on Proparco-HNB relationship since 2015.",
-    "Product Page": "https://www.proparco.fr/en/carte-des-projets/hatton-national-bank-2020",
-    "Currency": "USD",
-    "Tenor": "N/A",
-    "Std. Tenor": "Not disclosed",
-    "Interest Rate / Cost": "N/A",
-    "Grace Period": "N/A",
-    "Min. Finance (LKR '000)": "N/A",
-    "Max. Finance (LKR '000)": "USD 60m credit line to HNB",
-    "Concessional": "Non Concessionary",
-    "Guarantee": "No",
-    "Std. Green": "No",
-    "Std. Green Investment Type": "",
-    "Eligibility Criteria": "SME use of proceeds, rural earmark; no sector exclusion catching T&C stated.",
-    "Eligible Projects / Applicants": "SMEs borrowing from HNB; ≥50% rural-province SMEs",
-    "Eligible Business Size": "N/A",
-    "Std. Business Size": "SMEs (Micro + Small + Medium)",
-    "T&C Value Chain Stage": "No sector exclusion catching T&C stated",
-    "Collateral Required": "N/A",
-    "Collateral Class": "Other",
-    "Turnover Requirement": "N/A",
-    "Capital Requirement": "N/A",
-    "Green Certification Req.": "N/A",
-    "Gender Lens": "No",
-    "Required Documents": "N/A",
-    "Application Form / Link": "N/A",
-    "Processing Time (months)": "N/A",
-    "Website": "https://www.proparco.fr",
-    "Contact Person": "N/A",
-    "Contact Email": "N/A",
-    "Contact Phone": "N/A",
-    "Last Verified": "",
-    "T&C Applicability": "Sector-neutral — eligible",
-    "Comments": ""
-  },
-  {
-    "ID": "G0986",
-    "Product Code": "DEG · #1063",
-    "Institution Name (Abbr.)": "DEG",
-    "Institution Full Name": "Deutsche Investitions- und Entwicklungsgesellschaft mbH (KfW Group)",
-    "Source of Finance": "Debt",
-    "Institution Type": "Development Finance Institution / Multilateral",
-    "Financing Product": "DEG long-term SME loans to Hatton National Bank (2012, 2015)",
-    "Std. Product Type": "06. Long-term loan",
-    "Financing Need": "Enable HNB to provide local SME customers with long-tenor capital",
-    "Std. Financing Need": "Fixed assets / CAPEX",
-    "Product Description": "Long-term DEG loans (second loan Sept 2015) enabling HNB to provide local SME customers with long-tenor capital.",
-    "Product Page": "https://www.deginvest.de/Newsroom/News/News-Details_308929-2.html",
-    "Currency": "Not stated",
-    "Tenor": "Long-term",
-    "Std. Tenor": "Long-term (> 5 years)",
-    "Interest Rate / Cost": "N/A",
-    "Grace Period": "N/A",
-    "Min. Finance (LKR '000)": "N/A",
-    "Max. Finance (LKR '000)": "Amounts not stated",
-    "Concessional": "Non Concessionary",
-    "Guarantee": "No",
-    "Std. Green": "No",
-    "Std. Green Investment Type": "",
-    "Eligibility Criteria": "SME use of proceeds; DEG's example beneficiary is a manufacturing SME (industrial heating elements).",
-    "Eligible Projects / Applicants": "SMEs borrowing from HNB (DEG example beneficiary is a manufacturing SME)",
-    "Eligible Business Size": "N/A",
-    "Std. Business Size": "SMEs (Micro + Small + Medium)",
-    "T&C Value Chain Stage": "Manufacturing SME example cited",
-    "Collateral Required": "N/A",
-    "Collateral Class": "Other",
-    "Turnover Requirement": "N/A",
-    "Capital Requirement": "N/A",
-    "Green Certification Req.": "N/A",
-    "Gender Lens": "No",
-    "Required Documents": "N/A",
-    "Application Form / Link": "N/A",
-    "Processing Time (months)": "N/A",
-    "Website": "https://www.deginvest.de",
-    "Contact Person": "N/A",
-    "Contact Email": "N/A",
-    "Contact Phone": "N/A",
-    "Last Verified": "",
-    "T&C Applicability": "Sector-neutral — eligible",
-    "Comments": ""
-  },
-  {
-    "ID": "G0987",
-    "Product Code": "OPEC Fund · #1064",
-    "Institution Name (Abbr.)": "OPEC Fund",
-    "Institution Full Name": "OPEC Fund for International Development",
-    "Source of Finance": "Debt",
-    "Institution Type": "Development Finance Institution / Multilateral",
-    "Financing Product": "OPEC Fund / OeEB / DEG joint MSME term loan to Seylan Bank",
-    "Std. Product Type": "06. Long-term loan",
-    "Financing Need": "MSME on-lending; over one-third earmarked for MSMEs in Northern & Eastern provinces",
-    "Std. Financing Need": "Fixed assets / CAPEX, Working capital",
-    "Product Description": "USD 45m five-year term loan to Seylan Bank for MSME on-lending; over one-third earmarked for MSMEs in Northern and Eastern provinces.",
-    "Product Page": "https://opecfund.org/media-center/press-releases/2017/ofid-oeeb-and-deg-team-up-to-support-sri-lankan-msmes-through-seylan-bank-plc",
-    "Currency": "USD",
-    "Tenor": "5-year tenor",
-    "Std. Tenor": "Medium-term (1-5 years)",
-    "Interest Rate / Cost": "N/A",
-    "Grace Period": "N/A",
-    "Min. Finance (LKR '000)": "N/A",
-    "Max. Finance (LKR '000)": "USD 45m term loan to Seylan Bank",
-    "Concessional": "Non Concessionary",
-    "Guarantee": "No",
-    "Std. Green": "No",
-    "Std. Green Investment Type": "",
-    "Eligibility Criteria": "MSME use of proceeds, regional earmark; no sector exclusion catching T&C stated.",
-    "Eligible Projects / Applicants": "MSMEs borrowing from Seylan Bank; >1/3 Northern & Eastern MSMEs",
-    "Eligible Business Size": "N/A",
-    "Std. Business Size": "SMEs (Micro + Small + Medium)",
-    "T&C Value Chain Stage": "No sector exclusion catching T&C stated",
-    "Collateral Required": "N/A",
-    "Collateral Class": "Other",
-    "Turnover Requirement": "N/A",
-    "Capital Requirement": "N/A",
-    "Green Certification Req.": "N/A",
-    "Gender Lens": "No",
-    "Required Documents": "N/A",
-    "Application Form / Link": "N/A",
-    "Processing Time (months)": "N/A",
-    "Website": "https://opecfund.org",
-    "Contact Person": "N/A",
-    "Contact Email": "N/A",
-    "Contact Phone": "N/A",
-    "Last Verified": "",
-    "T&C Applicability": "Sector-neutral — eligible",
-    "Comments": ""
-  },
-  {
-    "ID": "G0988",
-    "Product Code": "OPEC Fund · #1065",
-    "Institution Name (Abbr.)": "OPEC Fund",
-    "Institution Full Name": "OPEC Fund for International Development",
-    "Source of Finance": "Debt",
-    "Institution Type": "Development Finance Institution / Multilateral",
-    "Financing Product": "OPEC Fund private-sector & trade finance commitments to Sri Lanka (MSME-supporting)",
-    "Std. Product Type": "06. Long-term loan",
-    "Financing Need": "Private-sector funding and trade finance in support of MSMEs (aggregate; underlying facilities undisclosed)",
-    "Std. Financing Need": "Trade finance, Working capital",
-    "Product Description": "OPEC Fund reports USD 115m committed in private-sector funding and trade finance to Sri Lanka in support of MSMEs (cumulative, as of Oct 2019); individual facilities beyond Seylan not disclosed in sources located.",
-    "Product Page": "https://opecfund.org/media-center/press-releases/2019/us-40m-opec-fund-loan-finances-key-highway-in-sri-lanka",
-    "Currency": "USD",
-    "Tenor": "N/A",
-    "Std. Tenor": "Not disclosed",
-    "Interest Rate / Cost": "N/A",
-    "Grace Period": "N/A",
-    "Min. Finance (LKR '000)": "N/A",
-    "Max. Finance (LKR '000)": "USD 115m cumulative (as of Oct 2019)",
-    "Concessional": "Non Concessionary",
-    "Guarantee": "Partly (trade finance)",
-    "Std. Green": "No",
-    "Std. Green Investment Type": "",
-    "Eligibility Criteria": "Aggregate figure; underlying facilities, banks and eligibility undisclosed.",
-    "Eligible Projects / Applicants": "Sri Lankan MSMEs (via banks; specifics undisclosed)",
-    "Eligible Business Size": "N/A",
-    "Std. Business Size": "SMEs (Micro + Small + Medium)",
-    "T&C Value Chain Stage": "Aggregate; underlying eligibility undisclosed",
-    "Collateral Required": "N/A",
-    "Collateral Class": "Not disclosed",
-    "Turnover Requirement": "N/A",
-    "Capital Requirement": "N/A",
-    "Green Certification Req.": "N/A",
-    "Gender Lens": "No",
-    "Required Documents": "N/A",
-    "Application Form / Link": "N/A",
-    "Processing Time (months)": "N/A",
-    "Website": "https://opecfund.org",
-    "Contact Person": "N/A",
-    "Contact Email": "N/A",
-    "Contact Phone": "N/A",
-    "Last Verified": "",
-    "T&C Applicability": "Conditional/Unclear",
-    "Comments": ""
-  },
-  {
-    "ID": "G0989",
-    "Product Code": "Swedfund · #1066",
-    "Institution Name (Abbr.)": "Swedfund",
-    "Institution Full Name": "Swedfund International AB",
-    "Source of Finance": "Debt",
-    "Institution Type": "Development Finance Institution / Multilateral",
-    "Financing Product": "Swedfund senior loan to LOLC Finance PLC",
-    "Std. Product Type": "06. Long-term loan",
-    "Financing Need": "Support financial inclusion and SME lending through the largest NBFI group",
-    "Std. Financing Need": "Fixed assets / CAPEX, Working capital",
-    "Product Description": "USD 10m senior loan to LOLC Finance (Dec 2019) supporting financial inclusion and SME lending through Sri Lanka's largest NBFI group.",
-    "Product Page": "https://www.swedfund.se/en/investments/our-portfolio-companies/lolc-finance-plc-lofc",
-    "Currency": "USD",
-    "Tenor": "N/A",
-    "Std. Tenor": "Not disclosed",
-    "Interest Rate / Cost": "N/A",
-    "Grace Period": "N/A",
-    "Min. Finance (LKR '000)": "N/A",
-    "Max. Finance (LKR '000)": "USD 10m senior loan to LOLC Finance",
-    "Concessional": "Non Concessionary",
-    "Guarantee": "No",
-    "Std. Green": "No",
-    "Std. Green Investment Type": "",
-    "Eligibility Criteria": "\"empowering a growing number of local small and medium-sized companies\" (Swedfund statement); NBFI channel reaches micro/small T&C producers.",
-    "Eligible Projects / Applicants": "Small & medium companies via LOLC Finance (NBFI channel reaches micro/small T&C)",
-    "Eligible Business Size": "N/A",
-    "Std. Business Size": "SMEs (Micro + Small + Medium)",
-    "T&C Value Chain Stage": "NBFI channel reaches micro/small T&C producers",
-    "Collateral Required": "N/A",
-    "Collateral Class": "Other",
-    "Turnover Requirement": "N/A",
-    "Capital Requirement": "N/A",
-    "Green Certification Req.": "N/A",
-    "Gender Lens": "No",
-    "Required Documents": "N/A",
-    "Application Form / Link": "N/A",
-    "Processing Time (months)": "N/A",
-    "Website": "https://www.swedfund.se",
-    "Contact Person": "N/A",
-    "Contact Email": "N/A",
-    "Contact Phone": "N/A",
-    "Last Verified": "",
-    "T&C Applicability": "Sector-neutral — eligible",
-    "Comments": ""
-  },
-  {
-    "ID": "G0990",
+    "ID": "G0969",
     "Product Code": "BOC · #1067",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -45540,7 +44574,7 @@
     "Comments": ""
   },
   {
-    "ID": "G0991",
+    "ID": "G0970",
     "Product Code": "BOC · #1068",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -45586,7 +44620,7 @@
     "Comments": ""
   },
   {
-    "ID": "G0992",
+    "ID": "G0971",
     "Product Code": "BOC · #1069",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -45632,7 +44666,7 @@
     "Comments": ""
   },
   {
-    "ID": "G0993",
+    "ID": "G0972",
     "Product Code": "BOC · #1070",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -45678,7 +44712,7 @@
     "Comments": ""
   },
   {
-    "ID": "G0994",
+    "ID": "G0973",
     "Product Code": "BOC · #1071",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -45724,7 +44758,7 @@
     "Comments": ""
   },
   {
-    "ID": "G0995",
+    "ID": "G0974",
     "Product Code": "BOC · #1072",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -45770,7 +44804,7 @@
     "Comments": ""
   },
   {
-    "ID": "G0996",
+    "ID": "G0975",
     "Product Code": "BOC · #1073",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -45816,7 +44850,7 @@
     "Comments": ""
   },
   {
-    "ID": "G0997",
+    "ID": "G0976",
     "Product Code": "BOC · #1074",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -45862,7 +44896,7 @@
     "Comments": ""
   },
   {
-    "ID": "G0998",
+    "ID": "G0977",
     "Product Code": "BOC · #1075",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -45908,7 +44942,7 @@
     "Comments": ""
   },
   {
-    "ID": "G0999",
+    "ID": "G0978",
     "Product Code": "BOC · #1076",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -45954,7 +44988,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1000",
+    "ID": "G0979",
     "Product Code": "BOC · #1077",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -46000,7 +45034,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1001",
+    "ID": "G0980",
     "Product Code": "BOC · #1078",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -46046,7 +45080,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1002",
+    "ID": "G0981",
     "Product Code": "BOC · #1079",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -46092,7 +45126,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1003",
+    "ID": "G0982",
     "Product Code": "BOC · #1080",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -46138,7 +45172,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1004",
+    "ID": "G0983",
     "Product Code": "BOC · #1081",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -46184,7 +45218,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1005",
+    "ID": "G0984",
     "Product Code": "BOC · #1082",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -46230,7 +45264,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1006",
+    "ID": "G0985",
     "Product Code": "BOC · #1083",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -46276,7 +45310,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1007",
+    "ID": "G0986",
     "Product Code": "BOC · #1084",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -46322,7 +45356,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1008",
+    "ID": "G0987",
     "Product Code": "BOC · #1085",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -46368,7 +45402,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1009",
+    "ID": "G0988",
     "Product Code": "BOC · #1086",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -46414,7 +45448,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1010",
+    "ID": "G0989",
     "Product Code": "BOC · #1087",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -46460,7 +45494,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1011",
+    "ID": "G0990",
     "Product Code": "BOC · #1088",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -46506,7 +45540,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1012",
+    "ID": "G0991",
     "Product Code": "BOC · #1089",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -46552,7 +45586,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1013",
+    "ID": "G0992",
     "Product Code": "BOC · #1090",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -46598,7 +45632,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1014",
+    "ID": "G0993",
     "Product Code": "BOC · #1091",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -46644,7 +45678,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1015",
+    "ID": "G0994",
     "Product Code": "BOC · #1092",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -46690,7 +45724,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1016",
+    "ID": "G0995",
     "Product Code": "BOC · #1093",
     "Institution Name (Abbr.)": "BOC",
     "Institution Full Name": "Bank of China Limited (Colombo Branch)",
@@ -46736,7 +45770,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1017",
+    "ID": "G0996",
     "Product Code": "Citi · #1094",
     "Institution Name (Abbr.)": "Citi",
     "Institution Full Name": "Citibank N.A. (Citigroup Inc.)",
@@ -46782,7 +45816,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1018",
+    "ID": "G0997",
     "Product Code": "Citi · #1095",
     "Institution Name (Abbr.)": "Citi",
     "Institution Full Name": "Citibank N.A. (Citigroup Inc.)",
@@ -46828,7 +45862,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1019",
+    "ID": "G0998",
     "Product Code": "Citi · #1096",
     "Institution Name (Abbr.)": "Citi",
     "Institution Full Name": "Citibank N.A. (Citigroup Inc.)",
@@ -46874,7 +45908,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1020",
+    "ID": "G0999",
     "Product Code": "Citi · #1097",
     "Institution Name (Abbr.)": "Citi",
     "Institution Full Name": "Citibank N.A. (Citigroup Inc.)",
@@ -46920,7 +45954,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1021",
+    "ID": "G1000",
     "Product Code": "Citi · #1098",
     "Institution Name (Abbr.)": "Citi",
     "Institution Full Name": "Citibank N.A. (Citigroup Inc.)",
@@ -46966,7 +46000,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1022",
+    "ID": "G1001",
     "Product Code": "Citi · #1099",
     "Institution Name (Abbr.)": "Citi",
     "Institution Full Name": "Citibank N.A. (Citigroup Inc.)",
@@ -47012,7 +46046,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1023",
+    "ID": "G1002",
     "Product Code": "Citi · #1100",
     "Institution Name (Abbr.)": "Citi",
     "Institution Full Name": "Citibank N.A. (Citigroup Inc.)",
@@ -47058,7 +46092,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1024",
+    "ID": "G1003",
     "Product Code": "Citi · #1101",
     "Institution Name (Abbr.)": "Citi",
     "Institution Full Name": "Citibank N.A. (Citigroup Inc.)",
@@ -47104,7 +46138,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1025",
+    "ID": "G1004",
     "Product Code": "Citi · #1102",
     "Institution Name (Abbr.)": "Citi",
     "Institution Full Name": "Citibank N.A. (Citigroup Inc.)",
@@ -47150,7 +46184,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1026",
+    "ID": "G1005",
     "Product Code": "Citi · #1103",
     "Institution Name (Abbr.)": "Citi",
     "Institution Full Name": "Citibank N.A. (Citigroup Inc.)",
@@ -47196,7 +46230,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1027",
+    "ID": "G1006",
     "Product Code": "Citi · #1104",
     "Institution Name (Abbr.)": "Citi",
     "Institution Full Name": "Citibank N.A. (Citigroup Inc.)",
@@ -47242,7 +46276,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1028",
+    "ID": "G1007",
     "Product Code": "Citi · #1105",
     "Institution Name (Abbr.)": "Citi",
     "Institution Full Name": "Citibank N.A. (Citigroup Inc.)",
@@ -47288,7 +46322,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1029",
+    "ID": "G1008",
     "Product Code": "Citi · #1106",
     "Institution Name (Abbr.)": "Citi",
     "Institution Full Name": "Citibank N.A. (Citigroup Inc.)",
@@ -47334,7 +46368,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1030",
+    "ID": "G1009",
     "Product Code": "Citi · #1107",
     "Institution Name (Abbr.)": "Citi",
     "Institution Full Name": "Citibank N.A. (Citigroup Inc.)",
@@ -47380,7 +46414,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1031",
+    "ID": "G1010",
     "Product Code": "Citi · #1108",
     "Institution Name (Abbr.)": "Citi",
     "Institution Full Name": "Citibank N.A. (Citigroup Inc.)",
@@ -47426,7 +46460,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1032",
+    "ID": "G1011",
     "Product Code": "Citi · #1109",
     "Institution Name (Abbr.)": "Citi",
     "Institution Full Name": "Citibank N.A. (Citigroup Inc.)",
@@ -47472,7 +46506,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1033",
+    "ID": "G1012",
     "Product Code": "Citi · #1110",
     "Institution Name (Abbr.)": "Citi",
     "Institution Full Name": "Citibank N.A. (Citigroup Inc.)",
@@ -47518,7 +46552,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1034",
+    "ID": "G1013",
     "Product Code": "Citi · #1111",
     "Institution Name (Abbr.)": "Citi",
     "Institution Full Name": "Citibank N.A. (Citigroup Inc.)",
@@ -47564,7 +46598,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1035",
+    "ID": "G1014",
     "Product Code": "DB · #1112",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -47610,7 +46644,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1036",
+    "ID": "G1015",
     "Product Code": "DB · #1113",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -47656,7 +46690,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1037",
+    "ID": "G1016",
     "Product Code": "DB · #1114",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -47702,7 +46736,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1038",
+    "ID": "G1017",
     "Product Code": "DB · #1115",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -47748,7 +46782,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1039",
+    "ID": "G1018",
     "Product Code": "DB · #1116",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -47794,7 +46828,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1040",
+    "ID": "G1019",
     "Product Code": "DB · #1117",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -47840,7 +46874,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1041",
+    "ID": "G1020",
     "Product Code": "DB · #1118",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -47886,7 +46920,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1042",
+    "ID": "G1021",
     "Product Code": "DB · #1119",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -47932,7 +46966,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1043",
+    "ID": "G1022",
     "Product Code": "DB · #1120",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -47978,7 +47012,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1044",
+    "ID": "G1023",
     "Product Code": "DB · #1121",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -48024,7 +47058,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1045",
+    "ID": "G1024",
     "Product Code": "DB · #1122",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -48070,7 +47104,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1046",
+    "ID": "G1025",
     "Product Code": "DB · #1123",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -48116,7 +47150,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1047",
+    "ID": "G1026",
     "Product Code": "DB · #1124",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -48162,7 +47196,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1048",
+    "ID": "G1027",
     "Product Code": "DB · #1124",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -48208,7 +47242,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1049",
+    "ID": "G1028",
     "Product Code": "DB · #1125",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -48254,7 +47288,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1050",
+    "ID": "G1029",
     "Product Code": "DB · #1126",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -48300,7 +47334,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1051",
+    "ID": "G1030",
     "Product Code": "DB · #1127",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -48346,7 +47380,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1052",
+    "ID": "G1031",
     "Product Code": "DB · #1128",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -48392,7 +47426,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1053",
+    "ID": "G1032",
     "Product Code": "DB · #1129",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -48438,7 +47472,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1054",
+    "ID": "G1033",
     "Product Code": "DB · #1130",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -48484,7 +47518,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1055",
+    "ID": "G1034",
     "Product Code": "DB · #1131",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -48530,7 +47564,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1056",
+    "ID": "G1035",
     "Product Code": "DB · #1132",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -48576,7 +47610,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1057",
+    "ID": "G1036",
     "Product Code": "DB · #1133",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -48622,7 +47656,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1058",
+    "ID": "G1037",
     "Product Code": "DB · #1134",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -48668,7 +47702,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1059",
+    "ID": "G1038",
     "Product Code": "DB · #1135",
     "Institution Name (Abbr.)": "DB",
     "Institution Full Name": "Deutsche Bank AG, Colombo Branch",
@@ -48714,7 +47748,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1060",
+    "ID": "G1039",
     "Product Code": "HBLSL · #1136",
     "Institution Name (Abbr.)": "HBLSL",
     "Institution Full Name": "Habib Bank Limited - Sri Lanka",
@@ -48760,7 +47794,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1061",
+    "ID": "G1040",
     "Product Code": "HBLSL · #1137",
     "Institution Name (Abbr.)": "HBLSL",
     "Institution Full Name": "Habib Bank Limited - Sri Lanka",
@@ -48806,7 +47840,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1062",
+    "ID": "G1041",
     "Product Code": "HBLSL · #1138",
     "Institution Name (Abbr.)": "HBLSL",
     "Institution Full Name": "Habib Bank Limited - Sri Lanka",
@@ -48852,7 +47886,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1063",
+    "ID": "G1042",
     "Product Code": "HBLSL · #1139",
     "Institution Name (Abbr.)": "HBLSL",
     "Institution Full Name": "Habib Bank Limited - Sri Lanka",
@@ -48898,7 +47932,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1064",
+    "ID": "G1043",
     "Product Code": "HBLSL · #1140",
     "Institution Name (Abbr.)": "HBLSL",
     "Institution Full Name": "Habib Bank Limited - Sri Lanka",
@@ -48944,7 +47978,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1065",
+    "ID": "G1044",
     "Product Code": "HBLSL · #1141",
     "Institution Name (Abbr.)": "HBLSL",
     "Institution Full Name": "Habib Bank Limited - Sri Lanka",
@@ -48990,7 +48024,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1066",
+    "ID": "G1045",
     "Product Code": "HBLSL · #1142",
     "Institution Name (Abbr.)": "HBLSL",
     "Institution Full Name": "Habib Bank Limited - Sri Lanka",
@@ -49036,7 +48070,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1067",
+    "ID": "G1046",
     "Product Code": "HBLSL · #1143",
     "Institution Name (Abbr.)": "HBLSL",
     "Institution Full Name": "Habib Bank Limited - Sri Lanka",
@@ -49082,7 +48116,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1068",
+    "ID": "G1047",
     "Product Code": "HBLSL · #1144",
     "Institution Name (Abbr.)": "HBLSL",
     "Institution Full Name": "Habib Bank Limited - Sri Lanka",
@@ -49128,7 +48162,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1069",
+    "ID": "G1048",
     "Product Code": "HBLSL · #1145",
     "Institution Name (Abbr.)": "HBLSL",
     "Institution Full Name": "Habib Bank Limited - Sri Lanka",
@@ -49174,7 +48208,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1070",
+    "ID": "G1049",
     "Product Code": "HBLSL · #1146",
     "Institution Name (Abbr.)": "HBLSL",
     "Institution Full Name": "Habib Bank Limited - Sri Lanka",
@@ -49220,7 +48254,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1071",
+    "ID": "G1050",
     "Product Code": "HBLSL · #1147",
     "Institution Name (Abbr.)": "HBLSL",
     "Institution Full Name": "Habib Bank Limited - Sri Lanka",
@@ -49266,7 +48300,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1072",
+    "ID": "G1051",
     "Product Code": "HBLSL · #1148",
     "Institution Name (Abbr.)": "HBLSL",
     "Institution Full Name": "Habib Bank Limited - Sri Lanka",
@@ -49312,7 +48346,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1073",
+    "ID": "G1052",
     "Product Code": "HBLSL · #1149",
     "Institution Name (Abbr.)": "HBLSL",
     "Institution Full Name": "Habib Bank Limited - Sri Lanka",
@@ -49358,7 +48392,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1074",
+    "ID": "G1053",
     "Product Code": "HBLSL · #1150",
     "Institution Name (Abbr.)": "HBLSL",
     "Institution Full Name": "Habib Bank Limited - Sri Lanka",
@@ -49404,7 +48438,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1075",
+    "ID": "G1054",
     "Product Code": "HBLSL · #1151",
     "Institution Name (Abbr.)": "HBLSL",
     "Institution Full Name": "Habib Bank Limited - Sri Lanka",
@@ -49450,7 +48484,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1076",
+    "ID": "G1055",
     "Product Code": "HBLSL · #1152",
     "Institution Name (Abbr.)": "HBLSL",
     "Institution Full Name": "Habib Bank Limited - Sri Lanka",
@@ -49496,7 +48530,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1077",
+    "ID": "G1056",
     "Product Code": "HBLSL · #1153",
     "Institution Name (Abbr.)": "HBLSL",
     "Institution Full Name": "Habib Bank Limited - Sri Lanka",
@@ -49542,7 +48576,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1078",
+    "ID": "G1057",
     "Product Code": "HBLSL · #1154",
     "Institution Name (Abbr.)": "HBLSL",
     "Institution Full Name": "Habib Bank Limited - Sri Lanka",
@@ -49588,7 +48622,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1079",
+    "ID": "G1058",
     "Product Code": "HBLSL · #1155",
     "Institution Name (Abbr.)": "HBLSL",
     "Institution Full Name": "Habib Bank Limited - Sri Lanka",
@@ -49634,7 +48668,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1080",
+    "ID": "G1059",
     "Product Code": "HBLSL · #1156",
     "Institution Name (Abbr.)": "HBLSL",
     "Institution Full Name": "Habib Bank Limited - Sri Lanka",
@@ -49680,7 +48714,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1081",
+    "ID": "G1060",
     "Product Code": "IB · #1157",
     "Institution Name (Abbr.)": "IB",
     "Institution Full Name": "Indian Bank",
@@ -49726,7 +48760,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1082",
+    "ID": "G1061",
     "Product Code": "IB · #1158",
     "Institution Name (Abbr.)": "IB",
     "Institution Full Name": "Indian Bank",
@@ -49772,7 +48806,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1083",
+    "ID": "G1062",
     "Product Code": "IB · #1159",
     "Institution Name (Abbr.)": "IB",
     "Institution Full Name": "Indian Bank",
@@ -49818,7 +48852,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1084",
+    "ID": "G1063",
     "Product Code": "IB · #1160",
     "Institution Name (Abbr.)": "IB",
     "Institution Full Name": "Indian Bank",
@@ -49864,7 +48898,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1085",
+    "ID": "G1064",
     "Product Code": "IB · #1161",
     "Institution Name (Abbr.)": "IB",
     "Institution Full Name": "Indian Bank",
@@ -49910,7 +48944,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1086",
+    "ID": "G1065",
     "Product Code": "IB · #1162",
     "Institution Name (Abbr.)": "IB",
     "Institution Full Name": "Indian Bank",
@@ -49956,7 +48990,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1087",
+    "ID": "G1066",
     "Product Code": "IB · #1163",
     "Institution Name (Abbr.)": "IB",
     "Institution Full Name": "Indian Bank",
@@ -50002,7 +49036,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1088",
+    "ID": "G1067",
     "Product Code": "IB · #1164",
     "Institution Name (Abbr.)": "IB",
     "Institution Full Name": "Indian Bank",
@@ -50048,7 +49082,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1089",
+    "ID": "G1068",
     "Product Code": "IB · #1165",
     "Institution Name (Abbr.)": "IB",
     "Institution Full Name": "Indian Bank",
@@ -50094,7 +49128,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1090",
+    "ID": "G1069",
     "Product Code": "IB · #1166",
     "Institution Name (Abbr.)": "IB",
     "Institution Full Name": "Indian Bank",
@@ -50140,7 +49174,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1091",
+    "ID": "G1070",
     "Product Code": "IB · #1167",
     "Institution Name (Abbr.)": "IB",
     "Institution Full Name": "Indian Bank",
@@ -50186,7 +49220,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1092",
+    "ID": "G1071",
     "Product Code": "IB · #1168",
     "Institution Name (Abbr.)": "IB",
     "Institution Full Name": "Indian Bank",
@@ -50232,7 +49266,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1093",
+    "ID": "G1072",
     "Product Code": "IB · #1169",
     "Institution Name (Abbr.)": "IB",
     "Institution Full Name": "Indian Bank",
@@ -50278,7 +49312,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1094",
+    "ID": "G1073",
     "Product Code": "IB · #1170",
     "Institution Name (Abbr.)": "IB",
     "Institution Full Name": "Indian Bank",
@@ -50324,7 +49358,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1095",
+    "ID": "G1074",
     "Product Code": "HSBC · #1171",
     "Institution Name (Abbr.)": "HSBC",
     "Institution Full Name": "The Hongkong and Shanghai Banking Corporation Limited – Sri Lanka Branch",
@@ -50370,7 +49404,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1096",
+    "ID": "G1075",
     "Product Code": "HSBC · #1172",
     "Institution Name (Abbr.)": "HSBC",
     "Institution Full Name": "The Hongkong and Shanghai Banking Corporation Limited – Sri Lanka Branch",
@@ -50416,7 +49450,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1097",
+    "ID": "G1076",
     "Product Code": "HSBC · #1173",
     "Institution Name (Abbr.)": "HSBC",
     "Institution Full Name": "The Hongkong and Shanghai Banking Corporation Limited – Sri Lanka Branch",
@@ -50462,7 +49496,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1098",
+    "ID": "G1077",
     "Product Code": "HSBC · #1174",
     "Institution Name (Abbr.)": "HSBC",
     "Institution Full Name": "The Hongkong and Shanghai Banking Corporation Limited – Sri Lanka Branch",
@@ -50508,7 +49542,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1099",
+    "ID": "G1078",
     "Product Code": "HSBC · #1175",
     "Institution Name (Abbr.)": "HSBC",
     "Institution Full Name": "The Hongkong and Shanghai Banking Corporation Limited – Sri Lanka Branch",
@@ -50554,7 +49588,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1100",
+    "ID": "G1079",
     "Product Code": "HSBC · #1176",
     "Institution Name (Abbr.)": "HSBC",
     "Institution Full Name": "The Hongkong and Shanghai Banking Corporation Limited – Sri Lanka Branch",
@@ -50600,7 +49634,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1101",
+    "ID": "G1080",
     "Product Code": "HSBC · #1177",
     "Institution Name (Abbr.)": "HSBC",
     "Institution Full Name": "The Hongkong and Shanghai Banking Corporation Limited – Sri Lanka Branch",
@@ -50646,7 +49680,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1102",
+    "ID": "G1081",
     "Product Code": "HSBC · #1178",
     "Institution Name (Abbr.)": "HSBC",
     "Institution Full Name": "The Hongkong and Shanghai Banking Corporation Limited – Sri Lanka Branch",
@@ -50692,7 +49726,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1103",
+    "ID": "G1082",
     "Product Code": "HSBC · #1179",
     "Institution Name (Abbr.)": "HSBC",
     "Institution Full Name": "The Hongkong and Shanghai Banking Corporation Limited – Sri Lanka Branch",
@@ -50738,7 +49772,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1104",
+    "ID": "G1083",
     "Product Code": "HSBC · #1180",
     "Institution Name (Abbr.)": "HSBC",
     "Institution Full Name": "The Hongkong and Shanghai Banking Corporation Limited – Sri Lanka Branch",
@@ -50784,7 +49818,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1105",
+    "ID": "G1084",
     "Product Code": "HSBC · #1181",
     "Institution Name (Abbr.)": "HSBC",
     "Institution Full Name": "The Hongkong and Shanghai Banking Corporation Limited – Sri Lanka Branch",
@@ -50830,7 +49864,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1106",
+    "ID": "G1085",
     "Product Code": "HSBC · #1182",
     "Institution Name (Abbr.)": "HSBC",
     "Institution Full Name": "The Hongkong and Shanghai Banking Corporation Limited – Sri Lanka Branch",
@@ -50876,7 +49910,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1107",
+    "ID": "G1086",
     "Product Code": "HSBC · #1183",
     "Institution Name (Abbr.)": "HSBC",
     "Institution Full Name": "The Hongkong and Shanghai Banking Corporation Limited – Sri Lanka Branch",
@@ -50922,7 +49956,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1108",
+    "ID": "G1087",
     "Product Code": "HSBC · #1184",
     "Institution Name (Abbr.)": "HSBC",
     "Institution Full Name": "The Hongkong and Shanghai Banking Corporation Limited – Sri Lanka Branch",
@@ -50968,7 +50002,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1109",
+    "ID": "G1088",
     "Product Code": "HSBC · #1185",
     "Institution Name (Abbr.)": "HSBC",
     "Institution Full Name": "The Hongkong and Shanghai Banking Corporation Limited – Sri Lanka Branch",
@@ -51014,7 +50048,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1110",
+    "ID": "G1089",
     "Product Code": "HSBC · #1186",
     "Institution Name (Abbr.)": "HSBC",
     "Institution Full Name": "The Hongkong and Shanghai Banking Corporation Limited – Sri Lanka Branch",
@@ -51060,7 +50094,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1111",
+    "ID": "G1090",
     "Product Code": "IOB · #1187",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -51106,7 +50140,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1112",
+    "ID": "G1091",
     "Product Code": "IOB · #1188",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -51152,7 +50186,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1113",
+    "ID": "G1092",
     "Product Code": "IOB · #1189",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -51198,7 +50232,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1114",
+    "ID": "G1093",
     "Product Code": "IOB · #1190",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -51244,7 +50278,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1115",
+    "ID": "G1094",
     "Product Code": "IOB · #1191",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -51290,7 +50324,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1116",
+    "ID": "G1095",
     "Product Code": "IOB · #1192",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -51336,7 +50370,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1117",
+    "ID": "G1096",
     "Product Code": "IOB · #1193",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -51382,7 +50416,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1118",
+    "ID": "G1097",
     "Product Code": "IOB · #1194",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -51428,7 +50462,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1119",
+    "ID": "G1098",
     "Product Code": "IOB · #1195",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -51474,7 +50508,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1120",
+    "ID": "G1099",
     "Product Code": "IOB · #1196",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -51520,7 +50554,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1121",
+    "ID": "G1100",
     "Product Code": "IOB · #1197",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -51566,7 +50600,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1122",
+    "ID": "G1101",
     "Product Code": "IOB · #1198",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -51612,7 +50646,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1123",
+    "ID": "G1102",
     "Product Code": "IOB · #1199",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -51658,7 +50692,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1124",
+    "ID": "G1103",
     "Product Code": "IOB · #1200",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -51704,7 +50738,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1125",
+    "ID": "G1104",
     "Product Code": "IOB · #1201",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -51750,7 +50784,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1126",
+    "ID": "G1105",
     "Product Code": "IOB · #1202",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -51796,7 +50830,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1127",
+    "ID": "G1106",
     "Product Code": "IOB · #1203",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -51842,7 +50876,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1128",
+    "ID": "G1107",
     "Product Code": "IOB · #1204",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -51888,7 +50922,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1129",
+    "ID": "G1108",
     "Product Code": "IOB · #1205",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -51934,7 +50968,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1130",
+    "ID": "G1109",
     "Product Code": "IOB · #1206",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -51980,7 +51014,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1131",
+    "ID": "G1110",
     "Product Code": "IOB · #1207",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -52026,7 +51060,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1132",
+    "ID": "G1111",
     "Product Code": "IOB · #1208",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -52072,7 +51106,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1133",
+    "ID": "G1112",
     "Product Code": "IOB · #1209",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -52118,7 +51152,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1134",
+    "ID": "G1113",
     "Product Code": "IOB · #1210",
     "Institution Name (Abbr.)": "IOB",
     "Institution Full Name": "Indian Overseas Bank",
@@ -52164,7 +51198,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1135",
+    "ID": "G1114",
     "Product Code": "MCB · #1211",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -52210,7 +51244,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1136",
+    "ID": "G1115",
     "Product Code": "MCB · #1212",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -52256,7 +51290,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1137",
+    "ID": "G1116",
     "Product Code": "MCB · #1213",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -52302,7 +51336,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1138",
+    "ID": "G1117",
     "Product Code": "MCB · #1214",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -52348,7 +51382,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1139",
+    "ID": "G1118",
     "Product Code": "MCB · #1215",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -52394,7 +51428,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1140",
+    "ID": "G1119",
     "Product Code": "MCB · #1216",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -52440,7 +51474,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1141",
+    "ID": "G1120",
     "Product Code": "MCB · #1217",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -52486,7 +51520,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1142",
+    "ID": "G1121",
     "Product Code": "MCB · #1218",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -52532,7 +51566,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1143",
+    "ID": "G1122",
     "Product Code": "MCB · #1219",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -52578,7 +51612,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1144",
+    "ID": "G1123",
     "Product Code": "MCB · #1220",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -52624,7 +51658,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1145",
+    "ID": "G1124",
     "Product Code": "MCB · #1221",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -52670,7 +51704,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1146",
+    "ID": "G1125",
     "Product Code": "MCB · #1222",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -52716,7 +51750,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1147",
+    "ID": "G1126",
     "Product Code": "MCB · #1223",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -52762,7 +51796,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1148",
+    "ID": "G1127",
     "Product Code": "MCB · #1224",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -52808,7 +51842,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1149",
+    "ID": "G1128",
     "Product Code": "MCB · #1225",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -52854,7 +51888,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1150",
+    "ID": "G1129",
     "Product Code": "MCB · #1226",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -52900,7 +51934,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1151",
+    "ID": "G1130",
     "Product Code": "MCB · #1227",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -52946,7 +51980,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1152",
+    "ID": "G1131",
     "Product Code": "MCB · #1228",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -52992,7 +52026,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1153",
+    "ID": "G1132",
     "Product Code": "MCB · #1229",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -53038,7 +52072,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1154",
+    "ID": "G1133",
     "Product Code": "MCB · #1230",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -53084,7 +52118,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1155",
+    "ID": "G1134",
     "Product Code": "MCB · #1231",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -53130,7 +52164,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1156",
+    "ID": "G1135",
     "Product Code": "MCB · #1232",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -53176,7 +52210,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1157",
+    "ID": "G1136",
     "Product Code": "MCB · #1233",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -53222,7 +52256,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1158",
+    "ID": "G1137",
     "Product Code": "MCB · #1234",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -53268,7 +52302,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1159",
+    "ID": "G1138",
     "Product Code": "MCB · #1235",
     "Institution Name (Abbr.)": "MCB",
     "Institution Full Name": "MCB Bank Limited – Sri Lanka Branch",
@@ -53314,7 +52348,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1160",
+    "ID": "G1139",
     "Product Code": "SBI · #1236",
     "Institution Name (Abbr.)": "SBI",
     "Institution Full Name": "State Bank of India (Sri Lanka Operations)",
@@ -53360,7 +52394,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1161",
+    "ID": "G1140",
     "Product Code": "SBI · #1237",
     "Institution Name (Abbr.)": "SBI",
     "Institution Full Name": "State Bank of India (Sri Lanka Operations)",
@@ -53406,7 +52440,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1162",
+    "ID": "G1141",
     "Product Code": "SBI · #1238",
     "Institution Name (Abbr.)": "SBI",
     "Institution Full Name": "State Bank of India (Sri Lanka Operations)",
@@ -53452,7 +52486,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1163",
+    "ID": "G1142",
     "Product Code": "SBI · #1239",
     "Institution Name (Abbr.)": "SBI",
     "Institution Full Name": "State Bank of India (Sri Lanka Operations)",
@@ -53498,7 +52532,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1164",
+    "ID": "G1143",
     "Product Code": "SBI · #1240",
     "Institution Name (Abbr.)": "SBI",
     "Institution Full Name": "State Bank of India (Sri Lanka Operations)",
@@ -53544,7 +52578,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1165",
+    "ID": "G1144",
     "Product Code": "SBI · #1241",
     "Institution Name (Abbr.)": "SBI",
     "Institution Full Name": "State Bank of India (Sri Lanka Operations)",
@@ -53590,7 +52624,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1166",
+    "ID": "G1145",
     "Product Code": "SBI · #1242",
     "Institution Name (Abbr.)": "SBI",
     "Institution Full Name": "State Bank of India (Sri Lanka Operations)",
@@ -53636,7 +52670,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1167",
+    "ID": "G1146",
     "Product Code": "SBI · #1243",
     "Institution Name (Abbr.)": "SBI",
     "Institution Full Name": "State Bank of India (Sri Lanka Operations)",
@@ -53682,7 +52716,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1168",
+    "ID": "G1147",
     "Product Code": "SBI · #1244",
     "Institution Name (Abbr.)": "SBI",
     "Institution Full Name": "State Bank of India (Sri Lanka Operations)",
@@ -53728,7 +52762,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1169",
+    "ID": "G1148",
     "Product Code": "SBI · #1245",
     "Institution Name (Abbr.)": "SBI",
     "Institution Full Name": "State Bank of India (Sri Lanka Operations)",
@@ -53774,7 +52808,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1170",
+    "ID": "G1149",
     "Product Code": "SBI · #1246",
     "Institution Name (Abbr.)": "SBI",
     "Institution Full Name": "State Bank of India (Sri Lanka Operations)",
@@ -53820,7 +52854,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1171",
+    "ID": "G1150",
     "Product Code": "SBI · #1247",
     "Institution Name (Abbr.)": "SBI",
     "Institution Full Name": "State Bank of India (Sri Lanka Operations)",
@@ -53866,7 +52900,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1172",
+    "ID": "G1151",
     "Product Code": "SBI · #1248",
     "Institution Name (Abbr.)": "SBI",
     "Institution Full Name": "State Bank of India (Sri Lanka Operations)",
@@ -53912,7 +52946,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1173",
+    "ID": "G1152",
     "Product Code": "SBI · #1249",
     "Institution Name (Abbr.)": "SBI",
     "Institution Full Name": "State Bank of India (Sri Lanka Operations)",
@@ -53958,7 +52992,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1174",
+    "ID": "G1153",
     "Product Code": "SBI · #1250",
     "Institution Name (Abbr.)": "SBI",
     "Institution Full Name": "State Bank of India (Sri Lanka Operations)",
@@ -54004,7 +53038,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1175",
+    "ID": "G1154",
     "Product Code": "SBI · #1251",
     "Institution Name (Abbr.)": "SBI",
     "Institution Full Name": "State Bank of India (Sri Lanka Operations)",
@@ -54050,7 +53084,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1176",
+    "ID": "G1155",
     "Product Code": "SBI · #1252",
     "Institution Name (Abbr.)": "SBI",
     "Institution Full Name": "State Bank of India (Sri Lanka Operations)",
@@ -54096,7 +53130,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1177",
+    "ID": "G1156",
     "Product Code": "SBI · #1253",
     "Institution Name (Abbr.)": "SBI",
     "Institution Full Name": "State Bank of India (Sri Lanka Operations)",
@@ -54142,7 +53176,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1178",
+    "ID": "G1157",
     "Product Code": "SBI · #1254",
     "Institution Name (Abbr.)": "SBI",
     "Institution Full Name": "State Bank of India (Sri Lanka Operations)",
@@ -54188,7 +53222,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1179",
+    "ID": "G1158",
     "Product Code": "SLIC · #1255",
     "Institution Name (Abbr.)": "SLIC",
     "Institution Full Name": "Sri Lanka Inventors Commission",
@@ -54234,7 +53268,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1180",
+    "ID": "G1159",
     "Product Code": "NRC · #1256",
     "Institution Name (Abbr.)": "NRC",
     "Institution Full Name": "National Research Council of Sri Lanka",
@@ -54280,7 +53314,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1181",
+    "ID": "G1160",
     "Product Code": "SLECIC · #1257",
     "Institution Name (Abbr.)": "SLECIC",
     "Institution Full Name": "Sri Lanka Export Credit Insurance Corporation",
@@ -54326,7 +53360,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1182",
+    "ID": "G1161",
     "Product Code": "SLECIC · #1258",
     "Institution Name (Abbr.)": "SLECIC",
     "Institution Full Name": "Sri Lanka Export Credit Insurance Corporation",
@@ -54372,7 +53406,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1183",
+    "ID": "G1162",
     "Product Code": "SLECIC · #1259",
     "Institution Name (Abbr.)": "SLECIC",
     "Institution Full Name": "Sri Lanka Export Credit Insurance Corporation",
@@ -54418,7 +53452,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1184",
+    "ID": "G1163",
     "Product Code": "SLECIC · #1260",
     "Institution Name (Abbr.)": "SLECIC",
     "Institution Full Name": "Sri Lanka Export Credit Insurance Corporation",
@@ -54464,7 +53498,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1185",
+    "ID": "G1164",
     "Product Code": "SLECIC · #1261",
     "Institution Name (Abbr.)": "SLECIC",
     "Institution Full Name": "Sri Lanka Export Credit Insurance Corporation",
@@ -54510,7 +53544,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1186",
+    "ID": "G1165",
     "Product Code": "SLECIC · #1262",
     "Institution Name (Abbr.)": "SLECIC",
     "Institution Full Name": "Sri Lanka Export Credit Insurance Corporation",
@@ -54556,7 +53590,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1187",
+    "ID": "G1166",
     "Product Code": "SLECIC · #1263",
     "Institution Name (Abbr.)": "SLECIC",
     "Institution Full Name": "Sri Lanka Export Credit Insurance Corporation",
@@ -54602,7 +53636,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1188",
+    "ID": "G1167",
     "Product Code": "SLECIC · #1264",
     "Institution Name (Abbr.)": "SLECIC",
     "Institution Full Name": "Sri Lanka Export Credit Insurance Corporation",
@@ -54648,7 +53682,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1189",
+    "ID": "G1168",
     "Product Code": "SLECIC · #1265",
     "Institution Name (Abbr.)": "SLECIC",
     "Institution Full Name": "Sri Lanka Export Credit Insurance Corporation",
@@ -54694,7 +53728,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1190",
+    "ID": "G1169",
     "Product Code": "SLECIC · #1266",
     "Institution Name (Abbr.)": "SLECIC",
     "Institution Full Name": "Sri Lanka Export Credit Insurance Corporation",
@@ -54740,7 +53774,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1191",
+    "ID": "G1170",
     "Product Code": "SLECIC · #1267",
     "Institution Name (Abbr.)": "SLECIC",
     "Institution Full Name": "Sri Lanka Export Credit Insurance Corporation",
@@ -54786,7 +53820,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1192",
+    "ID": "G1171",
     "Product Code": "SLECIC · #1268",
     "Institution Name (Abbr.)": "SLECIC",
     "Institution Full Name": "Sri Lanka Export Credit Insurance Corporation",
@@ -54832,7 +53866,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1193",
+    "ID": "G1172",
     "Product Code": "SLECIC · #1269",
     "Institution Name (Abbr.)": "SLECIC",
     "Institution Full Name": "Sri Lanka Export Credit Insurance Corporation",
@@ -54878,7 +53912,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1194",
+    "ID": "G1173",
     "Product Code": "SLECIC · #1270",
     "Institution Name (Abbr.)": "SLECIC",
     "Institution Full Name": "Sri Lanka Export Credit Insurance Corporation",
@@ -54924,7 +53958,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1195",
+    "ID": "G1174",
     "Product Code": "SLECIC · #1271",
     "Institution Name (Abbr.)": "SLECIC",
     "Institution Full Name": "Sri Lanka Export Credit Insurance Corporation",
@@ -54970,7 +54004,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1196",
+    "ID": "G1175",
     "Product Code": "AIN · #1272",
     "Institution Name (Abbr.)": "AIN",
     "Institution Full Name": "Angel Investment Network (Sri Lanka Investment Network)",
@@ -55016,7 +54050,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1197",
+    "ID": "G1176",
     "Product Code": "NSF · #1273",
     "Institution Name (Abbr.)": "NSF",
     "Institution Full Name": "National Science Foundation (Sri Lanka)",
@@ -55062,7 +54096,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1198",
+    "ID": "G1177",
     "Product Code": "NSF · #1274",
     "Institution Name (Abbr.)": "NSF",
     "Institution Full Name": "National Science Foundation (Sri Lanka)",
@@ -55108,7 +54142,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1199",
+    "ID": "G1178",
     "Product Code": "NSF · #1275",
     "Institution Name (Abbr.)": "NSF",
     "Institution Full Name": "National Science Foundation (Sri Lanka)",
@@ -55154,7 +54188,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1200",
+    "ID": "G1179",
     "Product Code": "IIX · #1276",
     "Institution Name (Abbr.)": "IIX",
     "Institution Full Name": "Impact Investment Exchange",
@@ -55200,7 +54234,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1201",
+    "ID": "G1180",
     "Product Code": "IIX · #1277",
     "Institution Name (Abbr.)": "IIX",
     "Institution Full Name": "Impact Investment Exchange",
@@ -55246,7 +54280,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1202",
+    "ID": "G1181",
     "Product Code": "IIX · #1278",
     "Institution Name (Abbr.)": "IIX",
     "Institution Full Name": "Impact Investment Exchange",
@@ -55292,7 +54326,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1203",
+    "ID": "G1182",
     "Product Code": "IIX · #1279",
     "Institution Name (Abbr.)": "IIX",
     "Institution Full Name": "Impact Investment Exchange",
@@ -55338,7 +54372,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1204",
+    "ID": "G1183",
     "Product Code": "IIX · #1280",
     "Institution Name (Abbr.)": "IIX",
     "Institution Full Name": "Impact Investment Exchange",
@@ -55384,7 +54418,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1205",
+    "ID": "G1184",
     "Product Code": "IIX · #1281",
     "Institution Name (Abbr.)": "IIX",
     "Institution Full Name": "Impact Investment Exchange",
@@ -55430,7 +54464,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1206",
+    "ID": "G1185",
     "Product Code": "IIX · #1282",
     "Institution Name (Abbr.)": "IIX",
     "Institution Full Name": "Impact Investment Exchange",
@@ -55476,7 +54510,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1207",
+    "ID": "G1186",
     "Product Code": "NDBZ / NDB Zephyr · #1283",
     "Institution Name (Abbr.)": "NDBZ / NDB Zephyr",
     "Institution Full Name": "NDB Zephyr Partners Lanka (Pvt) Limited (manager of the Emerald Sri Lanka Fund)",
@@ -55522,7 +54556,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1208",
+    "ID": "G1187",
     "Product Code": "Convergence · #1284",
     "Institution Name (Abbr.)": "Convergence",
     "Institution Full Name": "Convergence Capital Group (Convergence Trade Solutions PTE LTD)",
@@ -55568,7 +54602,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1209",
+    "ID": "G1188",
     "Product Code": "Convergence · #1285",
     "Institution Name (Abbr.)": "Convergence",
     "Institution Full Name": "Convergence Capital Group (Convergence Trade Solutions PTE LTD)",
@@ -55614,7 +54648,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1210",
+    "ID": "G1189",
     "Product Code": "Convergence · #1286",
     "Institution Name (Abbr.)": "Convergence",
     "Institution Full Name": "Convergence Capital Group (Convergence Trade Solutions PTE LTD)",
@@ -55660,7 +54694,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1211",
+    "ID": "G1190",
     "Product Code": "Convergence · #1287",
     "Institution Name (Abbr.)": "Convergence",
     "Institution Full Name": "Convergence Capital Group (Convergence Trade Solutions PTE LTD)",
@@ -55706,7 +54740,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1212",
+    "ID": "G1191",
     "Product Code": "Convergence · #1288",
     "Institution Name (Abbr.)": "Convergence",
     "Institution Full Name": "Convergence Capital Group (Convergence Trade Solutions PTE LTD)",
@@ -55752,7 +54786,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1213",
+    "ID": "G1192",
     "Product Code": "Convergence · #1289",
     "Institution Name (Abbr.)": "Convergence",
     "Institution Full Name": "Convergence Capital Group (Convergence Trade Solutions PTE LTD)",
@@ -55798,7 +54832,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1214",
+    "ID": "G1193",
     "Product Code": "Convergence · #1290",
     "Institution Name (Abbr.)": "Convergence",
     "Institution Full Name": "Convergence Capital Group (Convergence Trade Solutions PTE LTD)",
@@ -55844,7 +54878,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1215",
+    "ID": "G1194",
     "Product Code": "Convergence · #1291",
     "Institution Name (Abbr.)": "Convergence",
     "Institution Full Name": "Convergence Capital Group (Convergence Trade Solutions PTE LTD)",
@@ -55890,7 +54924,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1216",
+    "ID": "G1195",
     "Product Code": "Convergence · #1292",
     "Institution Name (Abbr.)": "Convergence",
     "Institution Full Name": "Convergence Capital Group (Convergence Trade Solutions PTE LTD)",
@@ -55936,7 +54970,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1217",
+    "ID": "G1196",
     "Product Code": "Convergence · #1293",
     "Institution Name (Abbr.)": "Convergence",
     "Institution Full Name": "Convergence Capital Group (Convergence Trade Solutions PTE LTD)",
@@ -55982,7 +55016,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1218",
+    "ID": "G1197",
     "Product Code": "Convergence · #1294",
     "Institution Name (Abbr.)": "Convergence",
     "Institution Full Name": "Convergence Capital Group (Convergence Trade Solutions PTE LTD)",
@@ -56028,7 +55062,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1219",
+    "ID": "G1198",
     "Product Code": "Convergence · #1295",
     "Institution Name (Abbr.)": "Convergence",
     "Institution Full Name": "Convergence Capital Group (Convergence Trade Solutions PTE LTD)",
@@ -56074,7 +55108,7 @@
     "Comments": ""
   },
   {
-    "ID": "G1220",
+    "ID": "G1199",
     "Product Code": "GFF · #1296",
     "Institution Name (Abbr.)": "GFF",
     "Institution Full Name": "Good Fashion Fund — fund manager: FOUNT; sub-advisor: Fashion for Good",
@@ -56120,11 +55154,11 @@
     "Comments": ""
   },
   {
-    "ID": "G1221",
-    "Product Code": "D-TAFS · #1297",
-    "Institution Name (Abbr.)": "D-TAFS",
-    "Institution Full Name": "Decarbonization of Textile, Apparel & Footwear Suppliers Fund B.V. (D-TAFS) — fund manager: Social Investment Managers and Advisors (SIMA); anchor investor: IFC",
-    "Source of Finance": "Debt; Blended Finance",
+    "ID": "G1200",
+    "Product Code": "IFC · #1297",
+    "Institution Name (Abbr.)": "IFC",
+    "Institution Full Name": "International Finance Corporation (World Bank Group)",
+    "Source of Finance": "Debt",
     "Institution Type": "Impact Investor / Fund",
     "Financing Product": "D-TAFS Direct Investments (DI) Sub-Fund - direct lending to TAF suppliers",
     "Std. Product Type": "06. Long-term loan",
@@ -56166,11 +55200,11 @@
     "Comments": ""
   },
   {
-    "ID": "G1222",
-    "Product Code": "D-TAFS · #1298",
-    "Institution Name (Abbr.)": "D-TAFS",
-    "Institution Full Name": "Decarbonization of Textile, Apparel & Footwear Suppliers Fund B.V. (D-TAFS) — fund manager: Social Investment Managers and Advisors (SIMA); anchor investor: IFC",
-    "Source of Finance": "Debt; Blended Finance",
+    "ID": "G1201",
+    "Product Code": "IFC · #1298",
+    "Institution Name (Abbr.)": "IFC",
+    "Institution Full Name": "International Finance Corporation (World Bank Group)",
+    "Source of Finance": "Debt",
     "Institution Type": "Impact Investor / Fund",
     "Financing Product": "D-TAFS Energy Provider Investments (EPI) Sub-Fund - lending to energy providers serving TAF customers",
     "Std. Product Type": "06. Long-term loan",
