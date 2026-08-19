@@ -11,13 +11,18 @@
  *                            and the header/KPI counts refreshed)
  *
  * Usage:
- *   node generate-finance-json.mjs [path-to-xlsx]
+ *   node generate-finance-json.mjs [path-to-xlsx|path-to-json]
  *
  * If no path is passed it looks for SOURCE_XLSX env var, then the newest
  * *.xlsx in the project root. In CI the SharePoint download step writes the
  * file to `source.xlsx` and passes it in.
+ *
+ * Passing a `.json` file instead reuses already-extracted records (i.e. a
+ * previous `public/finance.json`) and skips the workbook read entirely. That
+ * is for local design work on template.html without SharePoint access — the
+ * SharePoint -> source.xlsx -> index.html path is unchanged and remains the
+ * only one CI uses.
  */
-import ExcelJS from "exceljs";
 import { readdirSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -116,10 +121,11 @@ function tcCat(s) {
   return "Other";
 }
 
-async function main() {
-  const src = resolveSourcePath();
-  console.log(`Reading ${src}`);
-
+// Read the records out of the master workbook's `Database` sheet. This is the
+// SharePoint path used by CI. `exceljs` is imported lazily so the JSON path
+// below works without installing dependencies.
+async function readRecordsFromXlsx(src) {
+  const { default: ExcelJS } = await import("exceljs");
   const wb = new ExcelJS.Workbook();
   await wb.xlsx.readFile(src);
   const ws = wb.getWorksheet(SHEET);
@@ -143,6 +149,28 @@ async function main() {
     }
 
     records.push(rec);
+  }
+  return records;
+}
+
+// Reuse records already extracted by an earlier run (public/finance.json).
+// Local template.html previews only — never a substitute for the workbook.
+function readRecordsFromJson(src) {
+  const records = JSON.parse(readFileSync(src, "utf8"));
+  if (!Array.isArray(records) || !records.length) {
+    throw new Error(`${src} did not contain a non-empty array of records.`);
+  }
+  return records;
+}
+
+async function main() {
+  const src = resolveSourcePath();
+  console.log(`Reading ${src}`);
+
+  const isJson = src.toLowerCase().endsWith(".json");
+  const records = isJson ? readRecordsFromJson(src) : await readRecordsFromXlsx(src);
+  if (isJson) {
+    console.log("Using pre-extracted records — workbook not read.");
   }
 
   // ── stats for the header / KPI / About counts ──
@@ -175,8 +203,14 @@ async function main() {
   const byTC = covRows(Object.entries(tcCounts).filter(([, n]) => n > 0));
 
   // ── write JSON (debug / reuse) ──
-  mkdirSync(dirname(OUT_JSON), { recursive: true });
-  writeFileSync(OUT_JSON, JSON.stringify(records, null, 2));
+  // Skip when we were handed that very file as the source — regenerating from
+  // public/finance.json must not rewrite it.
+  if (src === OUT_JSON) {
+    console.log(`Source is ${OUT_JSON} — leaving it untouched.`);
+  } else {
+    mkdirSync(dirname(OUT_JSON), { recursive: true });
+    writeFileSync(OUT_JSON, JSON.stringify(records, null, 2));
+  }
 
   // ── inject into template.html ──
   let html = readFileSync(TEMPLATE, "utf8");
@@ -202,7 +236,11 @@ async function main() {
   }
 
   writeFileSync(OUT_HTML, html);
-  console.log(`Wrote ${OUT_HTML} (${html.length} bytes) and ${OUT_JSON}`);
+  console.log(
+    src === OUT_JSON
+      ? `Wrote ${OUT_HTML} (${html.length} bytes)`
+      : `Wrote ${OUT_HTML} (${html.length} bytes) and ${OUT_JSON}`
+  );
 }
 
 function escapeHtml(s) {
