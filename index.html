@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ITC GTEX — Sri Lanka Finance Guide for Textile &amp; Apparel SMEs</title>
+<title>ITC GTEX — Sri Lanka Finance Guide for Textile &amp; Clothing SMEs</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -20,6 +20,8 @@
   --sand:     #EDE5D5;
   --gold:     #B8882A;
   --gold-lt:  #D4A84B;
+  --brown:    #6E4423;
+  --brown-lt: #8C5C33;
   --gold-pale:#F5E9C8;
   --ink:      #1A1A18;
   --slate:    #4A5568;
@@ -218,7 +220,7 @@ body {
 /* ── KPI STRIP ───────────────────────────────────────────── */
 .kpi-strip {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-bottom: 36px;
 }
@@ -247,6 +249,8 @@ body {
 .kpi-card.gold::before  { background: linear-gradient(90deg, var(--gold), var(--gold-lt)); }
 .kpi-card.teal::before  { background: #0A7A6B; }
 .kpi-card.slate::before { background: #3D5A80; }
+.kpi-card.leaf::before  { background: linear-gradient(90deg, var(--leaf), var(--mint)); }
+.kpi-card.brown::before { background: linear-gradient(90deg, var(--brown), var(--brown-lt)); }
 .kpi-num {
   font-family: 'Cormorant Garant', serif;
   font-size: 52px;
@@ -259,6 +263,8 @@ body {
 .kpi-card.gold  .kpi-num { color: var(--gold); }
 .kpi-card.teal  .kpi-num { color: #0A7A6B; }
 .kpi-card.slate .kpi-num { color: #3D5A80; }
+.kpi-card.leaf  .kpi-num { color: var(--leaf); }
+.kpi-card.brown .kpi-num { color: var(--brown); }
 .kpi-label {
   font-size: 11px;
   font-weight: 700;
@@ -345,6 +351,15 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+/* Institution names are full legal names, not acronyms — let them wrap onto a
+   second line instead of being clipped to an ellipsis. */
+.rank-list.rank-list-full .rank-name {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  font-size: 12px;
+  line-height: 1.35;
+}
+.rank-list.rank-list-full .rank-row { align-items: flex-start; }
 .rank-val {
   position: relative;
   flex: none;
@@ -907,6 +922,7 @@ tbody td { padding: 11px 14px; vertical-align: top; }
 /* UX additions */
 .quick-start { margin: 0 0 30px; }
 .qs-title { font-size: 14px; font-weight: 600; color: var(--emerald); margin-bottom: 12px; }
+.qs-title-2 { margin-top: 18px; }
 .qs-chips { display: flex; flex-wrap: wrap; gap: 10px; }
 .qs-chip { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: var(--r-pill);
   background: var(--white); border: 1px solid var(--sand); font-size: 13px; font-weight: 500; color: var(--emerald);
@@ -1042,8 +1058,8 @@ tbody td { padding: 11px 14px; vertical-align: top; }
         <div class="eyebrow-dot"></div>
         <span class="eyebrow-text">International Trade Centre · GTEX</span>
       </div>
-      <h1 class="header-title">Sri Lanka <em>Finance Guide</em><br>for Textile &amp; Apparel SMEs</h1>
-      <p class="header-subtitle">Global Textiles and Apparel Programme (GTEX) &nbsp;·&nbsp; Financing &amp; funding options for Sri Lankan Textile &amp; Clothing SMEs</p>
+      <h1 class="header-title">Sri Lanka <em>Finance Guide</em><br>for Textile &amp; Clothing SMEs</h1>
+      <p class="header-subtitle">Global Textiles and Apparel Programme (GTEX) &nbsp;·&nbsp; Financing &amp; funding options for Sri Lankan Textile and Clothing (T&amp;C) SMEs</p>
     </div>
     <div class="header-badges">
       <div class="hbadge"><div class="hbadge-dot"></div>1,071 Financing Products</div>
@@ -1082,9 +1098,16 @@ tbody td { padding: 11px 14px; vertical-align: top; }
       <div class="qs-chip" onclick="quickStart('capex')"><span class="qs-ico">🏭</span> Machinery &amp; equipment</div>
       <div class="qs-chip" onclick="quickStart('trade')"><span class="qs-ico">🚢</span> Export / trade order</div>
       <div class="qs-chip" onclick="quickStart('startup')"><span class="qs-ico">🚀</span> Starting a business</div>
+      <div class="qs-chip" onclick="quickStart('tech')"><span class="qs-ico">💡</span> Technology &amp; innovation</div>
       <div class="qs-chip" onclick="quickStart('green')"><span class="qs-ico">🌱</span> Going green / solar</div>
       <div class="qs-chip" onclick="quickStart('women')"><span class="qs-ico">♀</span> Women-led business</div>
-      <div class="qs-chip" onclick="quickStart('collat')"><span class="qs-ico">🔓</span> No collateral</div>
+    </div>
+    <div class="qs-title qs-title-2">I need a…</div>
+    <div class="qs-chips">
+      <div class="qs-chip" onclick="quickStart('loan')"><span class="qs-ico">🏦</span> Loan</div>
+      <div class="qs-chip" onclick="quickStart('grant')"><span class="qs-ico">🎁</span> Grant</div>
+      <div class="qs-chip" onclick="quickStart('equity')"><span class="qs-ico">📈</span> Equity investment</div>
+      <div class="qs-chip" onclick="quickStart('conc')"><span class="qs-ico">💸</span> Concessional loan</div>
     </div>
   </div>
   <a class="learn-link" onclick="showPanel('glossary')"><span class="ll-ico">📘</span> New to finance? <strong>&nbsp;Start here →</strong></a>
@@ -1098,23 +1121,17 @@ tbody td { padding: 11px 14px; vertical-align: top; }
       <div class="kpi-sub">Financing options mapped</div>
       <div class="kpi-icon">⬡</div>
     </div>
-    <div class="kpi-card teal">
+    <div class="kpi-card brown">
       <div class="kpi-num">85</div>
       <div class="kpi-label">Institutions</div>
       <div class="kpi-sub">Banks · NBFIs · Dev. banks · Govt · Microfinance · Investors</div>
       <div class="kpi-icon">⬡</div>
     </div>
-    <div class="kpi-card gold">
+    <div class="kpi-card leaf">
       <div class="kpi-num">84</div>
       <div class="kpi-label">Green Products</div>
       <div class="kpi-sub">Sustainable / green tagged</div>
       <div class="kpi-icon">🌿</div>
-    </div>
-    <div class="kpi-card slate">
-      <div class="kpi-num">909</div>
-      <div class="kpi-label">Open to T&amp;C SMEs</div>
-      <div class="kpi-sub">Funder criteria show T&amp;C SMEs are eligible</div>
-      <div class="kpi-icon">⬡</div>
     </div>
   </div>
 
@@ -1126,7 +1143,7 @@ tbody td { padding: 11px 14px; vertical-align: top; }
           <div class="chart-title">By Institution</div>
         </div>
       </div>
-      <div id="cInst" class="rank-list"></div>
+      <div id="cInst" class="rank-list rank-list-full"></div>
     </div>
     <div class="chart-card">
       <div class="chart-head"><div>
@@ -1177,8 +1194,14 @@ tbody td { padding: 11px 14px; vertical-align: top; }
         <select class="filter-select" id="f-need"><option value="">Any purpose</option></select>
       </div>
       <div class="filter-group">
-        <label class="filter-label">Business size</label>
-        <select class="filter-select" id="f-size"><option value="">All sizes</option></select>
+        <label class="filter-label">What kind of finance?</label>
+        <select class="filter-select" id="f-family">
+          <option value="">Any kind</option>
+          <option value="Loan">Loan 🏦</option>
+          <option value="Grant">Grant / subsidy 🎁</option>
+          <option value="Equity">Equity investment 📈</option>
+          <option value="Concessional">Concessional / soft loan 💸</option>
+        </select>
       </div>
       <div class="filter-group">
         <label class="filter-label">Product type</label>
@@ -1189,8 +1212,8 @@ tbody td { padding: 11px 14px; vertical-align: top; }
         <select class="filter-select" id="f-tenor"><option value="">Any length</option></select>
       </div>
       <div class="filter-group">
-        <label class="filter-label">Lender</label>
-        <select class="filter-select" id="f-inst"><option value="">All lenders</option></select>
+        <label class="filter-label">Funder</label>
+        <select class="filter-select" id="f-inst"><option value="">All funders</option></select>
       </div>
       <div class="filter-group">
         <label class="filter-label">Institution type</label>
@@ -1203,13 +1226,6 @@ tbody td { padding: 11px 14px; vertical-align: top; }
           <option value="Open">Open to T&amp;C SMEs</option>
           <option value="Restricted">Restricted</option>
           <option value="Other">Other / unclear</option>
-        </select>
-      </div>
-      <div class="filter-group">
-        <label class="filter-label">Collateral</label>
-        <select class="filter-select" id="f-collat">
-          <option value="">Any</option>
-          <option value="yes">Collateral-free only 🔓</option>
         </select>
       </div>
       <div class="filter-group">
@@ -1231,13 +1247,6 @@ tbody td { padding: 11px 14px; vertical-align: top; }
         <label class="filter-label">Green investment type</label>
         <select class="filter-select" id="f-greentype">
           <option value="">Any type</option>
-        </select>
-      </div>
-      <div class="filter-group">
-        <label class="filter-label">Cost</label>
-        <select class="filter-select" id="f-conc">
-          <option value="">Any cost</option>
-          <option value="yes">Concessionary / low-cost 💸</option>
         </select>
       </div>
     </div>
@@ -1265,7 +1274,7 @@ tbody td { padding: 11px 14px; vertical-align: top; }
         </colgroup>
         <thead><tr>
           <th class="star-th">★</th>
-          <th>Lender</th>
+          <th>Funder</th>
           <th>Product</th>
           <th>Description</th>
           <th>What it's for</th>
@@ -1314,7 +1323,7 @@ tbody td { padding: 11px 14px; vertical-align: top; }
         <thead>
         <tr>
           <th class="star-th">★</th>
-          <th onclick="sortDb('Institution Name (Abbr.)')" id="th-inst">Lender <span class="si">⇅</span></th>
+          <th onclick="sortDb('Institution Name (Abbr.)')" id="th-inst">Funder <span class="si">⇅</span></th>
           <th>Product</th>
           <th onclick="sortDb('Std. Financing Need')" id="th-need">What it's for <span class="si">⇅</span></th>
           <th onclick="sortDb('Std. Product Type')" id="th-type">Type <span class="si">⇅</span></th>
@@ -1327,7 +1336,7 @@ tbody td { padding: 11px 14px; vertical-align: top; }
         </tr>
         <tr class="col-filter-row">
           <th></th>
-          <th><select id="dbf-inst" onchange="renderDb(1)" onclick="event.stopPropagation()"><option value="">All lenders</option></select></th>
+          <th><select id="dbf-inst" onchange="renderDb(1)" onclick="event.stopPropagation()"><option value="">All funders</option></select></th>
           <th></th>
           <th><select id="dbf-need" onchange="renderDb(1)" onclick="event.stopPropagation()"><option value="">All</option></select></th>
           <th><select id="dbf-type" onchange="renderDb(1)" onclick="event.stopPropagation()"><option value="">All</option></select></th>
@@ -1368,14 +1377,14 @@ tbody td { padding: 11px 14px; vertical-align: top; }
   <div class="about-grid">
     <div class="about-card" id="about-what">
       <div class="about-card-title">📖 What this guide is</div>
-      <p>This guide brings together financing and funding options relevant to Sri Lanka&rsquo;s Textile &amp; Clothing (T&amp;C) sector, with a focus on small and medium enterprises (SMEs). It is produced under the International Trade Centre&rsquo;s Global Textiles and Apparel Programme (GTEX). It maps <strong>1,071 products</strong> from <strong>85 institutions</strong> — banks, finance companies, development and government bodies, and investors — and tags each one so you can quickly see whether it fits your business, what it costs, and how to apply.</p>
+      <p>This guide brings together financing and funding options relevant to Sri Lanka&rsquo;s Textile and Clothing (T&amp;C) sector, with a focus on small and medium enterprises (SMEs). It is produced under the International Trade Centre&rsquo;s Global Textiles and Apparel Programme (GTEX). It maps <strong>1,071 products</strong> from <strong>85 institutions</strong> — banks, finance companies, development and government bodies, and investors — and tags each one so you can quickly see whether it fits your business, what it costs, and how to apply.</p>
     </div>
 
     <div class="about-card" id="about-sections">
       <div class="about-card-title">🚀 The four sections</div>
       <ol class="step-list">
-        <li class="step-item"><span class="step-n">1</span><span><strong>Overview</strong> — a snapshot of the whole guide: totals and charts showing the mix of lenders, product types, purposes and business sizes. Use the &ldquo;I need financing for…&rdquo; shortcuts to jump straight into matching products.</span></li>
-        <li class="step-item"><span class="step-n">2</span><span><strong>Finance Finder</strong> — the main tool. Narrow products down by what you need the money for, business size, product type, repayment period, lender, institution type, and whether the product is collateral-free, women-led, concessionary or green. Click any row to open full details, or use the <em>Product page</em> link to visit the funder&rsquo;s website.</span></li>
+        <li class="step-item"><span class="step-n">1</span><span><strong>Overview</strong> — a snapshot of the whole guide: totals and charts showing the mix of funders, product types, purposes and business sizes. Use the &ldquo;I need financing for…&rdquo; shortcuts to jump straight into matching products.</span></li>
+        <li class="step-item"><span class="step-n">2</span><span><strong>Finance Finder</strong> — the main tool. Narrow products down by what you need the money for, what kind of finance you want (loan, grant, equity or concessional), business size, product type, repayment period, funder, institution type, and whether the product is collateral-free, women-led or green. Click any row to open full details, or use the <em>Product page</em> link to visit the funder&rsquo;s website.</span></li>
         <li class="step-item"><span class="step-n">3</span><span><strong>All Products</strong> — the complete list. Sort by any column, use the filter dropdown under each heading (like a spreadsheet), or search across everything.</span></li>
         <li class="step-item"><span class="step-n">4</span><span><strong>Finance Explained</strong> — plain-language definitions of every product type, purpose, institution type and key term, each with a Textile &amp; Clothing example. New to finance? Start here.</span></li>
       </ol>
@@ -1422,7 +1431,7 @@ tbody td { padding: 11px 14px; vertical-align: top; }
     </div>
 
     <div class="about-card" id="about-data">
-      <div class="about-card-title">ℹ️ Data, currency &amp; a note of caution</div>
+      <div class="about-card-title">ℹ️ A note of caution</div>
       <p>Product information is drawn from each funder&rsquo;s own official website and is <strong>current as of 9 July 2026</strong>; terms change often, so always confirm the latest details with the institution before applying. This guide is an information resource, not financial advice or a recommendation, and eligibility for any product is decided by the funder.</p>
     </div>
   </div>
@@ -1599,7 +1608,9 @@ function makeDoughnut(id, labels, vals, colors) {
     options:{
       responsive:true, maintainAspectRatio:false, cutout:'65%',
       plugins:{
-        legend:{position:'right', labels:{font:{size:11,family:"Outfit"}, color:'#4A5568', boxWidth:12, padding:12}}
+        legend:{position:'right', labels:{font:{size:11,family:"Outfit"}, color:'#4A5568', boxWidth:12, padding:12}},
+        // The label already carries "<share>% (<count>)" — don't repeat the raw value.
+        tooltip:{callbacks:{label:c=>' '+c.label}}
       }
     }
   });
@@ -1625,6 +1636,35 @@ function sizeMatch(row,sel){ if(!sel) return true; return sizeSet(row['Std. Busi
 function isCollatFree(r){ return r['Collateral Class']==='Collateral not required'; }
 function isWomen(r){ return String(r['Gender Lens']||'').trim().toLowerCase().startsWith('yes'); }
 function isConc(r){ return r['Concessional']==='Concessionary'; }
+
+/* ── PRODUCT FAMILIES ──────────────────────────────────
+   Groups the numbered 'Std. Product Type' values into the plain-language
+   instrument families the "I need a…" shortcuts and the "What kind of
+   finance?" filter use. Types are listed explicitly rather than pattern-
+   matched, so renaming one in the workbook drops it from its family
+   visibly (an empty result) instead of silently mis-grouping it. */
+const CONC_LOAN_TYPE = '07. Concessional / soft loan';
+const FAMILY_TYPES = {
+  Loan: new Set([
+    '01. Short-term credit / working capital facility',
+    '06. Long-term loan',
+    CONC_LOAN_TYPE,
+    '08. Mortgage / real estate',
+    '13. Microfinance',
+    '17. Export credit / refinance',
+    '19. Sustainability-linked loan / facility'
+  ]),
+  Grant: new Set(['04. Grant / Subsidy']),
+  Equity: new Set(['10. Equity investment','11. Venture capital / PE'])
+};
+function familyMatch(r, sel){
+  if(!sel) return true;
+  // 'Concessionary' flag and the concessional product type do not overlap in
+  // the workbook, so match either — otherwise this returns almost nothing.
+  if(sel==='Concessional') return isConc(r) || r['Std. Product Type']===CONC_LOAN_TYPE;
+  const types = FAMILY_TYPES[sel];
+  return types ? types.has(r['Std. Product Type']) : true;
+}
 
 /* ── SHORTLIST & COMPARE ─────────────────────────────── */
 const SHORTLIST_MAX = 5;
@@ -1659,8 +1699,8 @@ const CMP_ROWS = [
  ['T&C access', r=>tcCat(r['T&C Applicability'])],
  ['Repayment period', r=>r['Tenor']],
  ['Interest / cost', r=>r['Interest Rate / Cost']],
- ["Max. finance (LKR '000)", r=>r["Max. Finance (LKR '000)"]],
- ["Min. finance (LKR '000)", r=>r["Min. Finance (LKR '000)"]],
+ ['Max. finance', r=>r["Max. Finance (LKR '000)"]],
+ ['Min. finance', r=>r["Min. Finance (LKR '000)"]],
  ['Grace period', r=>r['Grace Period']],
  ['Currency', r=>r['Currency']],
  ['Collateral', r=>nd(r['Collateral Required'])?r['Collateral Class']:r['Collateral Required']],
@@ -1703,25 +1743,37 @@ function quickStart(kind){
   populateFilters();
   clearFilters();
   const set=(id,v)=>{ const el=document.getElementById(id); if(el) el.value=v; };
+  // "I need financing for…" — purpose
   if(kind==='wc')      set('f-need','Working capital');
   else if(kind==='capex')  set('f-need','Fixed assets / CAPEX');
   else if(kind==='trade')  set('f-need','Trade finance');
   else if(kind==='startup') set('f-need','Start-up / creation');
+  else if(kind==='tech')   set('f-need','Technology & innovation');
   else if(kind==='green')  set('f-green','Yes');
   else if(kind==='women')  set('f-women','yes');
-  else if(kind==='collat') set('f-collat','yes');
+  // "I need a…" — instrument
+  else if(kind==='loan')   set('f-family','Loan');
+  else if(kind==='grant')  set('f-family','Grant');
+  else if(kind==='equity') set('f-family','Equity');
+  else if(kind==='conc')   set('f-family','Concessional');
   showPanel('finder');
   applyFilters();
 }
 window.addEventListener('DOMContentLoaded', () => {
-  makeRankList('cInst', countBy('Institution Name (Abbr.)').slice(0,12), GS);
+  // Counted by full name, not abbreviation: a few institutions carry more than
+  // one abbreviation in the workbook (e.g. LOLC / LOLC Finance), which would
+  // otherwise show the same name twice with its products split between them.
+  makeRankList('cInst', countBy('Institution Full Name').slice(0,12), GS);
   makeRankList('cType', countBy('Std. Product Type').slice(0,9), BS);
   makeRankList('cNeed', countBySplit('Std. Financing Need').slice(0,10), GS);
   makeBar('cSize', countBy('Std. Business Size'), GS);
   const gY = DATA.filter(r=>r['Std. Green']==='Yes').length;
+  const gN = DATA.length - gY;
+  const shareOf = n => DATA.length ? (n/DATA.length*100).toFixed(1) : '0.0';
   makeDoughnut('cGreen',
-    [`Conventional (${DATA.length-gY})`, `Green (${gY})`],
-    [DATA.length-gY, gY],
+    [`Conventional ${shareOf(gN)}% (${gN.toLocaleString('en-US')})`,
+     `Green ${shareOf(gY)}% (${gY.toLocaleString('en-US')})`],
+    [gN, gY],
     ['#E2E8F0','#1D7A45']);
   populateFilters();
 });
@@ -1731,6 +1783,10 @@ let filtersPopulated = false;
 function rankFor(id,v){
   if(id==='f-tenor'){ const o=['Short-term','Medium-term','Long-term','None','Not disclosed']; const i=o.findIndex(p=>v.startsWith(p)); return i<0?o.length:i; }
   if(id==='f-need'){ const o=['Working capital','Trade finance','Cash flow management','Invoice/receivables financing','Fixed assets / CAPEX','Start-up / creation','Technology & innovation','Capacity building','Green / sustainable assets & RECP upgrades','Sustainable upgrades','Sustainable Agriculture']; const i=o.findIndex(p=>v.startsWith(p)); return i<0?o.length:i; }
+  // 'f-size' is still used as a rank key by the All Products business-size
+  // column filter (see populateDbFilters), even though the Finance Finder no
+  // longer has a business-size dropdown. It keeps Micro/Small/Medium/Large in
+  // order instead of alphabetical.
   if(id==='f-size'){ const s=v.toLowerCase(); if(s.startsWith('micro'))return 1; if(s.startsWith('small'))return 2; if(s.startsWith('medium'))return 3; if(s.startsWith('sme'))return 4; if(s.startsWith('large'))return 6; if(s.startsWith('other'))return 8; if(s.startsWith('not disclosed'))return 9; return 7; }
   return 0;
 }
@@ -1740,15 +1796,14 @@ function populateFilters() {
   const INST_FULL = {};
   DATA.forEach(r=>{ const a=r['Institution Name (Abbr.)']; if(a && !INST_FULL[a]) INST_FULL[a]=r['Institution Full Name']||a; });
   const cfg = [
-    ['f-size','Std. Business Size'],['f-need','Std. Financing Need'],['f-greentype','Std. Green Investment Type'],
+    ['f-need','Std. Financing Need'],['f-greentype','Std. Green Investment Type'],
     ['f-type','Std. Product Type'],['f-tenor','Std. Tenor'],
     ['f-inst','Institution Name (Abbr.)'],['f-insttype','Institution Type']
   ];
   const splitFields = new Set(['Std. Financing Need','Std. Tenor','Std. Green Investment Type']);
   cfg.forEach(([id,field]) => {
     let vals;
-    if (id==='f-size') { vals=[...SIZE_OPTS]; }
-    else if (splitFields.has(field)) {
+    if (splitFields.has(field)) {
       const s=new Set();
       DATA.forEach(r=>splitMulti(r[field]).forEach(x=>s.add(x)));
       vals=[...s];
@@ -1773,8 +1828,8 @@ let finderActive = false, finderPage = 1; const PER_F = 25;
 function applyFilters() {
   const get = id => document.getElementById(id).value;
   finderRows = DATA.filter(r =>
-    sizeMatch(r, get('f-size')) &&
     (!get('f-need')  || splitMulti(r['Std. Financing Need']).includes(get('f-need'))) &&
+    familyMatch(r, get('f-family')) &&
     (!get('f-type')  || r['Std. Product Type']===get('f-type'))   &&
     (!get('f-tenor') || splitMulti(r['Std. Tenor']).includes(get('f-tenor'))) &&
     (!get('f-inst')  || r['Institution Name (Abbr.)']===get('f-inst')) &&
@@ -1782,9 +1837,7 @@ function applyFilters() {
     (!get('f-green') || r['Std. Green']===get('f-green')) &&
     (!get('f-greentype') || splitMulti(r['Std. Green Investment Type']).includes(get('f-greentype'))) &&
     (!get('f-tc')    || tcCat(r['T&C Applicability'])===get('f-tc')) &&
-    (get('f-collat')!=='yes' || isCollatFree(r)) &&
-    (get('f-women')!=='yes'  || isWomen(r)) &&
-    (get('f-conc')!=='yes'   || isConc(r))
+    (get('f-women')!=='yes'  || isWomen(r))
   );
   const pill = document.getElementById('finder-pill');
   pill.style.display = 'flex';
@@ -1793,7 +1846,7 @@ function applyFilters() {
   renderFinder(1);
 }
 function clearFilters() {
-  ['f-size','f-need','f-type','f-tenor','f-inst','f-insttype','f-green','f-greentype','f-tc','f-collat','f-women','f-conc'].forEach(id=>{const el=document.getElementById(id); if(el) el.value='';});
+  ['f-need','f-family','f-type','f-tenor','f-inst','f-insttype','f-green','f-greentype','f-tc','f-women'].forEach(id=>{const el=document.getElementById(id); if(el) el.value='';});
   document.getElementById('finder-search').value='';
   document.getElementById('finder-pill').style.display='none';
   finderRows=[...DATA];
@@ -1821,7 +1874,7 @@ function renderFinder(pg) {
   tbody.innerHTML=slice.map((r,i)=>`
     <tr onclick="openModal('${r.ID}')">
       <td class="star-cell" data-label="Shortlist">${starBtn(r.ID)}</td>
-      <td data-label="Lender">
+      <td data-label="Funder">
         <span class="inst-badge" style="color:${ic(r['Institution Name (Abbr.)'])}">${r['Institution Name (Abbr.)']}</span>
         <div style="font-size:11px;color:var(--mist);margin-top:1px">${r['Institution Full Name']}</div>
       </td>
@@ -1901,7 +1954,7 @@ function renderDb(pg) {
   tbody.innerHTML=slice.map(r=>`
     <tr onclick="openModal('${r.ID}')">
       <td class="star-cell" data-label="Shortlist">${starBtn(r.ID)}</td>
-      <td data-label="Lender">
+      <td data-label="Funder">
         <span class="inst-badge" style="color:${ic(r['Institution Name (Abbr.)'])}">${r['Institution Name (Abbr.)']}</span>
         <div style="font-size:11px;color:var(--mist);margin-top:1px">${r['Institution Full Name']||''}</div>
       </td>
@@ -1943,8 +1996,8 @@ function openModal(id) {
   const kt = grid([
     cell('Repayment period', r['Tenor']),
     cell('Interest Rate / Cost', r['Interest Rate / Cost'], true),
-    cell("Min. Finance (LKR '000)", r["Min. Finance (LKR '000)"]),
-    cell("Max. Finance (LKR '000)", r["Max. Finance (LKR '000)"], true),
+    cell("Min. Finance", r["Min. Finance (LKR '000)"]),
+    cell("Max. Finance", r["Max. Finance (LKR '000)"], true),
     cell('Currency', r['Currency']),
     cell('Grace Period', r['Grace Period']),
     cell('Concessionary Terms', r['Concessional']),
