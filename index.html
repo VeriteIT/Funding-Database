@@ -565,9 +565,9 @@ table { width: 100%; border-collapse: collapse; }
 .col-filter-clear { font-size: 10px; color: var(--gold); cursor: pointer; text-decoration: underline; white-space: nowrap; }
 .date-note { margin-top: 4px; background: rgba(192,57,43,.16); border: 1px solid #E06055; border-left: 4px solid #C0392B; color: #FBD9D4; font-size: 11px; font-weight: 600; letter-spacing: .2px; padding: 7px 12px; border-radius: 6px; text-align: right; max-width: 230px; line-height: 1.35; }
 /* All Products: fit full width, narrow Type/Size/Repayment */
-.db-fit col.d-lender{width:11%;} .db-fit col.d-prod{width:14%;} .db-fit col.d-need{width:11%;}
+.db-fit col.d-lender{width:11%;} .db-fit col.d-prod{width:17%;} .db-fit col.d-need{width:13%;}
 .db-fit col.d-type{width:9%;} .db-fit col.d-size{width:9%;} .db-fit col.d-rep{width:8%;}
-.db-fit col.d-cost{width:11%;} .db-fit col.d-fit{width:11%;} .db-fit col.d-tc{width:7%;} .db-fit col.d-view{width:9%;}
+.db-fit col.d-cost{width:13%;} .db-fit col.d-fit{width:11%;} .db-fit col.d-view{width:9%;}
 .db-fit th, .db-fit td { font-size: 11.5px; }
 thead th {
   background: var(--cream);
@@ -1059,7 +1059,7 @@ tbody td { padding: 11px 14px; vertical-align: top; }
         <span class="eyebrow-text">International Trade Centre · GTEX</span>
       </div>
       <h1 class="header-title">Sri Lanka <em>Finance Guide</em><br>for Textile &amp; Clothing SMEs</h1>
-      <p class="header-subtitle">Global Textiles and Apparel Programme (GTEX) &nbsp;·&nbsp; Financing &amp; funding options for Sri Lankan Textile and Clothing (T&amp;C) SMEs</p>
+      <p class="header-subtitle">The International Trade Centre (ITC) Global Textiles and Clothing Programme (GTEX) &nbsp;·&nbsp; Financing &amp; funding options for Sri Lankan Textile and Clothing (T&amp;C) SMEs</p>
     </div>
     <div class="header-badges">
       <div class="hbadge"><div class="hbadge-dot"></div>1,071 Financing Products</div>
@@ -1220,15 +1220,6 @@ tbody td { padding: 11px 14px; vertical-align: top; }
         <select class="filter-select" id="f-insttype"><option value="">All types</option></select>
       </div>
       <div class="filter-group">
-        <label class="filter-label">T&amp;C access</label>
-        <select class="filter-select" id="f-tc">
-          <option value="" selected>Show all</option>
-          <option value="Open">Open to T&amp;C SMEs</option>
-          <option value="Restricted">Restricted</option>
-          <option value="Other">Other / unclear</option>
-        </select>
-      </div>
-      <div class="filter-group">
         <label class="filter-label">Women-led</label>
         <select class="filter-select" id="f-women">
           <option value="">Any</option>
@@ -1318,7 +1309,7 @@ tbody td { padding: 11px 14px; vertical-align: top; }
       <table class="fit-table db-fit">
         <colgroup>
           <col class="d-star"><col class="d-lender"><col class="d-prod"><col class="d-need"><col class="d-type"><col class="d-size">
-          <col class="d-rep"><col class="d-cost"><col class="d-fit"><col class="d-tc"><col class="d-view">
+          <col class="d-rep"><col class="d-cost"><col class="d-fit"><col class="d-view">
         </colgroup>
         <thead>
         <tr>
@@ -1331,7 +1322,6 @@ tbody td { padding: 11px 14px; vertical-align: top; }
           <th onclick="sortDb('Std. Tenor')" id="th-tenor">Repayment <span class="si">⇅</span></th>
           <th>Cost</th>
           <th>Good to know</th>
-          <th onclick="sortDb('T&C Applicability')" id="th-tc">T&amp;C access <span class="si">⇅</span></th>
           <th>Product page</th>
         </tr>
         <tr class="col-filter-row">
@@ -1344,7 +1334,6 @@ tbody td { padding: 11px 14px; vertical-align: top; }
           <th><select id="dbf-rep" onchange="renderDb(1)" onclick="event.stopPropagation()"><option value="">All</option></select></th>
           <th></th>
           <th></th>
-          <th><select id="dbf-tc" onchange="renderDb(1)" onclick="event.stopPropagation()"><option value="">All</option><option value="Open">Open</option><option value="Restricted">Restricted</option><option value="Other">Other</option></select></th>
           <th><span class="col-filter-clear" onclick="clearDbFilters()">Clear</span></th>
         </tr>
         </thead>
@@ -1377,7 +1366,7 @@ tbody td { padding: 11px 14px; vertical-align: top; }
   <div class="about-grid">
     <div class="about-card" id="about-what">
       <div class="about-card-title">📖 What this guide is</div>
-      <p>This guide brings together financing and funding options relevant to Sri Lanka&rsquo;s Textile and Clothing (T&amp;C) sector, with a focus on small and medium enterprises (SMEs). It is produced under the International Trade Centre&rsquo;s Global Textiles and Apparel Programme (GTEX). It maps <strong>1,071 products</strong> from <strong>85 institutions</strong> — banks, finance companies, development and government bodies, and investors — and tags each one so you can quickly see whether it fits your business, what it costs, and how to apply.</p>
+      <p>This guide brings together financing and funding options relevant to Sri Lanka&rsquo;s Textile and Clothing (T&amp;C) sector, with a focus on small and medium enterprises (SMEs). It is produced under the International Trade Centre (ITC) Global Textiles and Clothing Programme (GTEX). It maps <strong>1,071 products</strong> from <strong>85 institutions</strong> — banks, finance companies, development and government bodies, and investors — and tags each one so you can quickly see whether it fits your business, what it costs, and how to apply.</p>
     </div>
 
     <div class="about-card" id="about-sections">
@@ -1850,7 +1839,6 @@ function applyFilters() {
     (!get('f-insttype') || r['Institution Type']===get('f-insttype')) &&
     (!get('f-green') || r['Std. Green']===get('f-green')) &&
     (!get('f-greentype') || splitMulti(r['Std. Green Investment Type']).includes(get('f-greentype'))) &&
-    (!get('f-tc')    || tcCat(r['T&C Applicability'])===get('f-tc')) &&
     (get('f-women')!=='yes'  || isWomen(r))
   );
   const pill = document.getElementById('finder-pill');
@@ -1860,7 +1848,7 @@ function applyFilters() {
   renderFinder(1);
 }
 function clearFilters() {
-  ['f-need','f-family','f-type','f-tenor','f-inst','f-insttype','f-green','f-greentype','f-tc','f-women'].forEach(id=>{const el=document.getElementById(id); if(el) el.value='';});
+  ['f-need','f-family','f-type','f-tenor','f-inst','f-insttype','f-green','f-greentype','f-women'].forEach(id=>{const el=document.getElementById(id); if(el) el.value='';});
   document.getElementById('finder-search').value='';
   document.getElementById('finder-pill').style.display='none';
   finderRows=[...DATA];
@@ -1935,7 +1923,7 @@ function populateDbFilters(){
   });
 }
 function clearDbFilters(){
-  ['dbf-inst','dbf-need','dbf-type','dbf-size','dbf-rep','dbf-tc'].forEach(id=>{const e=document.getElementById(id); if(e) e.value='';});
+  ['dbf-inst','dbf-need','dbf-type','dbf-size','dbf-rep'].forEach(id=>{const e=document.getElementById(id); if(e) e.value='';});
   const s=document.getElementById('db-search'); if(s) s.value='';
   renderDb(1);
 }
@@ -1947,8 +1935,7 @@ function getDbRows() {
     (!gv('dbf-need') || splitMulti(r['Std. Financing Need']).includes(gv('dbf-need'))) &&
     (!gv('dbf-type') || r['Std. Product Type']===gv('dbf-type')) &&
     sizeMatch(r, gv('dbf-size')) &&
-    (!gv('dbf-rep')  || splitMulti(r['Std. Tenor']).includes(gv('dbf-rep'))) &&
-    (!gv('dbf-tc')   || tcCat(r['T&C Applicability'])===gv('dbf-tc'))
+    (!gv('dbf-rep')  || splitMulti(r['Std. Tenor']).includes(gv('dbf-rep')))
   );
   if(q) rows=rows.filter(r=>Object.values(r).some(v=>String(v).toLowerCase().includes(q)));
   rows.sort((a,b)=>dbSort.asc?(a[dbSort.col]||'').localeCompare(b[dbSort.col]||''):(b[dbSort.col]||'').localeCompare(a[dbSort.col]||''));
@@ -1982,7 +1969,6 @@ function renderDb(pg) {
       <td data-label="Repayment">${tenorChip(r['Std. Tenor'])}</td>
       <td data-label="Cost" style="font-size:12px;color:var(--slate);max-width:130px">${r['Interest Rate / Cost']||'—'}</td>
       <td data-label="Good to know"><div class="fit-cell">${fitBadges(r)}</div></td>
-      <td data-label="T&C access">${tcChip(r['T&C Applicability'])}</td>
       <td data-label="Product page">
         ${(r['Product Page']||r['Website'])?`<a class="row-link ext" href="${r['Product Page']||r['Website']}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Product page ↗</a>`:'<span style="color:var(--mist);font-size:11px">—</span>'}
       </td>
