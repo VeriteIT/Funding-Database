@@ -1704,7 +1704,6 @@ function openCompare(){
 function closeCompare(){ const o=document.getElementById('compare-overlay'); if(o && o.classList.contains('open')){ o.classList.remove('open'); document.body.style.overflow=''; } }
 function printCompare(){ window.print(); }
 
-function tcRank(r){ const c=tcCat(r['T&C Applicability']); return c==='Open'?0:(c==='Restricted'?1:2); }
 function fitBadges(r){
   let h='';
   if(r['Std. Green']==='Yes') h+='<span class="chip chip-green" title="Green / sustainable finance">🌱 Green</span> ';
@@ -1850,7 +1849,13 @@ function renderFinder(pg) {
   prompt.style.display='none';
   let rows = finderRows;
   if(q) rows=rows.filter(r=>Object.values(r).some(v=>String(v).toLowerCase().includes(q)));
-  rows = rows.slice().sort((a,b)=>(tcRank(a)-tcRank(b)) || ((isConc(b)?1:0)-(isConc(a)?1:0)));
+  // Alphabetical by funder, then by product name so each funder's products stay
+  // together in a predictable order. Sorted on the full name rather than the
+  // abbreviation because one abbreviation can cover two different institutions
+  // (BOC is both Bank of Ceylon and Bank of China), which would interleave them.
+  rows = rows.slice().sort((a,b)=>
+    (a['Institution Full Name']||a['Institution Name (Abbr.)']||'').localeCompare(b['Institution Full Name']||b['Institution Name (Abbr.)']||'')
+    || (a['Financing Product']||'').localeCompare(b['Financing Product']||''));
   title.textContent = `${rows.length} product${rows.length!==1?'s':''}`;
   if(!rows.length){ tbody.innerHTML=''; pager.innerHTML=''; empty.style.display='block'; return; }
   empty.style.display='none';
