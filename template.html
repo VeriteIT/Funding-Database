@@ -1194,16 +1194,6 @@ tbody td { padding: 11px 14px; vertical-align: top; }
         <select class="filter-select" id="f-need"><option value="">Any purpose</option></select>
       </div>
       <div class="filter-group">
-        <label class="filter-label">What kind of finance?</label>
-        <select class="filter-select" id="f-family">
-          <option value="">Any kind</option>
-          <option value="Loan">Loan 🏦</option>
-          <option value="Grant">Grant / subsidy 🎁</option>
-          <option value="Equity">Equity investment 📈</option>
-          <option value="Concessional">Concessional / soft loan 💸</option>
-        </select>
-      </div>
-      <div class="filter-group">
         <label class="filter-label">Product type</label>
         <select class="filter-select" id="f-type"><option value="">Any type</option></select>
       </div>
@@ -1631,35 +1621,6 @@ function isCollatFree(r){ return r['Collateral Class']==='Collateral not require
 function isWomen(r){ return String(r['Gender Lens']||'').trim().toLowerCase().startsWith('yes'); }
 function isConc(r){ return r['Concessional']==='Concessionary'; }
 
-/* ── PRODUCT FAMILIES ──────────────────────────────────
-   Groups the numbered 'Std. Product Type' values into the plain-language
-   instrument families the "I need a…" shortcuts and the "What kind of
-   finance?" filter use. Types are listed explicitly rather than pattern-
-   matched, so renaming one in the workbook drops it from its family
-   visibly (an empty result) instead of silently mis-grouping it. */
-const CONC_LOAN_TYPE = '07. Concessional / soft loan';
-const FAMILY_TYPES = {
-  Loan: new Set([
-    '01. Short-term credit / working capital facility',
-    '06. Long-term loan',
-    CONC_LOAN_TYPE,
-    '08. Mortgage / real estate',
-    '13. Microfinance',
-    '17. Export credit / refinance',
-    '19. Sustainability-linked loan / facility'
-  ]),
-  Grant: new Set(['04. Grant / Subsidy']),
-  Equity: new Set(['10. Equity investment','11. Venture capital / PE'])
-};
-function familyMatch(r, sel){
-  if(!sel) return true;
-  // 'Concessionary' flag and the concessional product type do not overlap in
-  // the workbook, so match either — otherwise this returns almost nothing.
-  if(sel==='Concessional') return isConc(r) || r['Std. Product Type']===CONC_LOAN_TYPE;
-  const types = FAMILY_TYPES[sel];
-  return types ? types.has(r['Std. Product Type']) : true;
-}
-
 /* ── SHORTLIST & COMPARE ─────────────────────────────── */
 const SHORTLIST_MAX = 5;
 let shortlist = [];
@@ -1746,10 +1707,10 @@ function quickStart(kind){
   else if(kind==='green')  set('f-green','Yes');
   else if(kind==='women')  set('f-women','yes');
   // "I need a…" — instrument
-  else if(kind==='loan')   set('f-family','Loan');
-  else if(kind==='grant')  set('f-family','Grant');
-  else if(kind==='equity') set('f-family','Equity');
-  else if(kind==='conc')   set('f-family','Concessional');
+  else if(kind==='loan')   set('f-type','06. Long-term loan');
+  else if(kind==='grant')  set('f-type','04. Grant / Subsidy');
+  else if(kind==='equity') set('f-type','10. Equity investment');
+  else if(kind==='conc')   set('f-type','07. Concessional / soft loan');
   showPanel('finder');
   applyFilters();
 }
@@ -1823,7 +1784,6 @@ function applyFilters() {
   const get = id => document.getElementById(id).value;
   finderRows = DATA.filter(r =>
     (!get('f-need')  || splitMulti(r['Std. Financing Need']).includes(get('f-need'))) &&
-    familyMatch(r, get('f-family')) &&
     (!get('f-type')  || r['Std. Product Type']===get('f-type'))   &&
     (!get('f-tenor') || splitMulti(r['Std. Tenor']).includes(get('f-tenor'))) &&
     (!get('f-inst')  || r['Institution Name (Abbr.)']===get('f-inst')) &&
@@ -1840,7 +1800,7 @@ function applyFilters() {
   renderFinder(1);
 }
 function clearFilters() {
-  ['f-need','f-family','f-type','f-tenor','f-inst','f-insttype','f-green','f-greentype','f-tc','f-women'].forEach(id=>{const el=document.getElementById(id); if(el) el.value='';});
+  ['f-need','f-type','f-tenor','f-inst','f-insttype','f-green','f-greentype','f-tc','f-women'].forEach(id=>{const el=document.getElementById(id); if(el) el.value='';});
   document.getElementById('finder-search').value='';
   document.getElementById('finder-pill').style.display='none';
   finderRows=[...DATA];
