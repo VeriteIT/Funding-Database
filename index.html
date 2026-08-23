@@ -1194,6 +1194,16 @@ tbody td { padding: 11px 14px; vertical-align: top; }
         <select class="filter-select" id="f-need"><option value="">Any purpose</option></select>
       </div>
       <div class="filter-group">
+        <label class="filter-label">Finance Type</label>
+        <select class="filter-select" id="f-family">
+          <option value="">Any finance type</option>
+          <option value="Loan">Loan 🏦</option>
+          <option value="Grant">Grant / subsidy 🎁</option>
+          <option value="Equity">Equity investment 📈</option>
+          <option value="Concessional">Concessional / soft loan 💸</option>
+        </select>
+      </div>
+      <div class="filter-group">
         <label class="filter-label">Product type</label>
         <select class="filter-select" id="f-type"><option value="">Any type</option></select>
       </div>
@@ -1374,7 +1384,7 @@ tbody td { padding: 11px 14px; vertical-align: top; }
       <div class="about-card-title">🚀 The four sections</div>
       <ol class="step-list">
         <li class="step-item"><span class="step-n">1</span><span><strong>Overview</strong> — a snapshot of the whole guide: totals and charts showing the mix of funders, product types, purposes and business sizes. Use the &ldquo;I need financing for…&rdquo; shortcuts to jump straight into matching products.</span></li>
-        <li class="step-item"><span class="step-n">2</span><span><strong>Finance Finder</strong> — the main tool. Narrow products down by what you need the money for, what kind of finance you want (loan, grant, equity or concessional), business size, product type, repayment period, funder, institution type, and whether the product is collateral-free, women-led or green. Click any row to open full details, or use the <em>Product page</em> link to visit the funder&rsquo;s website.</span></li>
+        <li class="step-item"><span class="step-n">2</span><span><strong>Finance Finder</strong> — the main tool. Narrow products down by what you need the money for, the finance type (loan, grant, equity or concessional), product type, repayment period, funder, institution type, access for T&amp;C SMEs, and whether the product is women-led or green. Click any row to open full details, or use the <em>Product page</em> link to visit the funder&rsquo;s website.</span></li>
         <li class="step-item"><span class="step-n">3</span><span><strong>All Products</strong> — the complete list. Sort by any column, use the filter dropdown under each heading (like a spreadsheet), or search across everything.</span></li>
         <li class="step-item"><span class="step-n">4</span><span><strong>Finance Explained</strong> — plain-language definitions of every product type, purpose, institution type and key term, each with a Textile &amp; Clothing example. New to finance? Start here.</span></li>
       </ol>
@@ -1627,6 +1637,36 @@ function isCollatFree(r){ return r['Collateral Class']==='Collateral not require
 function isWomen(r){ return String(r['Gender Lens']||'').trim().toLowerCase().startsWith('yes'); }
 function isConc(r){ return r['Concessional']==='Concessionary'; }
 
+/* ── FINANCE TYPE ──────────────────────────────────────
+   Groups the numbered 'Std. Product Type' values into the plain-language
+   instrument the "Finance Type" filter and the "I need a…" shortcuts use.
+   This exists because 'Product type' is a single exact value: without it,
+   "Loan" could only ever mean one of the several product types that are
+   loans. Types are listed explicitly, so one renamed in the workbook drops
+   out visibly (a smaller result) rather than being silently mis-grouped. */
+const CONC_LOAN_TYPE = '07. Concessional / soft loan';
+const FAMILY_TYPES = {
+  Loan: new Set([
+    '01. Short-term credit / working capital facility',
+    '06. Long-term loan',
+    CONC_LOAN_TYPE,
+    '08. Mortgage / real estate',
+    '13. Microfinance',
+    '17. Export credit / refinance',
+    '19. Sustainability-linked loan / facility'
+  ]),
+  Grant: new Set(['04. Grant / Subsidy']),
+  Equity: new Set(['10. Equity investment','11. Venture capital / PE'])
+};
+function familyMatch(r, sel){
+  if(!sel) return true;
+  // Match the Concessional flag or the concessional product type: the two have
+  // disagreed in the workbook before, and either one means concessional terms.
+  if(sel==='Concessional') return isConc(r) || r['Std. Product Type']===CONC_LOAN_TYPE;
+  const types = FAMILY_TYPES[sel];
+  return types ? types.has(r['Std. Product Type']) : true;
+}
+
 /* ── SHORTLIST & COMPARE ─────────────────────────────── */
 const SHORTLIST_MAX = 5;
 let shortlist = [];
@@ -1722,11 +1762,12 @@ function quickStart(kind){
   else if(kind==='tech')   setMatch('f-need',/^technology/i);
   else if(kind==='green')  set('f-green','Yes');
   else if(kind==='women')  set('f-women','yes');
-  // "I need a…" — instrument
-  else if(kind==='loan')   set('f-type','06. Long-term loan');
-  else if(kind==='grant')  set('f-type','04. Grant / Subsidy');
-  else if(kind==='equity') set('f-type','10. Equity investment');
-  else if(kind==='conc')   set('f-type','07. Concessional / soft loan');
+  // "I need a…" — instrument. These set Finance Type, not Product type, so
+  // "Loan" covers every kind of loan rather than just one product type.
+  else if(kind==='loan')   set('f-family','Loan');
+  else if(kind==='grant')  set('f-family','Grant');
+  else if(kind==='equity') set('f-family','Equity');
+  else if(kind==='conc')   set('f-family','Concessional');
   showPanel('finder');
   applyFilters();
 }
@@ -1802,6 +1843,7 @@ function applyFilters() {
   const get = id => document.getElementById(id).value;
   finderRows = DATA.filter(r =>
     (!get('f-need')  || splitMulti(r['Std. Financing Need']).includes(get('f-need'))) &&
+    familyMatch(r, get('f-family')) &&
     (!get('f-type')  || r['Std. Product Type']===get('f-type'))   &&
     (!get('f-tenor') || splitMulti(r['Std. Tenor']).includes(get('f-tenor'))) &&
     (!get('f-inst')  || r['Institution Name (Abbr.)']===get('f-inst')) &&
@@ -1818,7 +1860,7 @@ function applyFilters() {
   renderFinder(1);
 }
 function clearFilters() {
-  ['f-need','f-type','f-tenor','f-inst','f-insttype','f-green','f-greentype','f-tc','f-women'].forEach(id=>{const el=document.getElementById(id); if(el) el.value='';});
+  ['f-need','f-family','f-type','f-tenor','f-inst','f-insttype','f-green','f-greentype','f-tc','f-women'].forEach(id=>{const el=document.getElementById(id); if(el) el.value='';});
   document.getElementById('finder-search').value='';
   document.getElementById('finder-pill').style.display='none';
   finderRows=[...DATA];
