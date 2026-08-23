@@ -442,79 +442,6 @@ body {
   background: var(--forest);
   color: var(--white);
 }
-/* Multi-select filter control. Replaces the single-value <select>s so a filter
-   can hold several values at once (e.g. every kind of loan). The wrapper keeps
-   the f-* id, so everything keyed on those ids still works. */
-.ms { position: relative; }
-.ms.open { z-index: 50; }
-.ms-btn {
-  width: 100%;
-  text-align: left;
-  background: rgba(255,255,255,.07);
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: var(--r-sm);
-  padding: 10px 32px 10px 12px;
-  color: rgba(255,255,255,.85);
-  font-family: 'Outfit', sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  cursor: pointer;
-  outline: none;
-  transition: border-color .2s, background .2s;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,.4)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.ms-btn:hover, .ms.open .ms-btn { border-color: var(--mint); background-color: rgba(255,255,255,.1); }
-.ms.has .ms-btn { border-color: rgba(46,173,101,.65); background-color: rgba(46,173,101,.12); color: var(--white); }
-.ms-panel {
-  display: none;
-  position: absolute;
-  top: calc(100% + 4px);
-  left: 0; right: 0;
-  max-height: 264px;
-  overflow-y: auto;
-  background: var(--forest);
-  border: 1px solid rgba(255,255,255,.18);
-  border-radius: var(--r-sm);
-  box-shadow: var(--shadow-md);
-  padding: 6px;
-}
-.ms.open .ms-panel { display: block; }
-.ms-opt {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  padding: 7px 8px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 12.5px;
-  line-height: 1.35;
-  color: rgba(255,255,255,.85);
-}
-.ms-opt:hover { background: rgba(255,255,255,.08); }
-.ms-opt input { margin: 2px 0 0; flex: none; cursor: pointer; accent-color: var(--mint); }
-.ms-none { padding: 8px; font-size: 12px; color: rgba(255,255,255,.5); }
-.ms-actions {
-  display: flex;
-  justify-content: flex-end;
-  border-top: 1px solid rgba(255,255,255,.12);
-  margin-top: 4px;
-  padding-top: 4px;
-}
-.ms-actions button {
-  background: none;
-  border: none;
-  color: var(--mint);
-  font-family: 'Outfit', sans-serif;
-  font-size: 11.5px;
-  font-weight: 600;
-  cursor: pointer;
-  padding: 4px 6px;
-}
 .filter-actions {
   display: flex;
   gap: 10px;
@@ -1264,39 +1191,53 @@ tbody td { padding: 11px 14px; vertical-align: top; }
     <div class="filters-grid">
       <div class="filter-group">
         <label class="filter-label">What's it for?</label>
-        <div class="ms" id="f-need" data-ph="Any purpose"></div>
+        <select class="filter-select" id="f-need"><option value="">Any purpose</option></select>
       </div>
       <div class="filter-group">
         <label class="filter-label">Product type</label>
-        <div class="ms" id="f-type" data-ph="Any type"></div>
+        <select class="filter-select" id="f-type"><option value="">Any type</option></select>
       </div>
       <div class="filter-group">
         <label class="filter-label">Repayment period</label>
-        <div class="ms" id="f-tenor" data-ph="Any length"></div>
+        <select class="filter-select" id="f-tenor"><option value="">Any length</option></select>
       </div>
       <div class="filter-group">
         <label class="filter-label">Funder</label>
-        <div class="ms" id="f-inst" data-ph="All funders"></div>
+        <select class="filter-select" id="f-inst"><option value="">All funders</option></select>
       </div>
       <div class="filter-group">
         <label class="filter-label">Institution type</label>
-        <div class="ms" id="f-insttype" data-ph="All types"></div>
+        <select class="filter-select" id="f-insttype"><option value="">All types</option></select>
       </div>
       <div class="filter-group">
         <label class="filter-label">T&amp;C access</label>
-        <div class="ms" id="f-tc" data-ph="Show all"></div>
+        <select class="filter-select" id="f-tc">
+          <option value="" selected>Show all</option>
+          <option value="Open">Open to T&amp;C SMEs</option>
+          <option value="Restricted">Restricted</option>
+          <option value="Other">Other / unclear</option>
+        </select>
       </div>
       <div class="filter-group">
         <label class="filter-label">Women-led</label>
-        <div class="ms" id="f-women" data-ph="Any"></div>
+        <select class="filter-select" id="f-women">
+          <option value="">Any</option>
+          <option value="yes">Women-led only ♀</option>
+        </select>
       </div>
       <div class="filter-group">
         <label class="filter-label">Green finance</label>
-        <div class="ms" id="f-green" data-ph="Show all"></div>
+        <select class="filter-select" id="f-green">
+          <option value="">Show all</option>
+          <option value="Yes">Green only 🌱</option>
+          <option value="No">Conventional only</option>
+        </select>
       </div>
       <div class="filter-group">
         <label class="filter-label">Green investment type</label>
-        <div class="ms" id="f-greentype" data-ph="Any type"></div>
+        <select class="filter-select" id="f-greentype">
+          <option value="">Any type</option>
+        </select>
       </div>
     </div>
     <div class="filter-actions">
@@ -1759,40 +1700,33 @@ function fitBadges(r){
   if(isConc(r)) h+='<span class="chip chip-amber" title="Concessionary / low-cost terms">💸 Low-cost</span> ';
   return h || '<span style="color:var(--mist);font-size:11px">—</span>';
 }
-/* Every Std. Product Type that is a loan, for the "Loan" shortcut. Listed
-   explicitly so a renamed type drops out visibly rather than being
-   mis-grouped. */
-const LOAN_TYPES = [
-  '01. Short-term credit / working capital facility',
-  '06. Long-term loan',
-  '07. Concessional / soft loan',
-  '08. Mortgage / real estate',
-  '13. Microfinance',
-  '17. Export credit / refinance',
-  '19. Sustainability-linked loan / facility'
-];
 function quickStart(kind){
   populateFilters();
   clearFilters();
-  const set=(id,v)=>msSet(id,v);
-  // "I need financing for…" — purpose. Matched by prefix so a relabelled
-  // category in the workbook does not quietly stop matching.
-  const need=re=>msSetMatch('f-need',v=>re.test(v));
-  if(kind==='wc')      need(/^working capital/i);
-  else if(kind==='capex')  need(/^fixed assets/i);
-  else if(kind==='trade')  need(/^trade finance/i);
-  else if(kind==='startup') need(/^start-?up/i);
-  else if(kind==='tech')   need(/^technology/i);
+  const set=(id,v)=>{ const el=document.getElementById(id); if(el) el.value=v; };
+  // Pick the first option whose value matches, rather than naming it in full.
+  // The workbook relabels these categories from time to time ("Fixed assets /
+  // CAPEX" became "Fixed assets / capital expenditure (CAPEX)"), and setting a
+  // value that no longer exists leaves the filter blank, which silently returns
+  // the whole catalogue instead of a filtered list.
+  const setMatch=(id,re)=>{
+    const el=document.getElementById(id); if(!el) return;
+    const opt=[...el.options].find(o=>o.value && re.test(o.value));
+    if(opt) el.value=opt.value;
+  };
+  // "I need financing for…" — purpose
+  if(kind==='wc')      setMatch('f-need',/^working capital/i);
+  else if(kind==='capex')  setMatch('f-need',/^fixed assets/i);
+  else if(kind==='trade')  setMatch('f-need',/^trade finance/i);
+  else if(kind==='startup') setMatch('f-need',/^start-?up/i);
+  else if(kind==='tech')   setMatch('f-need',/^technology/i);
   else if(kind==='green')  set('f-green','Yes');
   else if(kind==='women')  set('f-women','yes');
-  // "I need a…" — instrument. Now that Product type takes several values, a
-  // shortcut can tick every type that counts as that instrument. Types missing
-  // from the current workbook are ignored by msSet, so these lists are safe to
-  // keep complete.
-  else if(kind==='loan')   set('f-type',LOAN_TYPES);
-  else if(kind==='grant')  set('f-type',['04. Grant / Subsidy']);
-  else if(kind==='equity') set('f-type',['10. Equity investment','11. Venture capital / PE']);
-  else if(kind==='conc')   set('f-type',['07. Concessional / soft loan']);
+  // "I need a…" — instrument
+  else if(kind==='loan')   set('f-type','06. Long-term loan');
+  else if(kind==='grant')  set('f-type','04. Grant / Subsidy');
+  else if(kind==='equity') set('f-type','10. Equity investment');
+  else if(kind==='conc')   set('f-type','07. Concessional / soft loan');
   showPanel('finder');
   applyFilters();
 }
@@ -1815,102 +1749,12 @@ window.addEventListener('DOMContentLoaded', () => {
   populateFilters();
 });
 
-/* ── MULTI-SELECT FILTER CONTROL ──────────────────────────
-   Each Finder filter holds a set of chosen values instead of one value.
-   Within a filter the selections are OR'd; across filters they are AND'd.
-   An empty set means "no restriction", which is why the old ""/"Any" option
-   is gone: not choosing anything is the same thing. */
-const MS = {};                                    // filter id -> Set of values
-const MS_LABEL = {};                              // filter id -> value -> label
-function msHas(id){ return !!(MS[id] && MS[id].size); }
-function msVals(id){ return MS[id] ? [...MS[id]] : []; }
-function msMatch(id, values){                     // values: the row's value(s)
-  if(!msHas(id)) return true;
-  for(const v of values){ if(MS[id].has(v)) return true; }
-  return false;
-}
-function msSummary(id){
-  const el = document.getElementById(id); if(!el) return;
-  const btn = el.querySelector('.ms-text');
-  const n = MS[id] ? MS[id].size : 0;
-  const ph = el.getAttribute('data-ph') || 'Any';
-  if(btn) btn.textContent = n===0 ? ph : (n===1 ? (MS_LABEL[id]?.[msVals(id)[0]] || msVals(id)[0]) : `${n} selected`);
-  el.classList.toggle('has', n>0);
-}
-/* Build the option list. entries: [value, label][] */
-function msBuild(id, entries){
-  const el = document.getElementById(id); if(!el) return;
-  MS[id] = MS[id] || new Set();
-  MS_LABEL[id] = {};
-  entries.forEach(([v,l]) => { MS_LABEL[id][v] = l; });
-  const opts = entries.map(([v,l]) =>
-    `<label class="ms-opt"><input type="checkbox" value="${escAttr(v)}" onchange="msPick('${id}',this)"><span>${escHtml(l)}</span></label>`
-  ).join('');
-  el.innerHTML =
-    `<button type="button" class="ms-btn" aria-expanded="false" onclick="msOpen('${id}',event)"><span class="ms-text"></span></button>` +
-    `<div class="ms-panel">${opts || '<div class="ms-none">No options</div>'}` +
-    `<div class="ms-actions"><button type="button" onclick="msReset('${id}',event)">Clear</button></div></div>`;
-  msSummary(id);
-}
-function msPick(id, box){
-  MS[id] = MS[id] || new Set();
-  if(box.checked) MS[id].add(box.value); else MS[id].delete(box.value);
-  msSummary(id);
-}
-function msSet(id, values){                       // programmatic selection
-  const el = document.getElementById(id); if(!el) return;
-  MS[id] = new Set();
-  const wanted = new Set(Array.isArray(values) ? values : [values]);
-  el.querySelectorAll('input[type=checkbox]').forEach(b => {
-    // Values absent from the current workbook are simply skipped, so a chip
-    // still works when one of its product types disappears from the data.
-    b.checked = wanted.has(b.value);
-    if(b.checked) MS[id].add(b.value);
-  });
-  msSummary(id);
-}
-/* Select every option whose value satisfies `test`. Used by the Overview
-   shortcuts so they survive the workbook relabelling a category — matching a
-   prefix rather than an exact string means "Fixed assets / CAPEX" becoming
-   "Fixed assets / capital expenditure (CAPEX)" does not silently break them. */
-function msSetMatch(id, test){
-  const el = document.getElementById(id); if(!el) return;
-  MS[id] = new Set();
-  el.querySelectorAll('input[type=checkbox]').forEach(b => {
-    b.checked = test(b.value);
-    if(b.checked) MS[id].add(b.value);
-  });
-  msSummary(id);
-}
-function msReset(id, ev){
-  if(ev) ev.stopPropagation();
-  msSet(id, []);
-}
-function msOpen(id, ev){
-  if(ev) ev.stopPropagation();
-  const el = document.getElementById(id);
-  const wasOpen = el.classList.contains('open');
-  document.querySelectorAll('.ms.open').forEach(x => x.classList.remove('open'));
-  if(!wasOpen) el.classList.add('open');
-  const b = el.querySelector('.ms-btn');
-  if(b) b.setAttribute('aria-expanded', String(!wasOpen));
-}
-document.addEventListener('click', e => {
-  if(!e.target.closest('.ms')) document.querySelectorAll('.ms.open').forEach(x => x.classList.remove('open'));
-});
-document.addEventListener('keydown', e => {
-  if(e.key==='Escape') document.querySelectorAll('.ms.open').forEach(x => x.classList.remove('open'));
-});
-function escHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-function escAttr(s){ return escHtml(s).replace(/"/g,'&quot;'); }
-
 /* ── FILTER DROPDOWNS ── */
 let filtersPopulated = false;
 function rankFor(id,v){
   if(id==='f-tenor'){ const o=['Short-term','Medium-term','Long-term','None','Not disclosed']; const i=o.findIndex(p=>v.startsWith(p)); return i<0?o.length:i; }
-  // Short prefixes on purpose: the workbook relabels these categories from time
-  // to time (e.g. "Fixed assets / CAPEX" -> "Fixed assets / capital expenditure
-  // (CAPEX)"), and a full-string prefix would drop them to the end of the list.
+  // Short prefixes on purpose: the workbook relabels these categories, and a
+  // full-string prefix would drop the renamed ones to the end of the list.
   if(id==='f-need'){ const o=['Working capital','Trade finance','Cash flow','Invoice','Fixed assets','Start-up','Technology','Capacity building','Green / sustainable','Sustainable upgrades','Sustainable Agriculture']; const i=o.findIndex(p=>v.startsWith(p)); return i<0?o.length:i; }
   // 'f-size' is still used as a rank key by the All Products business-size
   // column filter (see populateDbFilters), even though the Finance Finder no
@@ -1941,34 +1785,31 @@ function populateFilters() {
     }
     if (id==='f-greentype') vals = vals.filter(v=>!/^not disclosed/i.test(v));
     vals.sort((a,b)=>(rankFor(id,a)-rankFor(id,b)) || a.localeCompare(b));
-    const label = v => (id==='f-inst') ? (INST_FULL[v] || v)
-      : (id==='f-insttype') ? v.replace(/\s*-\s*\(.*/,'').trim()
-      : v.replace(/^\d+\.\s*/,'').replace(/^[a-z]\.\s*/,'');
-    msBuild(id, vals.map(v => [v, label(v)]));
+    const sel = document.getElementById(id);
+    vals.forEach(v => {
+      const o = document.createElement('option');
+      o.value = v;
+      o.textContent = (id==='f-inst') ? (INST_FULL[v] || v) : (id==='f-insttype') ? v.replace(/\s*-\s*\(.*/,'').trim() : v.replace(/^\d+\.\s*/,'').replace(/^[a-z]\.\s*/,'');
+      sel.appendChild(o);
+    });
   });
-  // Fixed option lists. There is no "Any"/"Show all" entry any more: selecting
-  // nothing already means no restriction.
-  msBuild('f-tc', [['Open','Open to T&C SMEs'],['Restricted','Restricted'],['Other','Other / unclear']]);
-  msBuild('f-women', [['yes','Women-led only ♀']]);
-  msBuild('f-green', [['Yes','Green only 🌱'],['No','Conventional only']]);
 }
 
 /* ── FINDER ── */
 let finderRows = [...DATA];
 let finderActive = false, finderPage = 1; const PER_F = 25;
 function applyFilters() {
-  // Each filter: no selection = no restriction; otherwise the row must match
-  // at least one selected value.
+  const get = id => document.getElementById(id).value;
   finderRows = DATA.filter(r =>
-    msMatch('f-need',      splitMulti(r['Std. Financing Need'])) &&
-    msMatch('f-type',      [r['Std. Product Type']]) &&
-    msMatch('f-tenor',     splitMulti(r['Std. Tenor'])) &&
-    msMatch('f-inst',      [r['Institution Name (Abbr.)']]) &&
-    msMatch('f-insttype',  [r['Institution Type']]) &&
-    msMatch('f-green',     [r['Std. Green']]) &&
-    msMatch('f-greentype', splitMulti(r['Std. Green Investment Type'])) &&
-    msMatch('f-tc',        [tcCat(r['T&C Applicability'])]) &&
-    (!msHas('f-women')  || isWomen(r))
+    (!get('f-need')  || splitMulti(r['Std. Financing Need']).includes(get('f-need'))) &&
+    (!get('f-type')  || r['Std. Product Type']===get('f-type'))   &&
+    (!get('f-tenor') || splitMulti(r['Std. Tenor']).includes(get('f-tenor'))) &&
+    (!get('f-inst')  || r['Institution Name (Abbr.)']===get('f-inst')) &&
+    (!get('f-insttype') || r['Institution Type']===get('f-insttype')) &&
+    (!get('f-green') || r['Std. Green']===get('f-green')) &&
+    (!get('f-greentype') || splitMulti(r['Std. Green Investment Type']).includes(get('f-greentype'))) &&
+    (!get('f-tc')    || tcCat(r['T&C Applicability'])===get('f-tc')) &&
+    (get('f-women')!=='yes'  || isWomen(r))
   );
   const pill = document.getElementById('finder-pill');
   pill.style.display = 'flex';
@@ -1977,7 +1818,7 @@ function applyFilters() {
   renderFinder(1);
 }
 function clearFilters() {
-  ['f-need','f-type','f-tenor','f-inst','f-insttype','f-green','f-greentype','f-tc','f-women'].forEach(id=>msSet(id,[]));
+  ['f-need','f-type','f-tenor','f-inst','f-insttype','f-green','f-greentype','f-tc','f-women'].forEach(id=>{const el=document.getElementById(id); if(el) el.value='';});
   document.getElementById('finder-search').value='';
   document.getElementById('finder-pill').style.display='none';
   finderRows=[...DATA];
