@@ -1191,6 +1191,10 @@ tbody td { padding: 11px 14px; vertical-align: top; }
         <select class="filter-select" id="f-need"><option value="">Any purpose</option></select>
       </div>
       <div class="filter-group">
+        <label class="filter-label">Business size</label>
+        <select class="filter-select" id="f-size"><option value="">All sizes</option></select>
+      </div>
+      <div class="filter-group">
         <label class="filter-label">Finance Type</label>
         <select class="filter-select" id="f-family">
           <option value="">Any finance type</option>
@@ -1215,6 +1219,13 @@ tbody td { padding: 11px 14px; vertical-align: top; }
       <div class="filter-group">
         <label class="filter-label">Institution type</label>
         <select class="filter-select" id="f-insttype"><option value="">All types</option></select>
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">Collateral</label>
+        <select class="filter-select" id="f-collat">
+          <option value="">Any</option>
+          <option value="yes">Collateral-free only 🔓</option>
+        </select>
       </div>
       <div class="filter-group">
         <label class="filter-label">Women-led</label>
@@ -1369,7 +1380,7 @@ tbody td { padding: 11px 14px; vertical-align: top; }
       <div class="about-card-title">🚀 The four sections</div>
       <ol class="step-list">
         <li class="step-item"><span class="step-n">1</span><span><strong>Overview</strong> — a snapshot of the whole guide: totals and charts showing the mix of funders, product types, purposes and business sizes. Use the &ldquo;I need financing for…&rdquo; shortcuts to jump straight into matching products.</span></li>
-        <li class="step-item"><span class="step-n">2</span><span><strong>Finance Finder</strong> — the main tool. Narrow products down by what you need the money for, the finance type (loan, grant, equity or concessional), product type, repayment period, funder, institution type, and whether the product is women-led or green. Click any row to open full details, or use the <em>Product page</em> link to visit the funder&rsquo;s website.</span></li>
+        <li class="step-item"><span class="step-n">2</span><span><strong>Finance Finder</strong> — the main tool. Narrow products down by what you need the money for, the finance type (loan, grant, equity or concessional), business size, product type, repayment period, funder, institution type, and whether the product is collateral-free, women-led or green. Click any row to open full details, or use the <em>Product page</em> link to visit the funder&rsquo;s website.</span></li>
         <li class="step-item"><span class="step-n">3</span><span><strong>All Products</strong> — the complete list. Sort by any column, use the filter dropdown under each heading (like a spreadsheet), or search across everything.</span></li>
         <li class="step-item"><span class="step-n">4</span><span><strong>Finance Explained</strong> — plain-language definitions of every product type, purpose, institution type and key term, each with a Textile &amp; Clothing example. New to finance? Start here.</span></li>
       </ol>
@@ -1782,6 +1793,7 @@ function populateFilters() {
   const INST_FULL = {};
   DATA.forEach(r=>{ const a=r['Institution Name (Abbr.)']; if(a && !INST_FULL[a]) INST_FULL[a]=r['Institution Full Name']||a; });
   const cfg = [
+    ['f-size','Std. Business Size'],
     ['f-need','Std. Financing Need'],['f-greentype','Std. Green Investment Type'],
     ['f-type','Std. Product Type'],['f-tenor','Std. Tenor'],
     ['f-inst','Institution Name (Abbr.)'],['f-insttype','Institution Type']
@@ -1789,7 +1801,10 @@ function populateFilters() {
   const splitFields = new Set(['Std. Financing Need','Std. Tenor','Std. Green Investment Type']);
   cfg.forEach(([id,field]) => {
     let vals;
-    if (splitFields.has(field)) {
+    // Business size uses a fixed band list, not the raw values: a row can say
+    // "SMEs" or "All", which sizeSet() expands into the individual bands.
+    if (id==='f-size') { vals=[...SIZE_OPTS]; }
+    else if (splitFields.has(field)) {
       const s=new Set();
       DATA.forEach(r=>splitMulti(r[field]).forEach(x=>s.add(x)));
       vals=[...s];
@@ -1814,6 +1829,7 @@ let finderActive = false, finderPage = 1; const PER_F = 25;
 function applyFilters() {
   const get = id => document.getElementById(id).value;
   finderRows = DATA.filter(r =>
+    sizeMatch(r, get('f-size')) &&
     (!get('f-need')  || splitMulti(r['Std. Financing Need']).includes(get('f-need'))) &&
     familyMatch(r, get('f-family')) &&
     (!get('f-type')  || r['Std. Product Type']===get('f-type'))   &&
@@ -1822,6 +1838,7 @@ function applyFilters() {
     (!get('f-insttype') || r['Institution Type']===get('f-insttype')) &&
     (!get('f-green') || r['Std. Green']===get('f-green')) &&
     (!get('f-greentype') || splitMulti(r['Std. Green Investment Type']).includes(get('f-greentype'))) &&
+    (get('f-collat')!=='yes' || isCollatFree(r)) &&
     (get('f-women')!=='yes'  || isWomen(r))
   );
   const pill = document.getElementById('finder-pill');
@@ -1831,7 +1848,7 @@ function applyFilters() {
   renderFinder(1);
 }
 function clearFilters() {
-  ['f-need','f-family','f-type','f-tenor','f-inst','f-insttype','f-green','f-greentype','f-women'].forEach(id=>{const el=document.getElementById(id); if(el) el.value='';});
+  ['f-need','f-size','f-family','f-type','f-tenor','f-inst','f-insttype','f-green','f-greentype','f-collat','f-women'].forEach(id=>{const el=document.getElementById(id); if(el) el.value='';});
   document.getElementById('finder-search').value='';
   document.getElementById('finder-pill').style.display='none';
   finderRows=[...DATA];
